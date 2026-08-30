@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -33,20 +33,51 @@
 <body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
 
     <!-- Header -->
-    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
                 <img src="assets/kfta-logo.jpg" alt="KFTA Logo" class="h-10 w-auto mix-blend-multiply">
-                <span class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">FASHION THERAPY</span>
+                <span class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">한국패션테라피협회</span>
             </a>
-            <nav class="hidden md:flex gap-8">
-                <a href="index.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:text-kftaRed transition-colors">ABOUT</a>
-                <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">ACADEMY</a>
-                <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CERTIFICATION</a>
-                <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CONSULTING</a>
-                <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CORPORATE</a>
-                <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">SHOP</a>
-                <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">COMMUNITY</a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full">
+                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
+                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">방법론</a>
+                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">오시는 길</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="academy.html#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
+                        <a href="academy.html#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
+                        <a href="academy.html#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
+                        <a href="academy.html#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="certification.html#overview" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">과정 한눈에 보기</a>
+                        <a href="certification.html#level1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1</a>
+                        <a href="certification.html#level2" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2</a>
+                        <a href="certification.html#level3" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -118,6 +149,60 @@
         </div>
     </section>
 
+    <!-- Methodology -->
+    <section id="methodology" class="bg-kftaLight py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-5xl mb-4 text-kftaGreen animate__animated animate__fadeInUp">Methodology</h2>
+                <p class="text-xl text-gray-600 animate__animated animate__fadeInUp animate__delay-1s">한국패션테라피협회의 독자적인 이미지스타일분석™ 프레임워크</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
+                    <img src="assets/얼굴형.png" alt="7Layers" class="w-full h-48 object-cover rounded-xl mb-6">
+                    <h3 class="font-bold text-2xl text-kftaGreen mb-4">7Layers 패션테라피 시스템</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        개인의 심리와 패션 성향을 연결하는 7단계 진단 시스템입니다. 단순히 겉모습만 꾸미는 것이 아니라, 
+                        개인의 체형, 얼굴형, 라이프스타일, 내면의 심리 상태까지 종합적으로 분석하여 진정한 '나다움'을 찾아냅니다.
+                    </p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
+                    <img src="assets/image01.png" alt="4Axis" class="w-full h-48 object-cover rounded-xl mb-6">
+                    <h3 class="font-bold text-2xl text-kftaGreen mb-4">이미지스타일분석 4축 모델</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3"><span class="font-bold text-kftaRed">시각(Visual):</span> 타고난 신체 조건과 고유의 색채 분석</li>
+                        <li class="flex items-start gap-3"><span class="font-bold text-kftaRed">내면(Mind):</span> 자아 존중감과 심리적 기질 파악</li>
+                        <li class="flex items-start gap-3"><span class="font-bold text-kftaRed">행동(Behavior):</span> 제스처, 태도, 라이프스타일 분석</li>
+                        <li class="flex items-start gap-3"><span class="font-bold text-kftaRed">환경(Environment):</span> 사회적 역할과 TPO에 맞는 스타일링</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="bg-kftaBeige py-24 px-6 border-t border-kftaBorder">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2">
+                <div class="bg-gray-300 w-full h-80 rounded-3xl flex items-center justify-center text-gray-500 shadow-inner overflow-hidden">
+                    <img src="assets/11.png" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 space-y-6">
+                <h2 class="font-serif text-5xl mb-4 text-kftaGreen">Location</h2>
+                <h3 class="text-2xl font-bold text-gray-800">한국패션테라피협회 본관</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    경기도 용인시 처인구 성산로 667<br>
+                    자연 속 힐링 공간에서 온전한 나를 마주하는 시간을 가져보세요.
+                </p>
+                <div class="pt-6 border-t border-kftaBorder space-y-2">
+                    <p><strong>대중교통:</strong> 용인 공용 버스터미널에서 환승</p>
+                    <p><strong>주차안내:</strong> 협회 본관 앞 전용 주차장 무료 이용 가능</p>
+                    <p><strong>문의전화:</strong> 010-9692-0410</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Founder -->
     <section class="bg-[#D1C9BB] py-24 px-6 relative">
         <div class="max-w-7xl mx-auto">
@@ -176,5 +261,7 @@
     </footer>
 </body>
 </html>
+
+
 
 

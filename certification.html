@@ -13,20 +13,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
-    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
                 <img src="assets/kfta-logo.jpg" alt="KFTA Logo" class="h-10 w-auto mix-blend-multiply">
-                <span class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">FASHION THERAPY</span>
+                <span class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">한국패션테라피협회</span>
             </a>
-            <nav class="hidden md:flex gap-8">
-                <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">ABOUT</a>
-                <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">ACADEMY</a>
-                <a href="certification.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:text-kftaRed transition-colors">CERTIFICATION</a>
-                <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CONSULTING</a>
-                <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CORPORATE</a>
-                <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">SHOP</a>
-                <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">COMMUNITY</a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full">
+                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
+                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">방법론</a>
+                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">오시는 길</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="academy.html#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
+                        <a href="academy.html#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
+                        <a href="academy.html#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
+                        <a href="academy.html#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="certification.html#overview" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">과정 한눈에 보기</a>
+                        <a href="certification.html#level1" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1</a>
+                        <a href="certification.html#level2" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2</a>
+                        <a href="certification.html#level3" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -35,6 +66,13 @@
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="font-serif text-5xl md:text-6xl mb-8">Certification</h1>
             <p class="text-xl opacity-90">한국패션테라피협회 공식 자격 인증 과정</p>
+        </div>
+    </section>
+
+        <section class="bg-kftaLight pt-12 px-6" id="overview">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="font-serif text-4xl text-kftaGreen mb-8">과정 한눈에 보기</h2>
+            <img src="assets/3322.png" alt="Process Flowchart" class="w-full max-w-4xl mx-auto rounded-3xl shadow-lg border border-gray-200">
         </div>
     </section>
 
@@ -53,7 +91,7 @@
                             <p class="text-sm font-medium">모집 인원: 4명 ~ 10명</p>
                             <p class="text-sm font-medium">교육 기간: 6주 (총 12시간)</p>
                         </div>
-                        <a href="checkout.html?item=자격과정 Level 1 Foundation" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">신청하기</a>
+                        <a href="detail.html?type=cert&item=자격과정 Level 1 Foundation" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">더 보기</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +109,7 @@
                             <p class="text-sm font-medium">모집 인원: 4명 ~ 10명</p>
                             <p class="text-sm font-medium">교육 기간: 8주 (총 20시간)</p>
                         </div>
-                        <a href="checkout.html?item=자격과정 Level 2 Practitioner" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">신청하기</a>
+                        <a href="detail.html?type=cert&item=자격과정 Level 2 Practitioner" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">더 보기</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +127,7 @@
                             <p class="text-sm font-medium">모집 인원: 4명 ~ 10명</p>
                             <p class="text-sm font-medium">교육 기간: 8주 (총 24시간)</p>
                         </div>
-                        <a href="checkout.html?item=자격과정 Level 3 Master Practitioner" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">신청하기</a>
+                        <a href="detail.html?type=cert&item=자격과정 Level 3 Master Practitioner" class="bg-kftaRed hover:bg-red-900 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors">더 보기</a>
                     </div>
                 </div>
             </div>
@@ -104,5 +142,7 @@
     </footer>
 </body>
 </html>
+
+
 
 

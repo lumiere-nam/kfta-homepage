@@ -4,165 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한국패션테라피협회 | KFTA</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              kftaGreen: '#3B4B38',
+              kftaRed: '#8B1A1A',
+              kftaBeige: '#E8E3D9',
+              kftaLight: '#F9F8F6',
+              kftaBorder: '#D1C9BB'
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Pretendard', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="logo">FASHION THERAPY (KFTA)</a>
-            <nav class="nav-links">
-                <a href="index.html">ABOUT</a>
-                <a href="academy.html">ACADEMY</a>
-                <a href="certification.html">CERTIFICATION</a>
-                <a href="consulting.html">CONSULTING</a>
-                <a href="corporate.html">CORPORATE</a>
-                <a href="shop.html">SHOP</a>
-                <a href="community.html">COMMUNITY</a>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-2xl text-kftaGreen font-bold tracking-widest hover:opacity-80 transition-opacity">FASHION THERAPY</a>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:text-kftaRed transition-colors">ABOUT</a>
+                <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">ACADEMY</a>
+                <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CERTIFICATION</a>
+                <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CONSULTING</a>
+                <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">CORPORATE</a>
+                <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">SHOP</a>
+                <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed transition-colors">COMMUNITY</a>
             </nav>
         </div>
-    </header>    <section class="section bg-beige">
-        <div class="container grid-2">
-            <div>
-                <h1 class="eng-title" style="font-size: 3rem; margin-bottom: 20px; color: var(--color-primary-red);">About<br>our Story</h1>
-                <p>심리적 통찰, 자기 성찰, 그리고 진정성으로 완성되는 패션 테라피를 통해 당신을 발견하세요.</p>
-                <br>
-                <a href="#vision" class="btn">협회 소개</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-kftaBeige py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="animate__animated animate__fadeInLeft">
+                <h1 class="font-serif text-6xl md:text-7xl text-kftaRed mb-8 leading-tight">About<br>our Story</h1>
+                <p class="text-lg text-gray-700 mb-10 leading-relaxed max-w-lg">심리적 통찰, 자기 성찰, 그리고 진정성으로 완성되는 패션 테라피를 통해 당신을 발견하세요.</p>
+                <a href="#vision" class="inline-block bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-red-900/30">협회 소개</a>
             </div>
-            <div>
-                <img src="assets/image01.png" alt="패션테라피 이미지" style="border-radius: 8px;">
+            <div class="animate__animated animate__fadeInRight">
+                <img src="assets/image01.png" alt="패션테라피 이미지" class="rounded-3xl shadow-2xl hover:scale-[1.02] transition-transform duration-500 w-full object-cover aspect-[4/3]">
             </div>
         </div>
     </section>
 
-    <section id="vision" class="section bg-green">
-        <div class="container grid-2">
-            <div>
-                <h2 class="eng-title" style="font-size: 2.5rem; margin-bottom: 20px;">Philosophy-Vision</h2>
-                <p>한국패션테라피협회는 2021년 설립된 한국패션테라피진흥원의 교육 성과를 계승한, 국내 최초의 패션테라피 학술 기반 교육기관입니다.</p>
-                <br>
-                <p>의류학·심리학·미술치료의 융합적 통찰을 바탕으로, 감각이 아닌 '분석 기준'으로 스타일링을 설명하는 7요소·4축 프레임워크와 매체론을 정립해왔습니다.</p>
-                <br>
-                <p>국내 최고 권위의 교육기관으로서 전문가를 양성하고, 검증된 시스템을 해외로 확장해 나갑니다.</p>
-            </div>
-            <div>
-                <h2 class="eng-title" style="font-size: 2.5rem; margin-bottom: 20px;">Philosophy-Mission</h2>
-                <p style="font-size: 1.2rem; font-style: italic;">“감이 아닌 분석으로 옷차림 너머의 마음을 읽는다.”</p>
-                <br>
-                <p>이미지스타일분석™을 통해 누구나 자신의 스타일을 스스로 완성해 나가도록 돕는다.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-beige text-center">
-        <div class="container">
-            <h2 class="eng-title" style="font-size: 2.5rem; margin-bottom: 40px; color: var(--color-primary-green);">Core Values - BLOOM</h2>
-            <p class="mb-40">관계, 자기사랑, 호기심, 타인존중, 성장의 다섯 가지 가치로 구조화하고, 이를 'BLOOM(꽃이 피다)'으로 통합</p>
-            <div class="grid-4" style="text-align:center;">
-                <div style="background:#fff; padding:20px; border-radius:8px;">
-                    <h1 style="color:var(--color-primary-green); font-size:3rem;">B L</h1>
-                    <h4>BELONG (관계) / LOVE (자기사랑)</h4>
-                </div>
-                <div style="background:#fff; padding:20px; border-radius:8px;">
-                    <h1 style="color:var(--color-primary-green); font-size:3rem;">O</h1>
-                    <h4>OPEN (호기심)</h4>
-                </div>
-                <div style="background:#fff; padding:20px; border-radius:8px;">
-                    <h1 style="color:var(--color-primary-green); font-size:3rem;">O</h1>
-                    <h4>OTHER (타인존중)</h4>
-                </div>
-                <div style="background:#fff; padding:20px; border-radius:8px;">
-                    <h1 style="color:var(--color-primary-green); font-size:3rem;">M</h1>
-                    <h4>MOVE (성장)</h4>
+    <!-- Philosophy Vision & Mission -->
+    <section id="vision" class="bg-kftaGreen text-kftaLight py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="animate__animated animate__fadeInUp">
+                <h2 class="font-serif text-4xl md:text-5xl mb-8 text-kftaLight/90">Philosophy-Vision</h2>
+                <div class="space-y-6 text-kftaLight/80 text-lg leading-relaxed font-light">
+                    <p>한국패션테라피협회는 2021년 설립된 한국패션테라피진흥원의 교육 성과를 계승한, 국내 최초의 패션테라피 학술 기반 교육기관입니다.</p>
+                    <p>의류학·심리학·미술치료의 융합적 통찰을 바탕으로, 감각이 아닌 '분석 기준'으로 스타일링을 설명하는 7요소·4축 프레임워크와 매체론을 정립해왔습니다.</p>
+                    <p>국내 최고 권위의 교육기관으로서 전문가를 양성하고, 검증된 시스템을 해외로 확장해 나갑니다.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="section" style="background:#D1C9BB;">
-        <div class="container">
-            <h2 class="eng-title mb-40 text-center" style="color:var(--color-primary-red);">Founder's Message</h2>
-            <div class="grid-2">
-                <div>
-                    <p>안녕하십니까, 한국패션테라피협회장 남미화입니다. 저희 협회를 찾아주신 여러분께 진심으로 감사드립니다.</p><br>
-                    <p>본 협회는 의류학, 심리학, 미술치료를 융합하여 옷차림 속에 담긴 개인의 심리를 읽어내는 국내 최초의 패션테라피 전문 기관입니다. 주관적인 감각에 의존하지 않고, 축적된 상담 사례와 심리 분석을 바탕으로 패션테라피의 객관적인 기준을 제시합니다. 검증된 전문성을 통해 나이와 유행에 흔들리지 않는, 당신만의 스타일을 주도적으로 완성해 나가시도록 돕겠습니다.</p><br>
-                    <p>어떤 옷을 입어도 그 안에서 진정한 자신을 발견하시기를 바랍니다. 감사합니다.</p>
-                    <h4 class="mt-40">협회장 남 미 화</h4>
-                </div>
-                <div style="background:#fff; padding:20px; border-radius:8px; font-size:0.9rem;">
-                    <strong>현 소속 및 직책</strong><br>한국패션테라피협회장 / 한국패션테라피진흥원 대표<br>CALM:ON(캄온) 대표<br><br>
-                    <strong>학술 및 연구</strong><br>국립창원대학교 대학원: 의류학과 패션전공 이학박사<br>영국 Nottingham Trent University 석사<br>이화여자대학교 대학원 석사<br><br>
-                    <strong>주요 저서</strong><br>나의 빛나는 시절: 시니어 패션 컬러링북 시리즈<br>반짝반짝 패션 놀이 컬러링북 외 다수
+            <div class="animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="font-serif text-4xl md:text-5xl mb-8 text-kftaLight/90">Philosophy-Mission</h2>
+                <div class="p-8 border border-kftaLight/20 rounded-3xl bg-kftaGreen/50 backdrop-blur">
+                    <p class="text-2xl font-serif italic text-white mb-6 leading-relaxed">“감이 아닌 분석으로 옷차림 너머의 마음을 읽는다.”</p>
+                    <p class="text-kftaLight/80 text-lg">이미지스타일분석™을 통해 누구나 자신의 스타일을 스스로 완성해 나가도록 돕는다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-white text-center">
-        <div class="container">
-            <h2 class="eng-title mb-40">Main Business</h2>
-            <div class="grid-3">
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">교육과정</h3>
-                    <p>원데이 클래스, 어린이교실, 패밀리교실, Weekly Talk</p>
+    <!-- Core Values -->
+    <section class="bg-kftaLight py-24 px-6 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#3B4B38 2px, transparent 2px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="font-serif text-5xl mb-6 text-kftaGreen animate__animated animate__fadeInUp">Core Values - BLOOM</h2>
+            <p class="text-xl text-gray-600 mb-16 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">관계, 자기사랑, 호기심, 타인존중, 성장의 다섯 가지 가치로 구조화하고, 이를 'BLOOM(꽃이 피다)'으로 통합</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn">
+                    <h1 class="font-serif text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">B L</h1>
+                    <h4 class="font-bold text-gray-800">BELONG & LOVE</h4>
+                    <p class="text-sm text-gray-500 mt-2">관계와 자기사랑</p>
                 </div>
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">자격과정</h3>
-                    <p>단계별 자격 과정 (Level 1, Level 2, Level 3, 트레이너, 마스터 트레이너)</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-1s">
+                    <h1 class="font-serif text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">O</h1>
+                    <h4 class="font-bold text-gray-800">OPEN</h4>
+                    <p class="text-sm text-gray-500 mt-2">호기심</p>
                 </div>
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">개인 컨설팅</h3>
-                    <p>컬러/옷장/토탈 이미지 컨설팅, 체형·자세 컨설팅</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-2s">
+                    <h1 class="font-serif text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">O</h1>
+                    <h4 class="font-bold text-gray-800">OTHER</h4>
+                    <p class="text-sm text-gray-500 mt-2">타인존중</p>
                 </div>
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">기업·기관강의</h3>
-                    <p>TPO 실무스타일링, 조직문화 강화, 직원 유니폼 스타일링</p>
-                </div>
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">SHOP</h3>
-                    <p>도서, 컬러링북, 워크북, 프로 키트, 실기 키트</p>
-                </div>
-                <div style="background:#f4f4f4; padding:20px; border-radius:8px;">
-                    <h3 style="color:var(--color-primary-red);" class="mb-20">연계 사업</h3>
-                    <p>CALM:ON 온라인 여성의류 쇼핑몰 (별도 분리 운영)</p>
+                <div class="bg-white p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-3s">
+                    <h1 class="font-serif text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">M</h1>
+                    <h4 class="font-bold text-gray-800">MOVE</h4>
+                    <p class="text-sm text-gray-500 mt-2">성장</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="section bg-green text-center">
-        <div class="container">
-            <h2 class="eng-title mb-40">Patents & Certifications</h2>
-            <div class="grid-4">
-                <div>
-                    <h4 class="mb-20">이미지스타일분석™ 4축 모델</h4>
-                    <p style="font-size:0.9rem;">시각, 내면, 행동, 환경의 4가지 축을 기반으로 개인의 이미지를 입체적으로 진단하는 독자적 분석 체계 및 상표권.</p>
+
+    <!-- Founder -->
+    <section class="bg-[#D1C9BB] py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-serif text-5xl mb-16 text-center text-kftaRed animate__animated animate__fadeInUp">Founder's Message</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="text-gray-800 text-lg leading-loose space-y-6 font-medium animate__animated animate__fadeInLeft">
+                    <p>안녕하십니까, 한국패션테라피협회장 남미화입니다. 저희 협회를 찾아주신 여러분께 진심으로 감사드립니다.</p>
+                    <p>본 협회는 의류학, 심리학, 미술치료를 융합하여 옷차림 속에 담긴 개인의 심리를 읽어내는 국내 최초의 패션테라피 전문 기관입니다.</p>
+                    <p>주관적인 감각에 의존하지 않고, 축적된 상담 사례와 심리 분석을 바탕으로 패션테라피의 객관적인 기준을 제시합니다. 검증된 전문성을 통해 나이와 유행에 흔들리지 않는, 당신만의 스타일을 주도적으로 완성해 나가시도록 돕겠습니다.</p>
+                    <p class="font-serif text-2xl text-kftaRed mt-10">협회장 남 미 화</p>
                 </div>
-                <div>
-                    <h4 class="mb-20">7Layers 패션테라피 시스템</h4>
-                    <p style="font-size:0.9rem;">개인의 심리와 패션 성향을 연결하는 7단계 진단 시스템 및 맞춤형 성향 평가 도구 '패션다움'의 지식재산권.</p>
-                </div>
-                <div>
-                    <h4 class="mb-20">ISO/IEC 17024 국제 표준 인증</h4>
-                    <p style="font-size:0.9rem;">국제표준화기구(ISO) 기준을 충족하는 인성지도사 등 글로벌 수준의 전문 교육 역량 인증.</p>
-                </div>
-                <div>
-                    <h4 class="mb-20">한국패션테라피협회 공식 상표권</h4>
-                    <p style="font-size:0.9rem;">패션테라피 분야의 전문성을 갖춘 교육 기관으로서 공식 명칭 및 로고에 대한 상표권 등록 완료.</p>
+                <div class="bg-white/80 backdrop-blur p-10 rounded-3xl shadow-lg border border-white/50 animate__animated animate__fadeInRight">
+                    <div class="space-y-8 text-gray-700">
+                        <div>
+                            <h4 class="font-bold text-kftaGreen border-b border-kftaGreen/20 pb-2 mb-4">현 소속 및 직책</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm ml-4">
+                                <li>한국패션테라피협회장 / 한국패션테라피진흥원 대표</li>
+                                <li>CALM:ON(캄온) 대표</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kftaGreen border-b border-kftaGreen/20 pb-2 mb-4">학술 및 연구</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm ml-4">
+                                <li>국립창원대학교 대학원: 의류학과 패션전공 이학박사</li>
+                                <li>영국 Nottingham Trent University 석사</li>
+                                <li>이화여자대학교 대학원 석사</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kftaGreen border-b border-kftaGreen/20 pb-2 mb-4">주요 저서</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm ml-4">
+                                <li>나의 빛나는 시절: 시니어 패션 컬러링북 시리즈</li>
+                                <li>반짝반짝 패션 놀이 컬러링북 외 다수</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div>
-                <h2 class="footer-logo">KFTA</h2>
-                <p>한국패션테라피협회</p>
-                <p>경기도 용인시 처인구 성산로 667</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
+                <p class="font-bold text-white/90">한국패션테라피협회</p>
+                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
             </div>
-            <div>
-                <p>Email: nxxon@naver.com | Tel: 010-9692-0410</p>
-                <br>
+            <div class="text-center md:text-right text-sm">
+                <p class="mb-2">Email: <a href="mailto:nxxon@naver.com" class="hover:text-white transition-colors">nxxon@naver.com</a></p>
+                <p class="mb-6">Tel: 010-9692-0410</p>
                 <p>&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>

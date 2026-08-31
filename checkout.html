@@ -9,41 +9,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     <script>
-        // Extract item name from URL parameters
         document.addEventListener("DOMContentLoaded", () => {
             const params = new URLSearchParams(window.location.search);
             const itemName = params.get("item") || "한국패션테라피 교육 과정";
-            document.getElementById("item-name").textContent = itemName;
+            let price = "0";
             
-            // Generate dummy price based on string length to look realistic
-            const price = (itemName.length * 15000 + 50000).toLocaleString();
+            if(itemName.includes("Level 1")) price = "870,000";
+            else if(itemName.includes("Level 2")) price = "1,200,000";
+            else if(itemName.includes("Level 3")) price = "1,500,000";
+            else if(itemName.includes("Trainer") && !itemName.includes("Master")) price = "1,850,000";
+            else if(itemName.includes("Master Trainer")) price = "2,000,000";
+            else price = "1,000,000"; // default fallback
+
+            document.getElementById("item-name").textContent = itemName;
             document.getElementById("item-price").textContent = price + " 원";
         });
 
         function processPayment() {
-            alert("결제 시스템이 아직 연동되지 않았습니다.\n(실제 카드 결제 및 PG사 연동은 추후 비즈니스 등록 후 가능합니다.)");
+            alert("결제 시스템 연동 전입니다.\n(실제 카드 결제 및 PG 연동은 추후 적용됩니다.)");
         }
     </script>
 </head>
 <body class="font-sans text-gray-800 bg-kftaLight antialiased flex flex-col min-h-screen">
     
     <header class="bg-white border-b border-kftaBorder py-4 px-6 text-center shadow-sm">
-        <a href="index.html" class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">FASHION THERAPY</a>
+        <a href="index.html">
+            <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-10 w-auto mx-auto inline-block">
+        </a>
     </header>
 
     <main class="flex-grow flex items-center justify-center p-6 animate__animated animate__fadeIn">
         <div class="bg-white max-w-lg w-full rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             <div class="bg-kftaGreen p-8 text-center text-white">
-                <h2 class="text-2xl font-bold mb-2">수강 신청 및 결제</h2>
-                <p class="text-kftaLight/80 text-sm">안전하게 결제가 진행됩니다.</p>
+                <h2 class="text-2xl font-bold mb-2">과정 신청 및 결제</h2>
+                <p class="text-kftaLight/80 text-sm">환영합니다! 지원서 작성과 결제를 진행해주세요.</p>
             </div>
             
             <div class="p-8">
                 <div class="mb-8 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                    <p class="text-sm text-gray-500 mb-1">선택한 과정</p>
+                    <p class="text-sm text-gray-500 mb-1">선택한 교육 과정</p>
                     <h3 id="item-name" class="font-bold text-xl text-kftaGreen mb-4">로딩중...</h3>
                     <div class="flex justify-between items-center border-t border-gray-200 pt-4 mt-4">
-                        <span class="text-gray-600 font-medium">총 결제 금액</span>
+                        <span class="text-gray-600 font-medium">총 결제 금액 (자격증 발급비 별도)</span>
                         <span id="item-price" class="font-bold text-2xl text-kftaRed">0 원</span>
                     </div>
                 </div>
@@ -55,11 +62,15 @@
                             <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-kftaGreen focus:border-transparent transition-shadow" placeholder="홍길동">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">연락처</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">휴대폰 번호</label>
                             <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-kftaGreen focus:border-transparent transition-shadow" placeholder="010-0000-0000">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">결제수단 선택</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">이메일</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-kftaGreen focus:border-transparent transition-shadow" placeholder="example@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">결제 수단</label>
                             <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-kftaGreen transition-shadow bg-white">
                                 <option>신용/체크카드</option>
                                 <option>무통장 입금</option>
@@ -69,10 +80,10 @@
                     </div>
                     
                     <button type="submit" class="w-full bg-kftaRed hover:bg-red-900 text-white font-bold py-4 rounded-xl transition-colors text-lg shadow-lg shadow-red-900/20">
-                        결제 진행하기
+                        안전하게 결제하기
                     </button>
                     <div class="mt-4 text-center">
-                        <a href="javascript:history.back()" class="text-sm text-gray-500 hover:text-gray-800 underline">취소하고 돌아가기</a>
+                        <a href="javascript:history.back()" class="text-sm text-gray-500 hover:text-gray-800 underline">이전으로 돌아가기</a>
                     </div>
                 </form>
             </div>
@@ -80,4 +91,3 @@
     </main>
 </body>
 </html>
-

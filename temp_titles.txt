@@ -1,0 +1,16 @@
+﻿<h4 class="font-bold text-lg text-kftaGreen mb-3">엄마프사 프로젝트<br><span class="text-sm text-gray-500 font-normal">퍼스널컬러 & 셀프화보</span></h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">옷장 다이어트</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">나만의 시그니처 무드향</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">4050 뷰티큐레이션</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">오감 테라피<br><span class="text-sm text-gray-500 font-normal">패션 소재 촉감 놀이</span></h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">꼬마 디자이너의 안목<br><span class="text-sm text-gray-500 font-normal">자연물 컬러 콜라주</span></h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">마음을 칠하는 시간<br><span class="text-sm text-gray-500 font-normal">반짝반짝 패션 컬러링</span></h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">서로를 비추는 거울<br><span class="text-sm text-gray-500 font-normal">가족 스타일링 테라피</span></h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[1화] 사람 읽는 법</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[2화] 매체론_스카프</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[3화] 매체론_벨트</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[4화] 매체론_모자</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[1화] 페르소나의 확장</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[2화] 심리적 접지</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[3화] 경계의 해체</h4>
+<h4 class="font-bold text-lg text-kftaGreen mb-3">[4화] 소통과 연대</h4>

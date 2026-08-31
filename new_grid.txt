@@ -1,0 +1,97 @@
+﻿                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="assets/class_weekly_reading.png" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[1화] 사람 읽는 법_비언어적 소통</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">옷차림에 담긴 비언어적 메시지를 이해하고, 타인의 고유한 취향과 라이프스타일을 존중하는 소통의 시각을 기르는 시간</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 1화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="assets/class_weekly_scarf.png" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[2화] 매체론_스카프</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">목선을 감싸는 유연한 드레이핑 속에 숨겨진 감정 표현 방식과 섬세한 자기 연출법</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 2화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="https://images.unsplash.com/photo-1553023247-c0f5f7f3263d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[3화] 매체론_벨트</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">실루엣의 중심을 잡는 벨트를 통해 알아보는 개인의 심리적 경계선과 통제 태도</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 3화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[4화] 매체론_모자</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">시선을 가리거나 끌어당기는 모자의 조형적 특성과 자아 표현</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 4화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="assets/class_weekly_bag.png" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[5화] 매체론_가방</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">소장품을 담아내는 정체성의 공간으로서 가방의 형태와 크기가 말해주는 삶의 가치관</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 5화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="assets/class_weekly_shoes.png" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[6화] 매체론_신발</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">세상을 디디는 접지점(Grounding)으로서 태도와 자존감을 결정짓는 신발의 기호학</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 6화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[7화] 매체론_주얼리</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">빛과 금속이 전하는 고유의 메시지, 자신을 증명하고 기념하는 조용한 존재감의 가치</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 7화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+                      <div class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300 border-t-4 border-kftaRed">
+                            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm border-b border-gray-100"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover" alt="클래스 이미지"></div>
+                            <div class="p-6 flex-grow flex flex-col">
+                              <h4 class="font-bold text-lg text-kftaGreen mb-3">[8화] 매체론_프레임워크 완성</h4>
+                              <p class="text-sm text-gray-600 mb-6 flex-grow">6가지 소품을 통합하여 나만의 균형 잡힌 시그니처 룩을 완성하는 종합 해독 과정</p>
+                              <div class="flex justify-between items-center mb-3 text-sm font-bold text-gray-700 border-t border-gray-100 pt-2">
+                                  <span>비용: 50,000원</span>
+                                  <span>시간: 90분</span>
+                              </div>
+                              <a href="checkout.html?item=위클리토크 8화" class="w-full block text-center bg-gray-900 hover:bg-black text-white font-bold py-2 rounded-lg transition-colors">수강신청하기</a>
+                          </div>
+                      </div>
+

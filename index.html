@@ -172,42 +172,89 @@
     </section>
 
     <!-- Methodology -->
-    <section id="methodology" class="bg-kftaLight py-24 px-6 relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-5xl mb-4 text-kftaGreen animate__animated animate__fadeInUp">Methodology</h2>
-                <p class="text-xl text-gray-600 animate__animated animate__fadeInUp animate__delay-1s">한국패션테라피협회의 독자적인 이미지스타일분석™ 프레임워크</p>
+    <section id="methodology" class="bg-[#B65F42] py-24 px-6 relative text-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <!-- Text Content -->
+            <div class="flex-1">
+                <h2 class="font-serif text-5xl md:text-6xl mb-6 font-bold tracking-tight text-white/90">Methodology</h2>
+                <div class="mb-8">
+                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/80 mb-2">IMAGE STYLE ANALYSIS™은</p>
+                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/80 mb-6">한국패션테라피협회 고유 방법론입니다.</p>
+                </div>
+                <p class="text-lg leading-relaxed text-white/90 max-w-lg mb-10 break-keep">
+                    단순한 외모 연출을 넘어 개인의 심리, 체형, 행동 패턴, 라이프 스타일을 4가지 축으로 정밀하게 진단하여, 나이에 구애받지 않는 확고한 자기 취향을 도출합니다.
+                </p>
+                <a href="academy.html" class="inline-block bg-[#8A2019] hover:bg-[#6e1913] text-white font-bold py-3 px-8 rounded-full transition-colors text-lg shadow-md border border-[#8A2019]">교육과정 둘러보기</a>
+            </div>
+
+            <!-- 4-Axis Grid -->
+            <div class="flex-1 grid grid-cols-2 gap-6 w-full">
+                <!-- Vidual -->
+                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                    </div>
+                    <ul class="text-sm md:text-base font-bold text-gray-600 mb-6 space-y-1">
+                        <li>패션·컬러</li>
+                        <li>체형·얼굴</li>
+                        <li>헤어·메이크업</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
+                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Vidual (외적)</p>
+                    </div>
+                </div>
+
+                <!-- Internal -->
+                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-sm md:text-base font-bold text-gray-600">나도</p>
+                        <p class="text-sm md:text-base font-bold text-gray-600">몰랐던</p>
+                        <p class="text-sm md:text-base font-bold text-gray-600">내 마음</p>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
+                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Internal (내적)</p>
+                    </div>
+                </div>
+
+                <!-- Behavioral -->
+                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-sm md:text-base font-bold text-gray-600">자세·태도</p>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
+                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Behavioral (태도·행동)</p>
+                    </div>
+                </div>
+
+                <!-- Contextual -->
+                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-sm md:text-base font-bold text-gray-600">언제,</p>
+                        <p class="text-sm md:text-base font-bold text-gray-600">어디서,</p>
+                        <p class="text-sm md:text-base font-bold text-gray-600">어떤 모습으로</p>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
+                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Contextual (상황)</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="bg-white p-10 md:p-14 rounded-3xl shadow-lg border border-gray-100 animate__animated animate__fadeInUp">
-                <div class="text-center mb-10">
-                    <h3 class="font-bold text-3xl text-kftaGreen mb-2">이미지스타일분석™</h3>
-                    <p class="text-kftaRed font-serif tracking-widest uppercase">Image Style Analysis</p>
-                </div>
-                
-                <div class="space-y-8 text-gray-700 text-lg">
-                    <div class="flex items-start gap-4">
-                        <span class="font-bold text-xl text-kftaRed min-w-[140px] text-right">시각 (Visual)</span>
-                        <span class="font-light text-gray-300">|</span>
-                        <p class="flex-grow">타고난 신체 조건과 고유의 색채 분석</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="font-bold text-xl text-kftaRed min-w-[140px] text-right">내면 (Mind)</span>
-                        <span class="font-light text-gray-300">|</span>
-                        <p class="flex-grow">자아 존중감과 심리적 기질 파악</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="font-bold text-xl text-kftaRed min-w-[140px] text-right">행동·태도 (Behavior)</span>
-                        <span class="font-light text-gray-300">|</span>
-                        <p class="flex-grow">제스처, 태도, 라이프스타일 분석</p>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="font-bold text-xl text-kftaRed min-w-[140px] text-right">환경 (Environment)</span>
-                        <span class="font-light text-gray-300">|</span>
-                        <p class="flex-grow">사회적 역할과 TPO에 맞는 스타일링</p>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="text-center mt-12">
+            <p class="text-white/60 text-sm tracking-[0.2em] font-medium">[ THE 4-AXIS FRAMEWORK ]</p>
         </div>
     </section>
 
@@ -286,6 +333,7 @@
     </footer>
 </body>
 </html>
+
 
 
 

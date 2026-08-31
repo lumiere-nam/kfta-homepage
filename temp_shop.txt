@@ -1,0 +1,40 @@
+﻿<h2 class="font-serif text-4xl text-kftaGreen mb-12 border-b-2 border-kftaGreen pb-4 inline-block">Therapy Tools & Kits</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-16 mb-32">
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <img src="assets/shop_drape_set.png" alt="진단천 (드레이프) 세트" class="w-full h-40 object-cover rounded-xl mb-4 shadow-inner">
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">진단천 (드레이프) 세트</h4>
+                <a href="checkout.html?item=진단천 세트" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <img src="assets/shop_lip_board_mod.jpg" alt="컬러 진단보드" class="w-full h-40 object-cover rounded-xl mb-4 shadow-inner">
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">컬러 진단보드</h4>
+                <a href="checkout.html?item=컬러 진단보드" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <div class="bg-gray-100 h-40 rounded-xl mb-4 flex items-center justify-center text-gray-400 shadow-inner">이미지 준비중</div>
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">골격 진단보드</h4>
+                <a href="checkout.html?item=골격 진단보드" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <div class="bg-gray-100 h-40 rounded-xl mb-4 flex items-center justify-center text-gray-400 shadow-inner">이미지 준비중</div>
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">스킨톤 진단보드</h4>
+                <a href="checkout.html?item=스킨톤 진단보드" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <img src="assets/shop_faceboard_mw.png" alt="페이스보드 남/여" class="w-full h-40 object-cover rounded-xl mb-4 shadow-inner">
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">페이스보드 남/여</h4>
+                <a href="checkout.html?item=페이스보드" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <div class="bg-gray-100 h-40 rounded-xl mb-4 flex items-center justify-center text-gray-400 shadow-inner">이미지 준비중</div>
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">향 진단보드</h4>
+                <a href="checkout.html?item=향 진단보드" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+            <div class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col">
+                <div class="bg-gray-100 h-40 rounded-xl mb-4 flex items-center justify-center text-gray-400 shadow-inner">이미지 준비중</div>
+                <h4 class="font-bold text-gray-800 text-sm mb-4 flex-grow">패션 룰 북</h4>
+                <a href="checkout.html?item=패션 룰 북" class="inline-block w-3/4 mx-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-2 rounded-full transition-colors text-sm shadow-sm">구매하기</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국패션테라피협회 | KFTA</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Certification | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
                 <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
@@ -79,93 +83,43 @@
                 </div>
             </nav>
         </div>
-    </header>    <section class="section bg-green">
-        <div class="container text-center">
-            <h1 class="eng-title" style="font-size: 3rem; margin-bottom: 20px;">Support & Contact</h1>
-            <p>한국패션테라피협회의 주요 교육 일정, 자격 검정 시험 안내 및 소식을 전해드립니다.</p>
-        </div>
-    </section>
-    <section class="section bg-white">
-        <div class="container">
-            <h2 class="mb-20" style="color: var(--color-primary-green); border-bottom:2px solid #3B4B38; padding-bottom:10px;">Notice</h2>
-            <ul style="list-style:none; padding:0; margin-bottom:60px;">
-                <li style="padding:15px 10px; border-bottom:1px solid #eee; display:flex; justify-content:space-between;">
-                    <span>2026년 하반기 패션테라피스트 자격 검정 시험 일정 안내</span>
-                    <span style="color:#888;">2026.07.25</span>
-                </li>
-                <li style="padding:15px 10px; border-bottom:1px solid #eee; display:flex; justify-content:space-between;">
-                    <span>패션테라피 정기 교육과정 3기 모집 안내</span>
-                    <span style="color:#888;">2026.08.01</span>
-                </li>
-                <li style="padding:15px 10px; border-bottom:1px solid #eee; display:flex; justify-content:space-between;">
-                    <span>자격증 보유자 대상 보수교육 시행 안내</span>
-                    <span style="color:#888;">2026.08.10</span>
-                </li>
-                <li style="padding:15px 10px; border-bottom:1px solid #eee; display:flex; justify-content:space-between;">
-                    <span>협회 홈페이지 개편 및 온라인 회원 서비스 오픈 안내</span>
-                    <span style="color:#888;">2026.08.20</span>
-                </li>
-            </ul>
+    </header>    <main class="bg-kftaLight py-12 px-6 relative">
+        <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
+            <!-- Image -->
+            <img src="assets/consulting_3.png" alt="Signature Image Directing" class="w-full h-auto object-cover max-h-[70vh]">
             
-            <h2 class="mb-20" style="color: var(--color-primary-green); border-bottom:2px solid #3B4B38; padding-bottom:10px;">F&Q</h2>
-            <div style="background:var(--color-bg-light); padding:40px; border-radius:8px; margin-bottom:60px;">
-                <div class="grid-2">
-                    <div>
-                        <h4 class="mb-10">Q. 비전공자도 패션테라피스트 자격증 취득이 가능한가요?</h4>
-                        <p class="mb-40" style="font-size:0.95rem; color:#444;">네, 가능합니다. 기초 이론부터 실무 진단까지 단계별 커리큘럼이 체계적으로 제공되므로, 관련 전공자가 아니더라도 충분히 수강 및 검정 응시가 가능합니다.</p>
-                        
-                        <h4 class="mb-10">Q. 자격증 취득 후 활동 방향은 어떻게 되나요?</h4>
-                        <p class="mb-40" style="font-size:0.95rem; color:#444;">자격 취득 후에는 협회 소속 강사, 개인 컨설팅 공간 운영, 기업 출강 및 라이프스타일 큐레이터 등 패션과 심리를 결합한 다양한 전문 분야로 진출할 수 있습니다.</p>
-                        
-                        <h4 class="mb-10">Q. 교육 과정 수강 신청 후 환불 규정은 어떻게 되나요?</h4>
-                        <p style="font-size:0.95rem; color:#444;">개강일 기준 7일 전까지는 100% 전액 환불이 가능하며, 그 이후부터는 협회 교육 수강 규정에 따라 일정 수수료 공제 후 환불됩니다.</p>
-                    </div>
-                    <div>
-                        <h4 class="mb-10">Q. 기업 출강이나 맞춤형 단체 교육도 가능한가요?</h4>
-                        <p class="mb-40" style="font-size:0.95rem; color:#444;">네, 가능합니다. 기업 및 기관의 목적에 맞춰 조직 문화 강화, 실무 드레스코드 설계 등 4축 프레임워크를 기반으로 한 맞춤형 단체 특강과 워크숍을 제공하고 있습니다.</p>
-                        
-                        <h4 class="mb-10">Q. 대면 컨설팅은 어디서, 소요 시간은 얼마나 되나요?</h4>
-                        <p class="mb-40" style="font-size:0.95rem; color:#444;">대면 컨설팅은 협회 지정 프라이빗 룸에서 100% 사전 예약제로 진행됩니다. 프로그램에 따라 약 90분~ 120분 정도 소요됩니다.</p>
-                        
-                        <h4 class="mb-10">Q. 원데이 클래스는 어떤 내용으로 진행하며, 어떻게 신청하나요?</h4>
-                        <p style="font-size:0.95rem; color:#444;">패션테라피의 기초 개념을 체험하고 자신의 성향을 가볍게 진단해보는 입문 과정입니다. 상세 일정 및 신청은 'Notice' 게시판을 통해 확인하실 수 있습니다.</p>
-                    </div>
-                </div>
+            <div class="p-10 text-center">
+                <h2 class="font-serif text-3xl font-bold text-kftaGreen mb-6">Signature Image Directing</h2>
+                <p class="text-gray-600 leading-relaxed mb-8">KFTA만의 독자적인 진단 시스템을 통해 Signature Image Directing 에 대한 구체적인 분석과 솔루션을 제공합니다. 지금 예약하고 당신만의 시그니처 스타일을 찾아보세요.</p>
             </div>
-
-            <h2 class="mb-20" style="color: var(--color-primary-green); border-bottom:2px solid #3B4B38; padding-bottom:10px;">Contact Us</h2>
-            <div style="background:#fff; padding:40px; border:1px solid #ddd; border-radius:8px;">
-                <p class="mb-20">수강 신청, 맞춤 컨설팅 및 비즈니스 제휴 등 도움이 필요하신 내용을 기재해 주세요.<br>문의 목적과 연락처를 남겨주시면 영업일 기준 24시간 이내에 상세히 안내해 드립니다.</p>
-                <form style="display:flex; flex-direction:column; gap:15px; max-width:600px;">
-                    <input type="text" placeholder="Name" style="padding:10px; border:1px solid #ccc; border-radius:4px;">
-                    <input type="email" placeholder="Email address" style="padding:10px; border:1px solid #ccc; border-radius:4px;">
-                    <textarea placeholder="Leave a message" rows="5" style="padding:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
-                    <button type="button" class="btn" style="width:100%;">Submit</button>
-                </form>
+            
+            <!-- Sticky Bottom Apply Action -->
+            <div class="sticky bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200 p-6 flex flex-col sm:flex-row justify-between items-center gap-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
+                <div>
+                    <h3 class="font-bold text-xl text-gray-800">Signature Image Directing 예약</h3>
+                    <p class="text-sm text-gray-500">컨설팅 일정을 위해 결제 후 개별 연락을 드립니다.</p>
+                </div>
+                <a href="checkout.html?item=Signature Image Directing" class="w-full sm:w-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-lg text-lg text-center">
+                    예약 및 신청하기
+                </a>
             </div>
         </div>
-    </section>    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div>
-                <h2 class="footer-logo">KFTA</h2>
-                <p>한국패션테라피협회</p>
-                <p>경기도 용인시 처인구 성산로 667</p>
+    </main><!-- Footer -->
+    <footer class="bg-kftaGreen text-kftaLight py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
+                <p class="opacity-80 text-sm">KOREA FASHION THERAPY ASSOCIATION</p>
             </div>
-            <div>
-                <p>Email: nxxon@naver.com | Tel: 010-9692-0410</p>
-                <br>
-                <p>&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
+            <div class="text-center md:text-right opacity-80 text-sm space-y-1">
+                <p>경기도 용인시 처인구 성산로 667, 102동 1F 203호 A구역 (1F 주차가능)</p>
+                <p>Tel: 010-9692-0410 | Email: nxxon@naver.com</p>
+                <p class="mt-4 opacity-60">&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
 
 
 

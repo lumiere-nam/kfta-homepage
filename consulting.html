@@ -5,37 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulting | KFTA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 </head>
-<body class="font-sans text-gray-800 bg-kftaLight antialiased">
-                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+<body class="font-sans text-gray-800 bg-kftaLight antialiased flex flex-col min-h-screen">
+    <header class="bg-white border-b border-kftaBorder sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
-                
-            </a>
-            <nav class="hidden md:flex gap-8 relative z-50 h-full">
-                <div class="group relative flex items-center h-full">
-                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
-                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
-                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
-                    </div>
-                </div>
+            <a href="index.html" class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">FASHION THERAPY</a>
+            <nav class="hidden md:flex space-x-8 h-full">
                 <div class="group relative flex items-center h-full">
                     <a href="academy.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="academy.html#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
-                        <a href="academy.html#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
-                        <a href="academy.html#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
-                        <a href="academy.html#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
-                    </div>
                 </div>
                 <div class="group relative flex items-center h-full">
                     <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
+                      <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
                           <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
                           <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
                           <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
@@ -49,97 +41,117 @@
                     <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
                         <a href="consulting_1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">마인드 컬러 컨설팅</a>
                         <a href="consulting_2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">시그니처 무드 컨설팅</a>
-                        <a href="consulting_3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">패션 & 뷰티 컨설팅</a>
+                        <a href="consulting_3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">패션 &amp; 뷰티 컨설팅</a>
+                        <a href="consulting_4.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">VIP 올인원 컨설팅</a>
                     </div>
                 </div>
                 <div class="group relative flex items-center h-full">
                     <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="corporate.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Dress Code</a>
-                        <a href="corporate.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Culture</a>
-                        <a href="corporate.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Attitude Styling</a>
-                        <a href="corporate.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">TPO Styling</a>
-                    </div>
                 </div>
                 <div class="group relative flex items-center h-full">
                     <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Books</a>
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Therapy Tools</a>
-                    </div>
                 </div>
                 <div class="group relative flex items-center h-full">
                     <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
-                        <a href="contact.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
-                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
-                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
-                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="bg-kftaGreen text-kftaLight py-24 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="font-serif text-5xl md:text-6xl mb-8">Consulting</h1>
-            <p class="text-xl max-w-3xl mx-auto opacity-90">각 분야 최고 전문가 그룹의 견고한 파트너십을 통해 패션테라피의 학술적 깊이와 실무적 전문성을 확장합니다.</p>
+    <section class="bg-[#F8F9FA] py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h1 class="font-sans font-bold text-4xl text-gray-900 mb-4">Consulting Program</h1>
+            <p class="text-gray-500">나에게 딱 맞는 컬러와 스타일, KFTA 전문가와 함께 찾아보세요.</p>
         </div>
-    </section>
 
-    <section class="bg-kftaLight py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <p class="text-lg text-gray-600 mb-16 text-center max-w-5xl mx-auto leading-relaxed break-keep">본 컨설팅은 KFTA 고유의 '4축 모델(외적·내적·태도·환경)'을 통해 나의 고유한 매력과 성향을 진단합니다.<br class="hidden md:block">진단 결과를 바탕으로 [컬러 진단 - 스타일 재구성 - 시그니처 이미지 완성]으로 이어지는 3단계 맞춤 솔루션을 명확하게 제시합니다.</p>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                    <img src="assets/consulting_1.jpg" class="w-full h-64 object-cover" alt="내외면 컬러">
-                    <div class="p-8 text-center">
-                        <h3 class="font-sans font-bold text-2xl text-kftaGreen mb-4">마인드 & 라이프 컬러</h3><p class="text-gray-600 mb-6">현재의 심리 상태를 진단하여, 나의 일상과 라이프스타일에 꼭 필요한 '치유와 회복의 컬러'를 도출합니다.</p><a href="consulting_1.html" class="inline-block bg-kftaGreen text-white px-6 py-2 rounded-full font-bold hover:bg-green-900 transition-colors">더 보기</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                    <img src="assets/consulting_2.jpg" class="w-full h-64 object-cover" alt="스타일 아카이브">
-                    <div class="p-8 text-center">
-                        <h3 class="font-sans font-bold text-2xl text-kftaGreen mb-4">시그니처 컬러 & 무드</h3>
-                        <p class="text-gray-600 mb-6">피부톤부터 말투와 제스처까지 분석하여, 형식적인 톤에 얽매이지 않는 진짜 나만의 '시그니처 팔레트'를 설계합니다.</p><a href="consulting_2.html" class="inline-block bg-kftaGreen text-white px-6 py-2 rounded-full font-bold hover:bg-green-900 transition-colors">더 보기</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition-transform duration-300">
-                    <img src="assets/consulting_3.png" class="w-full h-64 object-cover" alt="시그니처 이미지">
-                    <div class="p-8 text-center">
-                        <h3 class="font-sans font-bold text-2xl text-kftaGreen mb-4">실전 스타일 솔루션</h3>
-                        <p class="text-gray-600 mb-6">옷장에 바로 적용 가능한 배색 룰과, 입는 순간 자신감을 채워주는 맞춤형 룩북 및 뷰티 가이드를 제공합니다.</p><a href="consulting_3.html" class="inline-block bg-kftaGreen text-white px-6 py-2 rounded-full font-bold hover:bg-green-900 transition-colors">더 보기</a>
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 flex flex-col border border-gray-100">
+                <img src="assets/consulting_1.jpg" class="w-full h-56 object-cover" alt="마인드 컬러 컨설팅">
+                <div class="p-6 flex-grow flex flex-col text-left">
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mb-2">마인드 컬러 컨설팅</h3>
+                    <p class="font-sans font-bold text-lg text-gray-900 mb-3">₩상담 후 안내</p>
+                    
+                    <p class="text-[11px] text-gray-500 mb-1">KFTA 오프라인 대면 컨설팅</p>
+                    <p class="text-[11px] text-[#FF477E] font-bold mb-5">상시 예약 오픈</p>
+                    
+                    <a href="consulting_1.html" class="block w-full bg-[#EF4444] hover:bg-red-600 text-white text-center font-bold py-3 rounded text-sm mb-5 transition-colors">
+                        예약하기
+                    </a>
+                    
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <p class="text-xs text-gray-500 italic mb-2">심리 에너지 및 라이프스타일 맞춤 치유 컬러 도출</p>
+                        <p class="text-xs text-gray-400">최근 스트레스 받으시나요? 일상에 필요한 회복의 컬러는?</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 flex flex-col border border-gray-100">
+                <img src="assets/consulting_2.jpg" class="w-full h-56 object-cover" alt="시그니처 무드 컨설팅">
+                <div class="p-6 flex-grow flex flex-col text-left">
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mb-2">시그니처 무드 컨설팅</h3>
+                    <p class="font-sans font-bold text-lg text-gray-900 mb-3">₩상담 후 안내</p>
+                    
+                    <p class="text-[11px] text-gray-500 mb-1">KFTA 오프라인 대면 컨설팅</p>
+                    <p class="text-[11px] text-[#FF477E] font-bold mb-5">상시 예약 오픈</p>
+                    
+                    <a href="consulting_2.html" class="block w-full bg-[#EF4444] hover:bg-red-600 text-white text-center font-bold py-3 rounded text-sm mb-5 transition-colors">
+                        예약하기
+                    </a>
+                    
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <p class="text-xs text-gray-500 italic mb-2">피부톤, 이목구비, 말투, 제스처 4축 입체 종합 분석</p>
+                        <p class="text-xs text-gray-400">뻔한 웜톤/쿨톤? 나만의 분위기를 살리는 진짜 팔레트는?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 flex flex-col border border-gray-100">
+                <img src="assets/consulting_3.png" class="w-full h-56 object-cover" alt="패션 & 뷰티 컨설팅">
+                <div class="p-6 flex-grow flex flex-col text-left">
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mb-2">패션 & 뷰티 컨설팅</h3>
+                    <p class="font-sans font-bold text-lg text-gray-900 mb-3">₩상담 후 안내</p>
+                    
+                    <p class="text-[11px] text-gray-500 mb-1">KFTA 오프라인 대면 컨설팅</p>
+                    <p class="text-[11px] text-[#FF477E] font-bold mb-5">상시 예약 오픈</p>
+                    
+                    <a href="consulting_3.html" class="block w-full bg-[#EF4444] hover:bg-red-600 text-white text-center font-bold py-3 rounded text-sm mb-5 transition-colors">
+                        예약하기
+                    </a>
+                    
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <p class="text-xs text-gray-500 italic mb-2">소장 아이템 연계 컬러 배색 & 실전 맞춤형 룩북 가이드</p>
+                        <p class="text-xs text-gray-400">옷은 많은데 입을 게 없나요? 내게 찰떡인 코디 조합은?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 flex flex-col border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover" alt="VIP 올인원 컨설팅">
+                <div class="p-6 flex-grow flex flex-col text-left">
+                    <h3 class="font-sans font-bold text-xl text-gray-900 mb-2">VIP 올인원 컨설팅</h3>
+                    <p class="font-sans font-bold text-lg text-gray-900 mb-3">₩상담 후 안내</p>
+                    
+                    <p class="text-[11px] text-gray-500 mb-1">KFTA 오프라인 대면 컨설팅</p>
+                    <p class="text-[11px] text-[#FF477E] font-bold mb-5">VIP 전담 한정 오픈</p>
+                    
+                    <a href="consulting_4.html" class="block w-full bg-[#111827] hover:bg-black text-white text-center font-bold py-3 rounded text-sm mb-5 transition-colors">
+                        Start now
+                    </a>
+                    
+                    <div class="border-t border-gray-100 pt-4 mt-auto">
+                        <p class="text-xs text-gray-500 italic mb-2">마인드, 무드, 뷰티를 하루에 완성하는 프리미엄 코스</p>
+                        <p class="text-xs text-gray-400">나를 위한 완벽한 메이크오버가 필요하신가요?</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

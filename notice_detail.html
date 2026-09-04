@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' },
+            fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] }
+          }
+        }
+      }
+    </script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased">
+    <!-- Header Placeholder (we can just copy from community.html later if needed, but a simple back button is fine for now, or just full header) -->
+    <header class="sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center">
+            <a href="community.html" class="flex items-center text-kftaGreen font-bold hover:text-kftaRed transition-colors">
+                ← 목록으로 돌아가기
+            </a>
+        </div>
+    </header>
+
+    <main class="py-24 px-6 max-w-4xl mx-auto min-h-screen">
+        <div class="bg-white rounded-3xl shadow-xl p-10 md:p-16 border border-gray-100">
+            <div class="border-b border-gray-200 pb-8 mb-10">
+                <span class="text-sm font-bold text-white bg-kftaGreen px-3 py-1 rounded-full mb-4 inline-block" id="notice-type">공지 / 소식</span>
+                <h1 class="font-serif font-bold text-3xl md:text-4xl text-gray-900 mb-4" id="notice-title">안내 사항</h1>
+                <p class="text-gray-400" id="notice-date">2026.00.00</p>
+            </div>
+            <div class="prose max-w-none text-gray-600 leading-relaxed text-justify">
+                <p class="text-lg bg-gray-50 p-8 rounded-xl text-center font-bold text-gray-500">
+                    상세 내용은 추후 업데이트 될 예정입니다.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+            const titleEl = document.getElementById("notice-title");
+            const dateEl = document.getElementById("notice-date");
+            const typeEl = document.getElementById("notice-type");
+            
+            if(id === "1") {
+                typeEl.textContent = "공지";
+                typeEl.className = "text-sm font-bold text-white bg-kftaRed px-3 py-1 rounded-full mb-4 inline-block";
+                titleEl.textContent = "한국패션테라피협회 2026년 하반기 자격과정 모집 안내";
+                dateEl.textContent = "2026.08.31";
+            } else if(id === "2") {
+                typeEl.textContent = "소식";
+                typeEl.className = "text-sm font-bold text-white bg-gray-400 px-3 py-1 rounded-full mb-4 inline-block";
+                titleEl.textContent = "용인시 평생학습관 패션테라피 특강 성료";
+                dateEl.textContent = "2026.08.15";
+            } else if(id === "3") {
+                typeEl.textContent = "소식";
+                typeEl.className = "text-sm font-bold text-white bg-gray-400 px-3 py-1 rounded-full mb-4 inline-block";
+                titleEl.textContent = "K-POP 패션테라피 위클리 토크 1화 다시보기 오픈";
+                dateEl.textContent = "2026.08.01";
+            }
+        });
+    </script>
+</body>
+</html>

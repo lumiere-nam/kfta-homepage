@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Detail | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased">
+                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide">← BACK TO SHOP</a>
+                </div>
+            </nav>
+        </div>
+    </header>    <section class="bg-kftaLight py-12 px-6">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
+                <img src="assets/shop_faceboard_mw.png" alt="퍼스널컬러 진단판" class="w-full h-auto object-cover rounded-xl shadow-md">
+            </div>
+            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+                <div class="text-sm text-kftaRed font-bold tracking-widest mb-2">KFTA THERAPY TOOLS</div>
+                <h1 class="text-4xl font-serif text-gray-900 mb-4">퍼스널컬러 진단판</h1>
+                <p class="text-lg text-gray-600 mb-6">4계절의 색채 에너지를 한눈에 비교하고 가장 편안한 컬러를 찾아주는 혁신적인 비주얼 진단 가이드입니다.</p>
+                <div class="flex items-end gap-3 mb-8 border-b border-gray-100 pb-8">
+                    <span class="text-3xl font-bold text-kftaRed">200,000원</span>
+                    <span class="text-lg text-gray-400 line-through mb-1">255,000원</span>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-600">
+                    <p class="flex justify-between"><span>배송비</span> <span class="font-bold text-gray-900">무료배송</span></p>
+                </div>
+                <a href="checkout.html?item=퍼스널컬러 진단판" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold py-4 rounded-xl transition-colors text-lg shadow-lg">구매하기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 px-6 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-4xl text-kftaGreen mb-6">사계절의 에너지, 한눈에 펼치다</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    봄의 생동감, 여름의 시원함, 가을의 포근함, 겨울의 도회적인 느낌.<br>
+                    계절의 색상이 지닌 고유의 심리적 에너지를 시각적으로 직접 경험하세요.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <h3 class="text-kftaRed font-bold text-lg mb-2">01. VISUAL COMPARISON</h3>
+                    <h4 class="text-3xl font-bold text-gray-900 mb-4">압도적인 시각적 비교 효과</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        한 장 한 장 넘기는 드레이핑의 한계를 보완합니다. 4계절의 베스트 톤이 모두 담긴 진단판에 얼굴을 대어보는 순간, 고객 스스로 가장 돋보이는 톤을 직관적으로 깨닫게 되어 컨설팅에 대한 만족도와 확신을 높여줍니다.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 order-1 md:order-2 bg-kftaLight p-8 rounded-2xl">
+                    <img src="assets/shop_faceboard_mw.png" alt="진단판 활용" class="w-full rounded-xl shadow-sm">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="w-full md:w-1/2 bg-kftaLight p-8 rounded-2xl">
+                    <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <img src="assets/shop_faceboard_mw.png" class="w-full h-full object-cover" alt="진단판 디테일">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-kftaRed font-bold text-lg mb-2">02. PSYCHOLOGICAL COLOR MAPPING</h3>
+                    <h4 class="text-3xl font-bold text-gray-900 mb-4">내면에 맞는 심리적 컬러 매핑</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        외적으로 어울리는 색(퍼스널컬러)과 내면이 끌리는 색(심리컬러)이 다를 때, 이를 부드럽게 조율하고 융합하는 패션테라피 가이드 도구로 활용됩니다. 고객이 스스로 자신의 기질과 에너지를 객관화할 수 있도록 돕습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>    <footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
+                <p class="font-bold text-white/90">한국패션테라피협회</p>
+                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

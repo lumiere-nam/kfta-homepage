@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Detail | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased">
+                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide">← BACK TO SHOP</a>
+                </div>
+            </nav>
+        </div>
+    </header>    <section class="bg-kftaLight py-12 px-6">
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
+                <img src="assets/shop_lip_board_mod.jpg" alt="립페이스 색상진단판" class="w-full h-auto object-cover rounded-xl shadow-md">
+            </div>
+            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+                <div class="text-sm text-kftaRed font-bold tracking-widest mb-2">KFTA THERAPY TOOLS</div>
+                <h1 class="text-4xl font-serif text-gray-900 mb-4">립페이스 색상진단판</h1>
+                <p class="text-lg text-gray-600 mb-6">얼굴에 가장 가까운 메이크업과 네크라인 컬러를 빠르고 직관적으로 진단하는 패션테라피 특화 교구입니다.</p>
+                <div class="flex items-end gap-3 mb-8 border-b border-gray-100 pb-8">
+                    <span class="text-3xl font-bold text-kftaRed">60,000원</span>
+                    <span class="text-lg text-gray-400 line-through mb-1">160,000원</span>
+                </div>
+                <div class="space-y-4 mb-8 text-sm text-gray-600">
+                    <p class="flex justify-between"><span>배송비</span> <span class="font-bold text-gray-900">3,000원 (10만원 이상 구매 시 무료)</span></p>
+                </div>
+                <a href="checkout.html?item=립페이스 색상진단판" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold py-4 rounded-xl transition-colors text-lg shadow-lg">구매하기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 px-6 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-serif text-4xl text-kftaGreen mb-6">가장 완벽한 색채, 내 얼굴에서 찾다</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    단순한 웜/쿨톤 분류를 넘어,<br>
+                    고객의 내면의 생기를 시각적으로 가장 잘 끌어올려주는 컬러를 직관적으로 진단합니다.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <h3 class="text-kftaRed font-bold text-lg mb-2">01. QUICK & INTUITIVE</h3>
+                    <h4 class="text-3xl font-bold text-gray-900 mb-4">빠르고 명확한 진단</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        복잡한 드레이핑 전, 고객의 기본 피부 톤과 베스트 립 컬러 라인을 단 몇 초 만에 스캐닝합니다. 진단을 받는 고객 스스로도 얼굴빛의 변화를 즉각적으로 체감하여 컨설팅의 신뢰도를 대폭 높여줍니다.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 order-1 md:order-2 bg-kftaLight p-8 rounded-2xl">
+                    <img src="assets/shop_lip_board_mod.jpg" alt="진단판 활용" class="w-full rounded-xl shadow-sm">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="w-full md:w-1/2 bg-kftaLight p-8 rounded-2xl">
+                    <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <img src="assets/shop_lip_board_mod.jpg" class="w-full h-full object-cover" alt="진단판 디테일">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-kftaRed font-bold text-lg mb-2">02. FASHION THERAPY EFFECT</h3>
+                    <h4 class="text-3xl font-bold text-gray-900 mb-4">내면의 빛을 끌어올리는 심리적 효과</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        자신에게 어울리지 않는 색으로 무장하던 방어기제를 내려놓고, 본연의 아름다움을 수용하는 과정을 돕습니다. 립페이스 진단판은 단순한 도구를 넘어 고객의 숨겨진 생기와 자존감을 시각적으로 증명해 주는 강력한 테라피 도구입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>    <footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
+                <p class="font-bold text-white/90">한국패션테라피협회</p>
+                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

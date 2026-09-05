@@ -1,207 +1,150 @@
-﻿<!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | KFTA</title>
+    <title>컬러 카드 18종 - 한국패션테라피협회</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kftaRed: '#A6212E',
+                        kftaGreen: '#3C4D3C',
+                        kftaLight: '#F5F5F0',
+                        kftaSand: '#DCD4C4'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="font-sans text-gray-800 bg-kftaLight antialiased">
-                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
-                
+<body class="font-sans text-gray-800 bg-white leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-kftaRed text-white flex items-center justify-center font-serif font-bold text-xl rounded-sm group-hover:bg-red-800 transition-colors shadow-sm">K</div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg tracking-wider text-gray-900">한국패션테라피협회</span>
+                    <span class="text-xs text-gray-500 font-medium tracking-widest">KOREA FASHION THERAPY ASSOCIATION</span>
+                </div>
             </a>
-            <nav class="hidden md:flex gap-8 relative z-50 h-full">
-                <div class="group relative flex items-center h-full">
-                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
-                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
-                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
-                        <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
-                        <a href="academy.html?v=2#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
-                        <a href="academy.html?v=2#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
-                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
-                          <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
-                          <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
-                          <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
-                          <a href="cert_trainer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Trainer</a>
-                          <a href="cert_master.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Master Trainer</a>
-                      </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Books</a>
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Therapy Tools</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
-                        <a href="community.html#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
-                        <a href="community.html#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
-                        <a href="community.html#reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
-                        <a href="community.html#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">F&Q</a>
-                    </div>
-                </div>
-            </nav>
+            <a href="shop.html" class="text-gray-600 hover:text-kftaRed font-medium transition-colors">SHOP으로 돌아가기</a>
         </div>
     </header>
 
-    
-    <section class="bg-kftaLight py-12 px-6">
-        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-            <!-- Product Image -->
-            <div class="w-full md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
-                <img src="assets/media_1788572645485.png" alt="컬러 카드 18종" class="w-full h-auto object-cover rounded-xl shadow-md">
-            </div>
-            <!-- Product Info -->
-            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
-                <div class="text-sm text-kftaRed font-bold tracking-widest mb-2">KFTA THERAPY TOOLS</div>
-                <h1 class="text-4xl font-serif text-gray-900 mb-4">컬러 카드 18종</h1>
-                <p class="text-lg text-gray-600 mb-6">18가지 색상이 가진 심리적 에너지를 담은 마인드풀니스 카드. 매일 아침 나에게 필요한 에너지를 컬러로 처방받으세요.</p>
-                <div class="flex items-end gap-3 mb-8 border-b border-gray-100 pb-8">
-                    <span class="text-3xl font-bold text-kftaRed">10,000원</span>
-                    <span class="text-lg text-gray-400 line-through mb-1">15,000원</span>
-                </div>
-                <div class="space-y-4 mb-8 text-sm text-gray-600">
-                    <p class="flex justify-between"><span>사이즈</span> <span class="font-bold text-gray-900">가로 70mm x 세로 120mm (타로카드 사이즈)</span></p><p class="flex justify-between"><span>재질</span> <span class="font-bold text-gray-900">최고급 랑데뷰지 (특수 무광 코팅)</span></p><p class="flex justify-between"><span>배송비</span> <span class="font-bold text-gray-900">4,500원 (10만원 이상 구매 시 무료)</span></p>
-                    <p class="flex justify-between"><span>구성품</span> <span class="font-bold text-gray-900">컬러 심리 카드 18종 1세트 + 활용 가이드북</span></p>
-                </div>
-                <a href="checkout.html?item=컬러 카드 18종" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold py-4 rounded-xl transition-colors text-lg shadow-lg">구매하기</a>
-            </div>
-        </div>
-    </section>
-
-            <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-kftaRed font-bold text-xl mb-4">심리 상담가, 컬러테라피스트, 그리고 내면을 치유하는 모든 전문가 여러분</h3>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">고객의 굳게 닫힌 입을 열게 하는 가장 강력한 열쇠,<br>바로 '색(Color)'입니다.</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
-                <ul class="space-y-4 text-gray-700 font-medium">
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>"고객이 상담 의자에 앉아 한숨만 쉬며 말을 아낄 때, 어떻게 접근해야 할지 막막합니다."</li>
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>"복잡 미묘한 감정을 단어로 끄집어내는 데 너무 많은 시간이 소모됩니다."</li>
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>"고객의 무의식에 자리 잡은 진짜 '결핍'과 '갈망'을 가장 빠르고 안전하게 파악하고 싶습니다."</li>
-                </ul>
-            </div>
-            <p class="text-xl text-kftaGreen font-bold mb-4">시각적 자극은 언어의 장벽을 우회하여 무의식에 직접 닿습니다.</p>
-            <p class="text-gray-600">18가지 정교한 색채 파동이 담긴 컬러 카드는 고객 스스로 자신의 마음을 쏟아내게 만드는 마법의 매개체입니다.</p>
-        </div>
-    </section>
-    
-    <section class="bg-white py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">현업 전문가들이 <span class="text-kftaRed">컬러 카드 18종</span>에 열광하는 이유</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-kftaLight rounded-2xl text-center border-t-4 border-kftaGreen shadow-sm hover:-translate-y-1 transition-transform">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4">무장해제 아이스브레이킹</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        아름다운 18장의 카드를 펼쳐놓고 "지금 가장 끌리는 색을 골라보세요"라고 말하는 순간, 무거웠던 공기가 환기되며 고객의 극도 긴장감이 눈 녹듯 사라집니다.
-                    </p>
-                </div>
-                <div class="p-8 bg-kftaLight rounded-2xl text-center border-t-4 border-kftaRed shadow-sm hover:-translate-y-1 transition-transform">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4">놀랍도록 정확한 심리 투사</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        빨강을 고른 자의 숨겨진 분노, 파랑을 고른 자의 휴식에 대한 갈망. 각 색채가 지닌 고유의 심리적 에너지가 언어로 표현 못할 고객의 무의식을 소름 돋게 대변합니다.
-                    </p>
-                </div>
-                <div class="p-8 bg-kftaLight rounded-2xl text-center border-t-4 border-gray-400 shadow-sm hover:-translate-y-1 transition-transform">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4">지속 가능한 셀프 마인드케어</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        상담실에서 끝나는 것이 아닙니다. 고객에게 지금 필요한 '처방 컬러'를 안내해 주고, 일상 속에서 그 색을 가까이하며 스스로 내면을 치유할 수 있는 솔루션을 제공합니다.
-                    </p>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Product Header -->
+        <div class="flex flex-col md:flex-row gap-12 mb-16">
+            <div class="w-full md:w-1/2">
+                <div class="bg-gray-100 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="assets/shop_color_cards.png" class="w-full h-full object-cover" alt="컬러 카드 18종" >
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Shipping & Return Notice -->
-    <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-gray-900 pb-3">Notice & Info</h3>
             
-            <div class="space-y-8">
-                <!-- Delivery -->
-                <div>
-                    <h4 class="text-lg font-bold text-kftaRed mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-                        배송 안내
-                    </h4>
-                    <ul class="text-sm text-gray-600 space-y-1 ml-7 list-disc">
-                        <li>배송비: 4,500원 (10만원 이상 구매 시 무료배송)</li>
-                        <li>오후 2시 이전 결제 완료 건에 한해 당일 출고됩니다. (주말 및 공휴일 제외)</li>
-                        <li>제주 및 도서 산간 지역은 추가 배송비가 발생할 수 있습니다.</li>
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <span class="text-kftaRed font-bold mb-2">스타일링 필수 교구</span>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">컬러 카드 18종</h1>
+                <p class="text-2xl font-medium text-gray-700 mb-6 border-b border-gray-200 pb-6">20,000원</p>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    단순한 색채 카드가 아닙니다. 무의식적으로 끌리는 색을 통해 현재의 심리 상태를 읽어내고 마음을 위로하는 마인드풀니스(Mindfulness) 훈련 도구입니다.
+                </p>
+                
+                <div class="bg-kftaLight p-6 rounded-xl mb-8">
+                    <h3 class="font-bold text-gray-900 mb-2">제품 구성</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• <strong>구성품:</strong> 고채도부터 저채도까지 엄선된 18종 컬러 카드 + 심리 해석 가이드</li><li>• <strong>특징:</strong> 색이 지닌 보편적 상징성과 개인의 감정을 연결하는 심도 깊은 컬러테라피 교구</li>
                     </ul>
                 </div>
-
-                <!-- Return/Exchange -->
-                <div>
-                    <h4 class="text-lg font-bold text-kftaRed mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"></path></svg>
-                        교환 및 반품 안내
-                    </h4>
-                    <ul class="text-sm text-gray-600 space-y-1 ml-7 list-disc">
-                        <li>상품 수령일로부터 7일 이내에 교환/반품이 가능합니다.</li>
-                        <li>단순 변심으로 인한 교환/반품 시 왕복 배송비는 고객님 부담입니다.</li>
-                        <li>제품 포장이 훼손되거나 사용 흔적이 있는 경우, 교환/반품이 불가합니다.</li>
-                    </ul>
-                </div>
-
-                <!-- CS -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 mt-4">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                        고객센터 (CS Center)
-                    </h4>
-                    <p class="text-sm text-gray-600 mb-4">도구 사용법 문의, 대량 구매, 배송 관련 등 모든 문의는 카카오톡 채널로 부탁드립니다.</p>
-                    <a href="https://pf.kakao.com/_vxitxaX" target="_blank" class="inline-block bg-[#FEE500] text-[#000000] font-bold px-6 py-3 rounded-xl hover:bg-[#E5CF00] transition-colors shadow-sm">
-                        카카오톡 채널 문의하기
-                    </a>
-                </div>
+                
+                <a href="checkout.html?item=컬러 카드 18종" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold text-lg py-4 rounded-xl transition-colors shadow-md">
+                    구입하기
+                </a>
             </div>
         </div>
-    </section>
 
-    <footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
-                <p class="font-bold text-white/90">한국패션테라피협회</p>
-                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
+        <!-- Hooking Story -->
+        <section class="bg-gray-50 py-16 px-6 border-t border-gray-200 rounded-3xl mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-kftaRed font-bold text-xl mb-4">색(Color)은 감정의 언어입니다</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">지금 당신의 눈길이 머무는 그 색이,<br>당신의 마음이 하고 싶은 말입니다.</h2>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
+                    <ul class="space-y-4 text-gray-700 font-medium">
+                        <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>무의식의 시각화:</strong> 말로 꺼내기 힘든 우울감, 스트레스, 혹은 에너지를 카드의 색상 선택을 통해 자연스럽게 도출합니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>마음 챙김(Mindfulness):</strong> 자신을 편안하게 해주는 색을 찾고, 그 색을 일상복이나 소품에 적용하여 에너지를 회복하는 방법을 배웁니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>공감 컨설팅:</strong> 퍼스널컬러 진단 전, 고객의 심리 상태를 먼저 어루만져 주어 컨설턴트와의 라포(유대감)를 극대화합니다.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="text-center md:text-right text-sm">
-                <p class="mb-2">Email: <a href="mailto:nxxon@naver.com" class="hover:text-white transition-colors">nxxon@naver.com</a></p>
-                <p class="mb-6">Tel: 010-9692-0410</p>
-                <p>&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
+        </section>
+
+        <!-- Product Detail Content -->
+        <div class="max-w-4xl mx-auto">
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">컬러 카드 18종 심리상담 실전</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 감정 일기 작성</h4><p class="text-sm">매일 아침 가장 끌리는 색 하나를 고르고, 왜 그 색이 좋은지 적어보세요. 내 감정의 흐름을 객관적으로 추적하는 훌륭한 테라피가 됩니다.</p></div><div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 힐링 컬러 매칭</h4><p class="text-sm">에너지가 고갈되었을 때 붉은색 계열을, 마음이 불안할 때 푸른색 계열 카드를 가까이 두고 명상하며 패션테라피의 기초를 다집니다.</p></div>
+                </div>
+
+                <p class="mb-8">
+                    퍼스널컬러가 '어울리는 색'을 찾는 것이라면, 컬러카드는 '나를 치유하는 색'을 찾는 여정입니다.
+                </p>
+            </div>
+        </div>
+
+        <!-- Global Notice Block -->
+        <div class="max-w-4xl mx-auto mt-16 bg-gray-50 border border-gray-200 p-8 rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">안내 및 주의사항 (Notice)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">배송 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 배송료: <strong>4,500원</strong> (도서산간 지역 추가 운임 발생)</li>
+                        <li>• 결제 완료 후 2~3 영업일 이내 출고됩니다.</li>
+                        <li>• 로젠택배를 통해 안전하게 배송됩니다.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">교환 및 반품 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 상품 수령 후 7일 이내에 고객센터로 접수해주셔야 합니다.</li>
+                        <li>• 교구 및 서적의 특성상 포장이 훼손되거나 사용 흔적이 있는 경우 교환/반품이 불가합니다.</li>
+                        <li>• 단순 변심으로 인한 교환/반품 시 왕복 배송비는 고객님 부담입니다.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1">고객센터 (카카오톡 채널)</h4>
+                    <p class="text-sm text-gray-600">궁금하신 점이나 대량 구매 문의는 카카오톡으로 남겨주세요.</p>
+                </div>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" class="mt-4 md:mt-0 bg-[#FEE500] hover:bg-[#F4DC00] text-black font-bold py-3 px-6 rounded-xl transition-colors shadow-sm flex items-center gap-2">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3c-5.523 0-10 3.491-10 7.8 0 2.723 1.706 5.12 4.303 6.452l-1.127 4.148c-.066.242.203.432.417.291l4.821-3.238c.513.078 1.042.12 1.586.12 5.523 0 10-3.491 10-7.8s-4.477-7.8-10-7.8z"/>
+                    </svg>
+                    카카오톡 문의하기
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-kftaRed">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
+                <p class="opacity-80 text-sm">KOREA FASHION THERAPY ASSOCIATION</p>
+            </div>
+            <div class="text-center md:text-right opacity-80 text-sm space-y-1">
+                <p>경기도 용인시 처인구 성산로 667, 102동 1F 203호 A구역 (1F 주차가능)</p>
+                <p>Tel: 010-9692-0410 | Email: nxxon@naver.com</p>
+                <p class="mt-4 opacity-60">&copy; 2026 Korea 패션테라피협회. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-

@@ -1,208 +1,150 @@
-﻿<!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Detail | KFTA</title>
+    <title>진단천 41컬러 세트 - 한국패션테라피협회</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kftaRed: '#A6212E',
+                        kftaGreen: '#3C4D3C',
+                        kftaLight: '#F5F5F0',
+                        kftaSand: '#DCD4C4'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="font-sans text-gray-800 bg-kftaLight antialiased">
-                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+<body class="font-sans text-gray-800 bg-white leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-kftaRed text-white flex items-center justify-center font-serif font-bold text-xl rounded-sm group-hover:bg-red-800 transition-colors shadow-sm">K</div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg tracking-wider text-gray-900">한국패션테라피협회</span>
+                    <span class="text-xs text-gray-500 font-medium tracking-widest">KOREA FASHION THERAPY ASSOCIATION</span>
+                </div>
             </a>
-            <nav class="hidden md:flex gap-8 relative z-50 h-full">
-                <div class="group relative flex items-center h-full">
-                    <a href="shop.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide">← BACK TO SHOP</a>
-                </div>
-            </nav>
+            <a href="shop.html" class="text-gray-600 hover:text-kftaRed font-medium transition-colors">SHOP으로 돌아가기</a>
         </div>
-    </header>    <section class="bg-kftaLight py-12 px-6">
-        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-            <div class="w-full md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
-                <img src="assets/shop_drape_set.png" alt="진단천 41컬러" class="w-full h-auto object-cover rounded-xl shadow-md">
-            </div>
-            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
-                <div class="text-sm text-kftaRed font-bold tracking-widest mb-2">KFTA THERAPY TOOLS</div>
-                <h1 class="text-4xl font-serif text-gray-900 mb-4">진단천 41컬러</h1>
-                <p class="text-lg text-gray-600 mb-6">최고급 원단으로 제작된 41가지 다채로운 색채로 고객의 피부톤을 가장 돋보이게 찾아내는 전문가용 퍼스널컬러 드레이프입니다.</p>
-                <div class="flex items-end gap-3 mb-8 border-b border-gray-100 pb-8">
-                    <span class="text-3xl font-bold text-kftaRed">350,000원</span>
-                    <span class="text-lg text-gray-400 line-through mb-1">650,000원</span>
-                </div>
-                <div class="space-y-4 mb-8 text-sm text-gray-600">
-                    <p class="flex justify-between"><span>사이즈</span> <span class="font-bold text-gray-900">가로 50cm x 세로 70cm (성인 어깨를 충분히 덮는 크기)</span></p><p class="flex justify-between"><span>재질</span> <span class="font-bold text-gray-900">프리미엄 링클프리 무광 폴리 (정전기 방지)</span></p><p class="flex justify-between"><span>배송비</span> <span class="font-bold text-gray-900">무료배송</span></p>
-                </div>
-                <a href="checkout.html?item=진단천 41컬러" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold py-4 rounded-xl transition-colors text-lg shadow-lg">구매하기</a>
-            </div>
-        </div>
-    </section>
+    </header>
 
-        <!-- Expert Pain Point Hook -->
-    <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-kftaRed font-bold text-xl mb-4">퍼스널컬러 전문가 여러분,</h3>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">저렴한 원단이 당신의 '프리미엄 컨설팅'의 격을 떨어뜨리고 있진 않나요?</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
-                <ul class="space-y-4 text-gray-700 font-medium">
-                    <li class="flex items-start gap-3">
-                        <span class="text-kftaRed mt-1">✔</span>
-                        "진단천이 너무 빳빳하고 저렴해 보여, 비싼 컨설팅 비용을 받기 민망할 때가 있습니다."
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-kftaRed mt-1">✔</span>
-                        "불필요하게 색상 수만 많아서 무겁고, 정작 자주 쓰는 알짜배기 컬러는 부족합니다."
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-kftaRed mt-1">✔</span>
-                        "피부에 닿았을 때 고객이 불편해하거나 정전기가 일어나 흐름이 끊깁니다."
-                    </li>
-                </ul>
-            </div>
-            <p class="text-xl text-kftaGreen font-bold mb-4">진단천은 전문가의 '얼굴'이자, 컨설팅의 '품격'입니다.</p>
-            <p class="text-gray-600">KFTA 진단천 41컬러는 촉각부터 시각까지, 고객에게 완벽한 테라피 경험을 선사하기 위해 탄생했습니다.</p>
-        </div>
-    </section>
-
-    <!-- Why Experts Need This -->
-    <section class="bg-white py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">상위 1% 전문가들이 KFTA 진단천을 고집하는 <span class="text-kftaRed">이유</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-8 bg-kftaLight rounded-2xl border-l-4 border-kftaGreen">
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">피부에 스며드는 하이엔드 텍스처</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">만지는 순간 느껴지는 부드러운 촉감은 진단 과정 자체가 하나의 프리미엄 경험이 되게 합니다. 차르르 떨어지는 완벽한 드레이핑 핏이 고객의 만족도를 극대화합니다.</p>
-                </div>
-                <div class="p-8 bg-kftaLight rounded-2xl border-l-4 border-kftaRed">
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">버릴 색이 없는 41개의 황금 비율</h4>
-                    <p class="text-gray-600 text-sm leading-relaxed">수백 개의 무거운 원단을 들고 다닐 필요가 없습니다. 수만 번의 임상으로 검증된, 가장 명확한 진단을 이끌어내는 41개의 에센셜 컬러만으로 완벽한 퍼스널컬러 도출이 가능합니다.</p>
-<div class="mt-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-    <h5 class="font-bold text-kftaRed mb-3">41컬러 상세 구성</h5>
-    <ul class="text-sm text-gray-700 space-y-2">
-        <li>🌸 <strong>Spring (봄 웜톤) 10컬러:</strong> 페일, 라이트, 브라이트, 비비드 등 봄의 생동감을 담은 컬러군</li>
-        <li>🌊 <strong>Summer (여름 쿨톤) 10컬러:</strong> 화이티시, 페일, 라이트그레이시, 뮤트 등 청량하고 우아한 컬러군</li>
-        <li>🍁 <strong>Autumn (가을 웜톤) 10컬러:</strong> 소프트, 덜, 딥, 다크 등 깊고 풍부한 가을의 무드 컬러군</li>
-        <li>❄️ <strong>Winter (겨울 쿨톤) 10컬러:</strong> 아이시, 마젠타, 딥, 다크 등 도회적이고 선명한 겨울 컬러군</li>
-        <li>✨ <strong>Special (뉴트럴/메탈릭) 1컬러:</strong> 진단의 기준점이 되는 베이스 진단천</li>
-    </ul>
-</div>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Product Header -->
+        <div class="flex flex-col md:flex-row gap-12 mb-16">
+            <div class="w-full md:w-1/2">
+                <div class="bg-gray-100 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="assets/shop_drape_set.png" class="w-full h-full object-cover" alt="진단천 41컬러 세트" >
                 </div>
             </div>
+            
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <span class="text-kftaRed font-bold mb-2">퍼스널컬러 진단 교구</span>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">진단천 41컬러 세트</h1>
+                <p class="text-2xl font-medium text-gray-700 mb-6 border-b border-gray-200 pb-6">120,000원</p>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    봄, 여름, 가을, 겨울 사계절의 톤을 정확하고 빠르게 찾아낼 수 있도록 최적화된 색상으로 엄선된 전문가용 퍼스널컬러 진단천 세트입니다.
+                </p>
+                
+                <div class="bg-kftaLight p-6 rounded-xl mb-8">
+                    <h3 class="font-bold text-gray-900 mb-2">제품 구성</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• <strong>구성품:</strong> 베이스 톤 진단용 천, 4계절 상세 진단천 총 41장 세트</li><li>• <strong>특징:</strong> 빛 반사를 최소화하여 얼굴 피부톤의 변화를 정확하게 읽어낼 수 있는 고급 원단 사용</li>
+                    </ul>
+                </div>
+                
+                <a href="checkout.html?item=진단천 41컬러 세트" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold text-lg py-4 rounded-xl transition-colors shadow-md">
+                    구입하기
+                </a>
+            </div>
         </div>
-    </section>
 
-<section class="bg-white py-24 px-6 border-t border-gray-100">
+        <!-- Hooking Story -->
+        <section class="bg-gray-50 py-16 px-6 border-t border-gray-200 rounded-3xl mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-kftaRed font-bold text-xl mb-4">정확한 진단은 도구의 디테일에서 시작됩니다</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">고객의 안색을 즉각적으로 변화시키는<br>41가지 핵심 컬러의 힘</h2>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
+                    <ul class="space-y-4 text-gray-700 font-medium">
+                        <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>정확한 사계절 분류:</strong> 봄 웜톤부터 겨울 쿨톤까지, 진단에 가장 필수적이고 명확한 변화를 보여주는 41개의 컬러만을 엄선했습니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>고객의 신뢰도 상승:</strong> 천을 넘길 때마다 다크서클이 옅어지고 피부 톤이 균일해지는 극적인 효과를 시각적으로 즉시 증명합니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>컨설턴트의 든든한 무기:</strong> 초보 컨설턴트도 헤매지 않고 명확하게 진단을 내릴 수 있도록 돕는 실용적이고 직관적인 구성입니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Content -->
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="font-serif text-4xl text-kftaGreen mb-6">색채의 스펙트럼, 진단의 프리미엄</h2>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    단순한 어울림을 넘어서, 색채가 지닌 고유의 에너지를 통해<br>
-                    고객의 피부톤 변화를 가장 극적으로 이끌어내는 완벽한 진단 솔루션을 제공합니다.
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">퍼스널컬러 진단 활용법</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 웜톤 vs 쿨톤 베이스 진단</h4><p class="text-sm">골드, 실버, 그리고 기본 베이스 천들을 이용해 고객의 피부가 따뜻한 색감과 차가운 색감 중 어느 쪽에 더 긍정적인 반응을 보이는지 1차로 판별합니다.</p></div><div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 사계절 세부 톤 드레이핑</h4><p class="text-sm">41종의 계절별 컬러 천을 얼굴 아래에 차례로 대보며, 이목구비가 또렷해지고 피부 결이 매끈해 보이는 베스트 컬러(Best Color)와 피해야 할 워스트 컬러(Worst Color)를 명확히 찾습니다.</p></div>
+                </div>
+
+                <p class="mb-8">
+                    퍼스널컬러 진단은 오직 색의 온도와 명도, 채도에 따른 시각적 변화에 집중합니다. 이 교구는 철저하게 피부톤의 긍정적인 변화를 분석하기 위해 고안된 전문 진단 도구입니다.
                 </p>
             </div>
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
-                <div class="w-full md:w-1/2 order-2 md:order-1">
-                    <h3 class="text-kftaRed font-bold text-lg mb-2">01. 41 ESSENTIAL COLORS</h3>
-                    <h4 class="text-3xl font-bold text-gray-900 mb-4">정교하게 큐레이션된 41가지 컬러</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        사계절 이론에 입각한 베이스 컬러부터, 피부톤의 미세한 변화를 읽어내는 포인트 컬러까지 41가지의 필수 색상만을 엄선했습니다. 컬러의 온도, 명도, 채도의 미세한 차이가 얼굴에 미치는 시각적 효과와 심리적 안정감을 동시에 보여줍니다.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 order-1 md:order-2 bg-kftaLight p-8 rounded-2xl">
-                    <img src="assets/shop_drape_set.png" alt="진단천 활용" class="w-full rounded-xl shadow-sm">
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
-                <div class="w-full md:w-1/2 bg-kftaLight p-8 rounded-2xl">
-                    <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center relative overflow-hidden">
-                        <img src="assets/shop_drape_set.png" class="w-full h-full object-cover" alt="진단천 디테일">
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-kftaRed font-bold text-lg mb-2">02. HIGH-END TEXTURE</h3>
-                    <h4 class="text-3xl font-bold text-gray-900 mb-4">프리미엄 컨설팅을 완성하는 촉감</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        최고급 원단 특유의 차르르 떨어지는 핏과 은은한 윤광은 컬러 진단의 정확도를 높일 뿐만 아니라, 고객에게 대접받는 듯한 프리미엄 컨설팅 경험을 제공합니다. 구김이 적고 내구성이 뛰어나 전문가의 오랜 비즈니스 파트너가 되어줍니다.
-                    </p>
-<div class="mt-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-    <h5 class="font-bold text-kftaRed mb-3">41컬러 상세 구성</h5>
-    <ul class="text-sm text-gray-700 space-y-2">
-        <li>🌸 <strong>Spring (봄 웜톤) 10컬러:</strong> 페일, 라이트, 브라이트, 비비드 등 봄의 생동감을 담은 컬러군</li>
-        <li>🌊 <strong>Summer (여름 쿨톤) 10컬러:</strong> 화이티시, 페일, 라이트그레이시, 뮤트 등 청량하고 우아한 컬러군</li>
-        <li>🍁 <strong>Autumn (가을 웜톤) 10컬러:</strong> 소프트, 덜, 딥, 다크 등 깊고 풍부한 가을의 무드 컬러군</li>
-        <li>❄️ <strong>Winter (겨울 쿨톤) 10컬러:</strong> 아이시, 마젠타, 딥, 다크 등 도회적이고 선명한 겨울 컬러군</li>
-        <li>✨ <strong>Special (뉴트럴/메탈릭) 1컬러:</strong> 진단의 기준점이 되는 베이스 진단천</li>
-    </ul>
-</div>
-                </div>
-            </div>
         </div>
-    </section>        <!-- Shipping & Return Notice -->
-    <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-gray-900 pb-3">Notice & Info</h3>
+
+        <!-- Global Notice Block -->
+        <div class="max-w-4xl mx-auto mt-16 bg-gray-50 border border-gray-200 p-8 rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">안내 및 주의사항 (Notice)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">배송 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 배송료: <strong>4,500원</strong> (도서산간 지역 추가 운임 발생)</li>
+                        <li>• 결제 완료 후 2~3 영업일 이내 출고됩니다.</li>
+                        <li>• 로젠택배를 통해 안전하게 배송됩니다.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">교환 및 반품 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 상품 수령 후 7일 이내에 고객센터로 접수해주셔야 합니다.</li>
+                        <li>• 교구 및 서적의 특성상 포장이 훼손되거나 사용 흔적이 있는 경우 교환/반품이 불가합니다.</li>
+                        <li>• 단순 변심으로 인한 교환/반품 시 왕복 배송비는 고객님 부담입니다.</li>
+                    </ul>
+                </div>
+            </div>
             
-            <div class="space-y-8">
-                <!-- Delivery -->
+            <div class="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between">
                 <div>
-                    <h4 class="text-lg font-bold text-kftaRed mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-                        배송 안내
-                    </h4>
-                    <ul class="text-sm text-gray-600 space-y-1 ml-7 list-disc">
-                        <li>배송비: 4,500원 (10만원 이상 구매 시 무료배송)</li>
-                        <li>오후 2시 이전 결제 완료 건에 한해 당일 출고됩니다. (주말 및 공휴일 제외)</li>
-                        <li>제주 및 도서 산간 지역은 추가 배송비가 발생할 수 있습니다.</li>
-                    </ul>
+                    <h4 class="font-bold text-gray-900 mb-1">고객센터 (카카오톡 채널)</h4>
+                    <p class="text-sm text-gray-600">궁금하신 점이나 대량 구매 문의는 카카오톡으로 남겨주세요.</p>
                 </div>
-
-                <!-- Return/Exchange -->
-                <div>
-                    <h4 class="text-lg font-bold text-kftaRed mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"></path></svg>
-                        교환 및 반품 안내
-                    </h4>
-                    <ul class="text-sm text-gray-600 space-y-1 ml-7 list-disc">
-                        <li>상품 수령일로부터 7일 이내에 교환/반품이 가능합니다.</li>
-                        <li>단순 변심으로 인한 교환/반품 시 왕복 배송비는 고객님 부담입니다.</li>
-                        <li>제품 포장이 훼손되거나 사용 흔적이 있는 경우, 교환/반품이 불가합니다.</li>
-                    </ul>
-                </div>
-
-                <!-- CS -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 mt-4">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                        고객센터 (CS Center)
-                    </h4>
-                    <p class="text-sm text-gray-600 mb-4">도구 사용법 문의, 대량 구매, 배송 관련 등 모든 문의는 카카오톡 채널로 부탁드립니다.</p>
-                    <a href="https://pf.kakao.com/_vxitxaX" target="_blank" class="inline-block bg-[#FEE500] text-[#000000] font-bold px-6 py-3 rounded-xl hover:bg-[#E5CF00] transition-colors shadow-sm">
-                        카카오톡 채널 문의하기
-                    </a>
-                </div>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" class="mt-4 md:mt-0 bg-[#FEE500] hover:bg-[#F4DC00] text-black font-bold py-3 px-6 rounded-xl transition-colors shadow-sm flex items-center gap-2">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3c-5.523 0-10 3.491-10 7.8 0 2.723 1.706 5.12 4.303 6.452l-1.127 4.148c-.066.242.203.432.417.291l4.821-3.238c.513.078 1.042.12 1.586.12 5.523 0 10-3.491 10-7.8s-4.477-7.8-10-7.8z"/>
+                    </svg>
+                    카카오톡 문의하기
+                </a>
             </div>
         </div>
-    </section>
+    </main>
 
-<footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-kftaRed">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
-                <p class="font-bold text-white/90">한국패션테라피협회</p>
-                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
+                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
+                <p class="opacity-80 text-sm">KOREA FASHION THERAPY ASSOCIATION</p>
+            </div>
+            <div class="text-center md:text-right opacity-80 text-sm space-y-1">
+                <p>경기도 용인시 처인구 성산로 667, 102동 1F 203호 A구역 (1F 주차가능)</p>
+                <p>Tel: 010-9692-0410 | Email: nxxon@naver.com</p>
+                <p class="mt-4 opacity-60">&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-

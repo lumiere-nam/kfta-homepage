@@ -1,164 +1,150 @@
-﻿<!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | KFTA</title>
+    <title>패션 부정어 카드 - 한국패션테라피협회</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kftaRed: '#A6212E',
+                        kftaGreen: '#3C4D3C',
+                        kftaLight: '#F5F5F0',
+                        kftaSand: '#DCD4C4'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="font-sans text-gray-800 bg-kftaLight antialiased">
-                <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
-                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
-                
+<body class="font-sans text-gray-800 bg-white leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-kftaRed text-white flex items-center justify-center font-serif font-bold text-xl rounded-sm group-hover:bg-red-800 transition-colors shadow-sm">K</div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg tracking-wider text-gray-900">한국패션테라피협회</span>
+                    <span class="text-xs text-gray-500 font-medium tracking-widest">KOREA FASHION THERAPY ASSOCIATION</span>
+                </div>
             </a>
-            <nav class="hidden md:flex gap-8 relative z-50 h-full">
-                <div class="group relative flex items-center h-full">
-                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
-                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
-                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
-                        <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
-                        <a href="academy.html?v=2#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
-                        <a href="academy.html?v=2#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
-                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
-                          <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
-                          <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
-                          <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
-                          <a href="cert_trainer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Trainer</a>
-                          <a href="cert_master.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Master Trainer</a>
-                      </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Books</a>
-                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Therapy Tools</a>
-                    </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
-                        <a href="community.html#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
-                        <a href="community.html#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
-                        <a href="community.html#reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
-                        <a href="community.html#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">F&Q</a>
-                    </div>
-                </div>
-            </nav>
+            <a href="shop.html" class="text-gray-600 hover:text-kftaRed font-medium transition-colors">SHOP으로 돌아가기</a>
         </div>
     </header>
 
-    
-    <section class="bg-kftaLight py-12 px-6">
-        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-            <!-- Product Image -->
-            <div class="w-full md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
-                <img src="assets/shop_nagging_card_v4.jpg" alt="잔소리 카드" class="w-full h-auto object-cover rounded-xl shadow-md" style="filter: brightness(1.25) saturate(1.3) contrast(1.1);">
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Product Header -->
+        <div class="flex flex-col md:flex-row gap-12 mb-16">
+            <div class="w-full md:w-1/2">
+                <div class="bg-gray-100 aspect-square rounded-2xl overflow-hidden shadow-md">
+                    <img src="assets/shop_nagging_card.jpg" class="w-full h-full object-cover" alt="패션 부정어 카드" style="filter: brightness(1.25) saturate(1.3) contrast(1.1);">
+                </div>
             </div>
-            <!-- Product Info -->
-            <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
-                <div class="text-sm text-kftaRed font-bold tracking-widest mb-2">KFTA THERAPY TOOLS</div>
-                <h1 class="text-4xl font-serif text-gray-900 mb-4">잔소리 카드</h1>
-                <p class="text-lg text-gray-600 mb-6">쇼핑 중독, 옷장 포화 상태를 막아주는 유쾌한 경고! 지름신이 강림할 때마다 나를 멈춰 세우는 패션테라피 굿즈입니다.</p>
-                <div class="flex items-end gap-3 mb-8 border-b border-gray-100 pb-8">
-                    <span class="text-3xl font-bold text-kftaRed">15,000원</span>
-                    <span class="text-lg text-gray-400 line-through mb-1">22,000원</span>
+            
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+                <span class="text-kftaRed font-bold mb-2">스타일링 필수 교구</span>
+                <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">패션 부정어 카드</h1>
+                <p class="text-2xl font-medium text-gray-700 mb-6 border-b border-gray-200 pb-6">25,000원</p>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    외모 콤플렉스와 남의 시선에 갇힌 사람들을 위한 마음 처방전.<br>나를 옭아매는 부정적인 말들을 눈앞에 꺼내놓고, 스스로 끊어내게 만드는 강력한 패션 심리상담 교구입니다.
+                </p>
+                
+                <div class="bg-kftaLight p-6 rounded-xl mb-8">
+                    <h3 class="font-bold text-gray-900 mb-2">제품 구성</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>• <strong>사이즈:</strong> 가로 70mm x 세로 120mm (타로카드 사이즈)</li><li>• <strong>구성품:</strong> 패션 부정어 카드 1세트 + 활용 가이드북</li>
+                    </ul>
                 </div>
-                <div class="space-y-4 mb-8 text-sm text-gray-600">
-                    <p class="flex justify-between"><span>배송비</span> <span class="font-bold text-gray-900">4,500원 (10만원 이상 구매 시 무료)</span></p>
-                    <p class="flex justify-between"><span>사이즈</span> <span class="font-bold text-gray-900">가로 65mm x 세로 90mm</span></p><p class="flex justify-between"><span>구성품</span> <span class="font-bold text-gray-900">잔소리 카드 1세트</span></p>
-                </div>
-                <a href="checkout.html?item=잔소리 카드" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold py-4 rounded-xl transition-colors text-lg shadow-lg">구매하기</a>
+                
+                <a href="checkout.html?item=패션 부정어 카드" class="block w-full bg-kftaRed hover:bg-red-900 text-white text-center font-bold text-lg py-4 rounded-xl transition-colors shadow-md">
+                    구입하기
+                </a>
             </div>
         </div>
-    </section>
 
-            <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-kftaRed font-bold text-xl mb-4">패션테라피스트 & 심리 상담가 여러분</h3>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">고객이 스스로를 옭아매는 '외모 콤플렉스',<br>어떻게 끊어내시겠습니까?</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
-                <ul class="space-y-4 text-gray-700 font-medium">
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>"저는 뚱뚱해서 이런 옷 못 입어요"라며 끊임없이 자책하는 고객.</li>
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>무의식 속에 박힌 부정적인 바디 이미지를 직면하게 만들어야 합니다.</li>
-                </ul>
-            </div>
-            <p class="text-xl text-kftaGreen font-bold mb-4">"부정어 카드는 내면의 상처를 게임처럼 가볍게 직면하고 털어내는 최고의 아이스브레이킹 도구입니다."</p>
-        </div>
-    </section>
-    <section class="bg-white py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">잔소리 카드가 사랑받는 <span class='text-kftaRed'>3가지 이유</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-kftaLight rounded-2xl">
-                    <h4 class="text-xl font-bold text-kftaGreen mb-3">강력한 지름신 퇴치 부적</h4><p class="text-gray-600 text-sm">장바구니 결제 버튼을 누르기 전, 카드에 적힌 뼈 때리는 멘트를 읽는 순간 충동구매 욕구가 마법처럼 사라집니다.</p>
-                </div>
-                <div class="p-8 bg-kftaLight rounded-2xl">
-                    <h4 class="text-xl font-bold text-kftaGreen mb-3">옷장 다이어트 메이트</h4><p class="text-gray-600 text-sm">비워야 비로소 보이는 것들. 불필요한 옷에 낭비하던 돈과 감정을 나를 위한 진짜 투자로 돌릴 수 있게 돕습니다.</p>
-                </div>
-                <div class="p-8 bg-kftaLight rounded-2xl">
-                    <h4 class="text-xl font-bold text-kftaGreen mb-3">위트 있는 심리 처방</h4><p class="text-gray-600 text-sm">단순한 절약 강요가 아닌, 우리가 왜 물건에 집착하는지 심리를 건드려주는 유쾌하고 통찰력 있는 패션테라피 굿즈입니다.</p>
+        <!-- Hooking Story -->
+        <section class="bg-gray-50 py-16 px-6 border-t border-gray-200 rounded-3xl mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-kftaRed font-bold text-xl mb-4">옷장을 열 때마다 들리는 부정적인 목소리를 잠재우세요</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">"뚱뚱해서 못 입어, 나이 들어 보여"<br>그 말, 진짜 당신의 생각인가요?</h2>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
+                    <ul class="space-y-4 text-gray-700 font-medium">
+                        <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>콤플렉스 직면:</strong> 무의식중에 자신을 깎아내리던 부정적인 단어들을 시각적 카드로 꺼내어 마주하게 합니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>타인의 시선 분리:</strong> 그 부정어가 내가 만든 것인지, 가족이나 사회가 주입한 것인지 분석하여 심리적 압박감에서 벗어나게 돕습니다.</li><li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span><strong>깊은 카타르시스:</strong> 부정어 카드를 찢거나 버리는 심리적 퍼포먼스를 통해 억눌렸던 감정을 해소하고 자존감을 회복합니다.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Shipping & Return Notice -->
-        <section class="bg-gray-50 py-16 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-kftaRed font-bold text-xl mb-4">패션테라피스트 & 심리 상담가 여러분</h3>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">고객이 스스로를 옭아매는 '외모 콤플렉스',<br>어떻게 끊어내시겠습니까?</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm text-left max-w-2xl mx-auto mb-10 border border-gray-100">
-                <ul class="space-y-4 text-gray-700 font-medium">
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>"저는 뚱뚱해서 이런 옷 못 입어요"라며 끊임없이 자책하는 고객.</li>
-                    <li class="flex items-start gap-3"><span class="text-kftaRed mt-1">✔</span>무의식 속에 박힌 부정적인 바디 이미지를 직면하게 만들어야 합니다.</li>
-                </ul>
-            </div>
-            <p class="text-xl text-kftaGreen font-bold mb-4">"부정어 카드는 내면의 상처를 게임처럼 가볍게 직면하고 털어내는 최고의 아이스브레이킹 도구입니다."</p>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-kftaGreen text-kftaLight/70 py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <!-- Product Detail Content -->
+        <div class="max-w-4xl mx-auto">
+            <div class="prose prose-lg max-w-none text-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">패션 부정어 카드 심리상담 활용법</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 내면의 족쇄 찾기</h4><p class="text-sm">고객에게 옷을 고를 때 방해가 되는 부정어 카드들을 고르게 합니다. '팔뚝이 굵어', '촌스러워' 등의 단어를 직접 보며, 자신을 제한하던 진짜 원인을 찾아냅니다.</p></div><div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"><h4 class="text-lg font-bold text-kftaRed mb-3"># 긍정어로의 전환 훈련</h4><p class="text-sm">선택된 부정어 카드를 어떻게 긍정적으로 바라볼 수 있을지 대화하며, 단점을 장점으로 승화시키는 패션테라피적 마인드 리셋을 경험하게 합니다.</p></div>
+                </div>
+
+                <p class="mb-8">
+                    옷을 바꾸기 전, 마음을 먼저 바꿔야 합니다. 패션 부정어 카드는 상처 입은 자존감을 안아주고 치유하는 따뜻하고 단단한 솔루션입니다.
+                </p>
+            </div>
+        </div>
+
+        <!-- Global Notice Block -->
+        <div class="max-w-4xl mx-auto mt-16 bg-gray-50 border border-gray-200 p-8 rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-2">안내 및 주의사항 (Notice)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">배송 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 배송료: <strong>4,500원</strong> (도서산간 지역 추가 운임 발생)</li>
+                        <li>• 결제 완료 후 2~3 영업일 이내 출고됩니다.</li>
+                        <li>• 로젠택배를 통해 안전하게 배송됩니다.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-2">교환 및 반품 안내</h4>
+                    <ul class="space-y-1">
+                        <li>• 상품 수령 후 7일 이내에 고객센터로 접수해주셔야 합니다.</li>
+                        <li>• 교구 및 서적의 특성상 포장이 훼손되거나 사용 흔적이 있는 경우 교환/반품이 불가합니다.</li>
+                        <li>• 단순 변심으로 인한 교환/반품 시 왕복 배송비는 고객님 부담입니다.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between">
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-1">고객센터 (카카오톡 채널)</h4>
+                    <p class="text-sm text-gray-600">궁금하신 점이나 대량 구매 문의는 카카오톡으로 남겨주세요.</p>
+                </div>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" class="mt-4 md:mt-0 bg-[#FEE500] hover:bg-[#F4DC00] text-black font-bold py-3 px-6 rounded-xl transition-colors shadow-sm flex items-center gap-2">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3c-5.523 0-10 3.491-10 7.8 0 2.723 1.706 5.12 4.303 6.452l-1.127 4.148c-.066.242.203.432.417.291l4.821-3.238c.513.078 1.042.12 1.586.12 5.523 0 10-3.491 10-7.8s-4.477-7.8-10-7.8z"/>
+                    </svg>
+                    카카오톡 문의하기
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-kftaRed">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <h2 class="font-serif text-3xl text-white mb-2 tracking-widest">KFTA</h2>
-                <p class="font-bold text-white/90">한국패션테라피협회</p>
-                <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
+                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
+                <p class="opacity-80 text-sm">KOREA FASHION THERAPY ASSOCIATION</p>
             </div>
-            <div class="text-center md:text-right text-sm">
-                <p class="mb-2">Email: <a href="mailto:nxxon@naver.com" class="hover:text-white transition-colors">nxxon@naver.com</a></p>
-                <p class="mb-6">Tel: 010-9692-0410</p>
-                <p>&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
+            <div class="text-center md:text-right opacity-80 text-sm space-y-1">
+                <p>경기도 용인시 처인구 성산로 667, 102동 1F 203호 A구역 (1F 주차가능)</p>
+                <p>Tel: 010-9692-0410 | Email: nxxon@naver.com</p>
+                <p class="mt-4 opacity-60">&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-
-

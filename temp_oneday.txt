@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFTA - 원데이 클래스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { kftaGreen: '#1A362B', kftaBeige: '#F5F5DC', kftaRed: '#8B0000', kftaLight: '#FAFAFA' },
+                    fontFamily: { sans: ['"Noto Sans KR"', 'sans-serif'], serif: ['"Playfair Display"', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-white selection:bg-kftaGreen selection:text-white">
+    <!-- Nav (simplified for script, we'll keep the existing nav by reading and replacing content) -->

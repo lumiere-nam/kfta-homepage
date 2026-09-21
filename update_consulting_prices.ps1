@@ -1,0 +1,6 @@
+$c = [System.IO.File]::ReadAllText("c:\lumi\kfta\kfta-homepage\consulting.html", [System.Text.Encoding]::UTF8)
+$c = [regex]::Replace($c, '(?s)(<h3 class="font-sans font-bold text-xl text-gray-900 mb-2">마인드 컬러 컨설팅</h3>\s*<p class="[^"]+">)1:1 맞춤 상담 후 비용 안내(</p>)', '${1}250,000원${2}')
+$c = [regex]::Replace($c, '(?s)(<h3 class="font-sans font-bold text-xl text-gray-900 mb-2">시그니처 무드 컨설팅</h3>\s*<p class="[^"]+">)1:1 맞춤 상담 후 비용 안내(</p>)', '${1}350,000원${2}')
+$c = [regex]::Replace($c, '(?s)(<h3 class="font-sans font-bold text-xl text-gray-900 mb-2">패션 & 뷰티 컨설팅</h3>\s*<p class="[^"]+">)1:1 맞춤 상담 후 비용 안내(</p>)', '${1}500,000원${2}')
+$c = [regex]::Replace($c, '(?s)(<h3 class="font-sans font-bold text-xl text-gray-900 mb-2">VIP 올인원 컨설팅</h3>\s*<p class="[^"]+">)1:1 맞춤 상담 후 비용 안내(</p>)', '${1}650,000원${2}')
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\consulting.html", $c, [System.Text.Encoding]::UTF8)

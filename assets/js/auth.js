@@ -13,6 +13,23 @@ const Auth = {
         return user ? JSON.parse(user) : null;
     },
 
+    // Sign up (연동 전 임시 — 비밀번호는 저장하지 않습니다)
+    signup: function(profile) {
+        const user = {
+            name: profile.name,
+            email: profile.email,
+            phone: profile.phone || '',
+            marketing: !!profile.marketing,
+            provider: profile.provider || 'email',
+            joinedAt: new Date().toISOString()
+        };
+        localStorage.setItem('kfta_user', JSON.stringify(user));
+        if (!localStorage.getItem('kfta_purchases')) {
+            localStorage.setItem('kfta_purchases', JSON.stringify([]));
+        }
+        return true;
+    },
+
     // Login user
     login: function(email, password) {
         // Mock validation: accept any email/password for demo purposes
@@ -69,23 +86,26 @@ const Auth = {
 
     // Update Navbar UI based on login status
     updateNavbar: function() {
+        const btn = document.getElementById('navAuth');
+        if (btn) {
+            if (this.isLoggedIn()) {
+                btn.textContent = '마이 클래스';
+                btn.setAttribute('href', 'mypage.html');
+                btn.className = 'self-center shrink-0 ml-4 text-xs font-bold text-white bg-kftaRed hover:bg-red-900 px-4 py-1.5 rounded-full transition-colors whitespace-nowrap';
+            } else {
+                btn.textContent = '로그인';
+                btn.setAttribute('href', 'login.html');
+                btn.className = 'self-center shrink-0 ml-4 text-xs font-bold text-white bg-kftaGreen hover:bg-green-900 px-4 py-1.5 rounded-full transition-colors whitespace-nowrap';
+            }
+        }
         const authContainer = document.getElementById('auth-nav-item');
         if (!authContainer) return;
-
-        if (this.isLoggedIn()) {
-            authContainer.innerHTML = `
-                <a href="mypage.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:opacity-80 flex items-center gap-1">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    MY CLASS
-                </a>
-            `;
-        } else {
-            authContainer.innerHTML = `
-                <a href="login.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">LOGIN</a>
-            `;
-        }
+        authContainer.innerHTML = this.isLoggedIn()
+            ? '<a href="mypage.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:opacity-80">MY CLASS</a>'
+            : '<a href="login.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">LOGIN</a>';
     }
 };
+
 
 // Automatically update navbar on page load
 document.addEventListener('DOMContentLoaded', () => {

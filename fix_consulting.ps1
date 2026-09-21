@@ -1,79 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulting | KFTA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' },
-                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'AmpersandSerif';
-            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
-            unicode-range: U+0026;
-        }
-        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
-            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
-        }
-    </style>
-</head>
-<body class="font-sans text-gray-800 bg-kftaLight antialiased flex flex-col min-h-screen">
-    <header class="bg-white border-b border-kftaBorder sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="font-serif text-2xl text-kftaGreen font-bold tracking-widest">FASHION THERAPY</a>
-            <nav class="hidden md:flex space-x-8 h-full">
-                <div class="group relative flex items-center h-full">
-                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
-                      <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
-                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
-                          <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
-                          <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
-                          <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
-                          <a href="cert_trainer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Trainer</a>
-                          <a href="cert_master.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Master Trainer</a>
-                      </div>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
-                </div>
-                <div class="group relative flex items-center h-full">
-                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+$html = [System.IO.File]::ReadAllText("c:\lumi\kfta\kfta-homepage\consulting.html", [System.Text.Encoding]::UTF8)
 
-    <section class="bg-kftaRed text-white py-24 px-6 animate__animated animate__fadeIn">
-    <div class="max-w-7xl mx-auto text-center">
-        <h1 class="font-serif font-bold text-5xl md:text-6xl mb-8">Consulting Program</h1>
-        <p class="text-xl opacity-90">나에게 딱 맞는 컬러와 스타일, KFTA 전문가와 함께 찾아보세요.</p>
-    </div>
-</section>
-<section class="bg-kftaLight py-16 px-6">
+# I will replace the entire grid content to fix the nesting.
+$pattern = '(?s)<!-- Card 1 -->.*<!-- Card 4 -->.*?</div>\s*</div>'
 
-        <div class="w-full max-w-[1400px] px-4 mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 lg:gap-6">
-            
-            <!-- Card 1 -->
+$fixedGrid = @"
+<!-- Card 1 -->
 <div class="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 flex flex-col border border-gray-100">
     <img src="assets/consulting_1.jpg" class="w-full h-56 object-cover" alt="마인드 컬러 컨설팅">
     <div class="p-6 flex-grow flex flex-col text-left">
@@ -160,29 +91,7 @@
         </div>
     </div>
 </div>
-</div>
+"@
 
-
-
-        </div>
-    </section>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$html = [regex]::Replace($html, $pattern, $fixedGrid)
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\consulting.html", $html, [System.Text.Encoding]::UTF8)

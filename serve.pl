@@ -28,6 +28,7 @@ my $server = IO::Socket::INET->new(
     ReuseAddr => 1,
 ) or die "포트 $PORT 열기 실패: $!\n";
 
+$SIG{PIPE} = 'IGNORE';   # 브라우저가 중간에 끊어도 서버가 죽지 않게
 $| = 1;
 print "KFTA 로컬 서버 실행 중\n";
 print "  PC   : http://localhost:$PORT/\n";

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+$mindHtml = @"
+<!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -159,3 +160,6 @@
     </footer>
 </body>
 </html>
+"@
+
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\consulting_1.html", $mindHtml, [System.Text.Encoding]::UTF8)

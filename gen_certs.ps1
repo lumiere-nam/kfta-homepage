@@ -1,4 +1,4 @@
-$template = [System.IO.File]::ReadAllText('cert_level1.html', [System.Text.Encoding]::UTF8)
+﻿$template = [System.IO.File]::ReadAllText('cert_level1.html', [System.Text.Encoding]::UTF8)
 
 $prefix = $template.Substring(0, $template.IndexOf('            <!-- Header Section -->'))
 $suffix = $template.Substring($template.IndexOf('            <!-- Sticky Bottom Apply Action -->'))
@@ -103,7 +103,7 @@ BuildCertPage -Filename "cert_level1.html" `
     @{주차="5주";요소="자세";주제="거울 속 나의 태도를 관찰하다"},
     @{주차="6주";요소="헤어·메이크업";주제="나만의 고유한 매력을 탐구하다"}
 ) `
--CertName "레벨1 (초급 실천가)" -Duration "6주·12시간" -Price "870,000원"
+-CertName "레벨1 (초급 실천가)" -Duration "6주·12시간" -Price "1,500,000원"
 
 # L2
 BuildCertPage -Filename "cert_level2.html" `
@@ -131,7 +131,7 @@ BuildCertPage -Filename "cert_level2.html" `
     @{주차="7주";요소="스타일링Ⅱ&포트폴리오";주제="나만의 스타일링을 완성하다"},
     @{주차="8주";요소="종합&수료";주제="레벨2 과정을 완성하다"}
 ) `
--CertName "레벨2 (프랙티셔너)" -Duration "8주·20시간" -Price "1,600,000원"
+-CertName "레벨2 (프랙티셔너)" -Duration "8주·20시간" -Price "2,000,000원"
 
 # L3
 BuildCertPage -Filename "cert_level3.html" `
@@ -160,7 +160,7 @@ BuildCertPage -Filename "cert_level3.html" `
     @{주차="7주";요소="상담 질문 설계 & 모의 컨설팅";주제="질문 설계로 컨설팅 프로세스를 구조화하다"},
     @{주차="8주";요소="케이스 스터디 & 상담 시연";주제="사례를 통합 분석해 상담으로 시연하다"}
 ) `
--CertName "레벨3 (마스터 프랙티셔너)" -Duration "8주·24시간" -Price "2,800,000원"
+-CertName "레벨3 (마스터 프랙티셔너)" -Duration "8주·24시간" -Price "2,500,000원"
 
 # Trainer
 BuildCertPage -Filename "cert_trainer.html" `

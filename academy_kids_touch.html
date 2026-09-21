@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certification | KFTA</title>
+    <title>오감 테라피 — 패션 소재 촉감 놀이 | KFTA 한국패션테라피협회</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -76,6 +76,7 @@
                     <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
                         <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
+                        <a href="schedule.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Schedule</a>
                         <a href="community.html#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
                         <a href="community.html#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
                         <a href="community.html#reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
@@ -84,28 +85,56 @@
                 </div>
             </nav>
         </div>
-    </header>    <main class="bg-kftaLight py-12 px-6 relative">
-        <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
-            <!-- Image -->
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="VIP 올인원 컨설팅" class="w-full h-auto object-cover max-h-[70vh]">
-            
-            <div class="p-10 text-center">
-                <h2 class="font-serif text-3xl font-bold text-kftaGreen mb-6">VIP 올인원 컨설팅</h2>
-                <p class="text-gray-600 leading-relaxed text-justify mb-8">KFTA만의 독자적인 진단 시스템을 통해 VIP 올인원 컨설팅 에 대한 구체적인 분석과 솔루션을 제공합니다. 지금 예약하고 당신만의 시그니처 스타일을 찾아보세요.</p>
+    </header>
+    <main class="bg-kftaLight py-12 px-6 relative font-sans text-gray-800">
+        <div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
+            <div class="bg-kftaGreen p-10 text-white">
+                <p class="text-sm text-kftaBeige mb-2 font-semibold">Kids &amp; Family Class</p>
+                <h1 class="font-serif font-bold text-4xl lg:text-5xl mb-4">오감 테라피</h1>
+                <p class="text-lg opacity-90">패션 소재 촉감 놀이 · 5세~7세 권장</p>
             </div>
-            
-            <!-- Sticky Bottom Apply Action -->
-            <div class="sticky bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-200 p-6 flex flex-col sm:flex-row justify-between items-center gap-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
-                <div>
-                    <h3 class="font-bold text-xl text-gray-800">VIP 올인원 컨설팅 예약</h3>
-                    <p class="text-sm text-gray-500">컨설팅 일정을 위해 결제 후 개별 연락을 드립니다.</p>
+
+            <div class="p-10 space-y-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <img src="assets/class_kids_5senses.png" class="rounded-2xl w-full h-96 object-cover shadow-lg" alt="오감 테라피">
+                    <div>
+                        <h3 class="text-2xl font-bold text-kftaGreen mb-2">오감 테라피</h3>
+                        <p class="text-kftaRed font-bold mb-4">우리 아이는 왜 그 옷만 입으려고 할까요?</p>
+                        <p class="text-gray-600 leading-relaxed text-justify mb-4">목이 까슬거린다며 새 옷을 벗어 던지는 아이. 몇 번이나 세탁해 부드러워진 티셔츠만 찾는 아이. <strong class="text-gray-800">고집이 아니라 감각이 예민한 것</strong>입니다.</p>
+                        <p class="text-gray-600 leading-relaxed text-justify mb-4">아이는 말로 설명하기 전에 손으로, 피부로 먼저 세상을 읽습니다. 이 시간은 그 감각에 <strong class="text-gray-800">이름을 붙여주는</strong> 시간입니다. 실크·면·니트·코듀로이·퍼·데님 등 열 가지가 넘는 소재를 눈을 감고 만져봅니다.</p>
+                        <p class="text-gray-600 leading-relaxed text-justify mb-4">"이건 시원해", "이건 안아주는 것 같아" — 아이가 촉감에 자기만의 말을 붙이기 시작합니다.</p>
+                        <h4 class="font-bold text-lg text-kftaGreen mb-2 mt-6">진행 내용</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-600 mb-6 space-y-2"><li>블라인드 촉감 상자 — 눈을 감고 소재 맞히기</li><li>좋아하는 촉감 · 싫어하는 촉감 나누기</li><li>내 촉감 지도 만들기 — 스와치 보드 제작 후 지참</li><li>부모 관찰 시트 제공 — 아이의 촉감 선호 정리</li></ul>
+                    </div>
                 </div>
-                <a href="checkout.html?item=VIP 올인원 컨설팅" class="w-full sm:w-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-lg text-lg text-center">
-                    예약 및 신청하기
-                </a>
+                <div class="bg-kftaBeige/50 rounded-2xl p-8 border-l-4 border-kftaRed">
+                    <p class="text-gray-800 leading-relaxed">이것이 KFTA가 옷을 읽는 네 축 가운데 <strong>T(Texture, 소재)</strong>입니다. 소재를 고르는 방식에는 그 사람이 위안을 얻는 방식이 담깁니다. <strong>다섯 살에도 이미 그렇습니다.</strong></p>
+                </div>
+
+                <div class="bg-kftaBeige/50 rounded-2xl p-8 border border-kftaBorder">
+                    <h4 class="font-bold text-xl text-kftaGreen mb-5">이런 아이에게 권합니다</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
+                        <li class="flex gap-2"><span class="text-kftaRed font-bold">·</span>특정 옷만 입으려 하는 아이</li>
+                        <li class="flex gap-2"><span class="text-kftaRed font-bold">·</span>새 옷·새 환경 적응이 느린 아이</li>
+                        <li class="flex gap-2"><span class="text-kftaRed font-bold">·</span>옷 입히기가 매번 실랑이인 가정</li>
+                        <li class="flex gap-2"><span class="text-kftaRed font-bold">·</span>아이의 감각 성향을 알고 싶은 부모</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 border-t border-gray-200 p-6 sm:p-10">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-800">오감 테라피</h3>
+                        <p class="text-sm text-gray-500">가격: 60,000원 / 5~7세 아동 1인 / 60분 / 스와치 키트 포함</p>
+                    </div>
+                    <a href="checkout.html?item=오감 테라피" class="w-full sm:w-auto bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-12 rounded-full transition-all duration-300 shadow-lg text-lg text-center">신청 및 결제하기</a>
+                </div>
             </div>
         </div>
-    </main><!-- Footer -->
+    </main>
+
+
     <footer class="bg-kftaGreen text-kftaLight py-12 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -123,7 +152,8 @@
             <p class="mb-3 space-x-4">
                 <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">YouTube</a>
                 <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">Instagram</a>
-                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오톡 채널</a>
+                <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">네이버 블로그</a>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오채널</a>
             </p>
             <p class="opacity-70">한국패션테라피협회(KFTA)는 <strong>캄온(calm:on)</strong>의 패션테라피 교육 브랜드입니다. (사업자등록번호 395-44-01406 · 교육과정의 신청 · 결제는 캄온에서 이루어집니다)</p>
             <p class="opacity-70 mt-1">학술 · 연구 활동은 <strong>한국패션테라피진흥원</strong>(비영리단체 · 고유번호 110-82-84910)이 수행합니다.</p>
@@ -133,9 +163,6 @@
     </footer>
 </body>
 </html>
-
-
-
 
 
 

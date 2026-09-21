@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월별 프로그램 일정 | KFTA 한국패션테라피협회</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full"><a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a></div>
+                <div class="group relative flex items-center h-full"><a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a></div>
+                <div class="group relative flex items-center h-full"><a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a></div>
+                <div class="group relative flex items-center h-full"><a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a></div>
+                <div class="group relative flex items-center h-full"><a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a></div>
+                <div class="group relative flex items-center h-full"><a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a></div>
+                <div class="group relative flex items-center h-full"><a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a></div>
+            </nav>
+        </div>
+    </header>    <main class="bg-kftaLight py-12 px-6 font-sans text-gray-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <p class="text-sm tracking-widest text-kftaRed font-bold mb-3">SCHEDULE</p>
+                <h1 class="font-serif font-bold text-4xl lg:text-5xl mb-4 text-kftaGreen">월별 프로그램 일정</h1>
+                <p class="text-gray-600">이달에 열리는 클래스를 한눈에 확인하고 바로 신청하실 수 있습니다.</p>
+            </div>
+
+            <!-- 월 이동 -->
+            <div class="flex items-center justify-center gap-6 mb-8">
+                <button id="prevBtn" class="w-11 h-11 rounded-full border border-kftaBorder bg-white hover:bg-kftaBeige text-kftaGreen font-bold text-xl transition-colors" aria-label="이전 달">&lsaquo;</button>
+                <h2 id="monthLabel" class="font-serif font-bold text-3xl text-kftaGreen w-56 text-center">2026년 10월</h2>
+                <button id="nextBtn" class="w-11 h-11 rounded-full border border-kftaBorder bg-white hover:bg-kftaBeige text-kftaGreen font-bold text-xl transition-colors" aria-label="다음 달">&rsaquo;</button>
+            </div>
+
+            <!-- 범례 -->
+            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-8 text-xs">
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-kftaGreen"></span>One Day Class</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#869CB0]"></span>Kids &amp; Family</span>
+            </div>
+
+            <!-- 캘린더 -->
+            <div class="bg-white rounded-3xl shadow-lg border border-gray-200 p-4 sm:p-7 mb-10">
+                <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-2 text-center text-xs sm:text-sm font-bold">
+                    <div class="py-2 text-kftaRed">일</div><div class="py-2 text-gray-600">월</div><div class="py-2 text-gray-600">화</div><div class="py-2 text-gray-600">수</div><div class="py-2 text-gray-600">목</div><div class="py-2 text-gray-600">금</div><div class="py-2 text-[#869CB0]">토</div>
+                </div>
+                <div id="calGrid" class="grid grid-cols-7 gap-1 sm:gap-2"></div>
+            </div>
+
+            <!-- 이달의 일정 리스트 -->
+            <div class="mb-12">
+                <h3 class="font-serif font-bold text-2xl text-kftaGreen mb-6">이달의 일정</h3>
+                <div id="eventList" class="space-y-3"></div>
+            </div>
+
+            <div class="bg-kftaBeige/50 rounded-2xl p-7 border border-kftaBorder text-sm text-gray-700 leading-relaxed">
+                <p class="font-bold text-gray-900 mb-3">신청 안내</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>모든 프로그램은 <strong>소수 정예</strong>로 진행되며, 최소 인원 미달 시 일정이 조정될 수 있습니다.</li>
+                    <li><strong>Weekly Talks</strong>는 온라인 VOD 중심으로 운영되어 캘린더에 표시되지 않습니다. <a href="academy_weekly.html" class="text-kftaRed underline hover:no-underline">여기</a>에서 언제든 수강하실 수 있습니다.</li>
+                    <li><strong>컨설팅</strong>(마인드 컬러 · 옷장 다이어트 · 퍼스널 이미지 브랜딩 · 엄마프사)은 캘린더와 무관하게 <strong>상시 예약</strong>으로 진행됩니다.</li>
+                    <li>단체 예약 · 프라이빗 클래스 · 기업 출강은 별도 문의해 주십시오.</li>
+                    <li>환불 규정은 <a href="refund.html" class="text-kftaRed underline hover:no-underline">여기</a>에서 확인하실 수 있습니다.</li>
+                </ul>
+                <div class="mt-5 pt-5 border-t border-kftaBorder flex flex-col sm:flex-row gap-3">
+                    <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="flex-1 text-center bg-kftaGreen hover:bg-green-900 text-white font-bold py-3 rounded-xl transition-colors">카카오채널로 문의하기</a>
+                    <a href="contact.html" class="flex-1 text-center border-2 border-kftaGreen text-kftaGreen hover:bg-kftaGreen hover:text-white font-bold py-3 rounded-xl transition-colors">문의 남기기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    /* ===================================================================
+       일정 관리 — 아래 EVENTS 배열만 수정하시면 캘린더가 자동 반영됩니다.
+       date  : 'YYYY-MM-DD'
+       type  : oneday | kids | weekly | cert
+       =================================================================== */
+    const EVENTS = [
+      // ── 2026년 10월 ──
+      { date:'2026-10-10', type:'oneday', title:'향으로 읽는 내 감정',        time:'11:00~12:30', link:'academy_oneday_aroma.html' },
+      { date:'2026-10-17', type:'kids',   title:'오감 테라피',                time:'10:30~11:30', link:'academy_kids_touch.html' },
+      { date:'2026-10-24', type:'oneday', title:'나의 컬러 팔레트 맵',        time:'11:00~12:00', link:'academy_oneday_color.html' },
+
+      // ── 2026년 11월 ──
+      { date:'2026-11-07', type:'kids',   title:'마음을 칠하는 시간',          time:'10:30~11:30', link:'academy_kids_coloring.html' },
+      { date:'2026-11-14', type:'oneday', title:'인형으로 만나는 어린 나',     time:'11:00~13:00', link:'academy_oneday_doll.html' },
+      { date:'2026-11-21', type:'oneday', title:'내 향을 담은 화장품 DIY',     time:'11:00~12:30', link:'academy_oneday_diy.html' },
+      { date:'2026-11-28', type:'oneday', title:'패션 마인드 디톡스',          time:'11:00~13:00', link:'academy_oneday_detox.html' },
+
+      // ── 2026년 12월 ──
+      { date:'2026-12-12', type:'oneday', title:'인생 파노라마',              time:'11:00~13:00', link:'academy_oneday_panorama.html' },
+      { date:'2026-12-19', type:'kids',   title:'서로를 비추는 거울',          time:'10:30~12:00', link:'academy_kids_family.html' },
+      { date:'2026-12-26', type:'oneday', title:'나만의 시그니처 향수',        time:'11:00~13:00', link:'academy_oneday_scent.html' },
+    ];
+
+    const TYPE = {
+      oneday: { label:'One Day',      dot:'bg-kftaGreen',   chip:'bg-kftaGreen text-white' },
+      kids:   { label:'Kids&Family',  dot:'bg-[#869CB0]',   chip:'bg-[#869CB0] text-white' },
+      weekly: { label:'Weekly Talks', dot:'bg-kftaRed',     chip:'bg-kftaRed text-white' },
+      cert:   { label:'자격 과정',     dot:'bg-[#8B7355]',   chip:'bg-[#8B7355] text-white' },
+    };
+
+    const START = new Date(2026, 9, 1);   // 2026년 10월부터 공개
+    let cur = new Date(2026, 9, 1);
+
+    function ymd(d){ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+
+    function render(){
+      const y = cur.getFullYear(), m = cur.getMonth();
+      document.getElementById('monthLabel').textContent = y + '년 ' + (m+1) + '월';
+      document.getElementById('prevBtn').disabled = (y===START.getFullYear() && m===START.getMonth());
+      document.getElementById('prevBtn').classList.toggle('opacity-30', document.getElementById('prevBtn').disabled);
+
+      const first = new Date(y, m, 1).getDay();
+      const days  = new Date(y, m+1, 0).getDate();
+      const grid  = document.getElementById('calGrid');
+      grid.innerHTML = '';
+
+      for (let i=0; i<first; i++){
+        const c = document.createElement('div');
+        c.className = 'min-h-[64px] sm:min-h-[92px]';
+        grid.appendChild(c);
+      }
+      for (let d=1; d<=days; d++){
+        const key = y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+        const evs = EVENTS.filter(e => e.date === key);
+        const dow = new Date(y, m, d).getDay();
+        const cell = document.createElement('div');
+        cell.className = 'min-h-[64px] sm:min-h-[92px] rounded-xl border p-1.5 sm:p-2 ' +
+          (evs.length ? 'border-kftaBorder bg-kftaBeige/30' : 'border-gray-100 bg-white');
+        let html = '<div class="text-xs sm:text-sm font-bold mb-1 ' +
+          (dow===0 ? 'text-kftaRed' : dow===6 ? 'text-[#869CB0]' : 'text-gray-700') + '">' + d + '</div>';
+        evs.forEach(e => {
+          const t = TYPE[e.type];
+          html += '<div class="hidden sm:block text-[10px] leading-tight mb-1 px-1.5 py-1 rounded ' + t.chip + ' truncate" title="' + e.title + '">' + e.title + '</div>';
+          html += '<span class="sm:hidden inline-block w-1.5 h-1.5 rounded-full mr-0.5 ' + t.dot + '"></span>';
+        });
+        cell.innerHTML = html;
+        grid.appendChild(cell);
+      }
+
+      const list = document.getElementById('eventList');
+      const mine = EVENTS.filter(e => e.date.startsWith(y+'-'+String(m+1).padStart(2,'0'))).sort((a,b)=>a.date.localeCompare(b.date));
+      if (!mine.length){
+        list.innerHTML = '<p class="text-gray-500 py-8 text-center bg-white rounded-2xl border border-gray-200">이달에 예정된 공개 클래스가 없습니다. 컨설팅은 상시 예약으로 진행됩니다.</p>';
+        return;
+      }
+      list.innerHTML = mine.map(e => {
+        const t = TYPE[e.type];
+        const dt = new Date(e.date + 'T00:00:00');
+        const dowName = ['일','월','화','수','목','금','토'][dt.getDay()];
+        return '<a href="' + e.link + '" class="flex items-center gap-4 sm:gap-5 bg-white rounded-2xl border border-gray-200 p-5 hover:border-kftaGreen hover:shadow-md transition-all group">' +
+          '<div class="flex-none text-center w-12"><div class="font-serif text-2xl font-bold text-kftaGreen leading-none">' + dt.getDate() + '</div>' +
+          '<div class="text-[11px] text-gray-400 mt-1">' + dowName + '</div></div>' +
+          '<div class="flex-1 min-w-0"><span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5 ' + t.chip + '">' + t.label + '</span>' +
+          '<div class="font-bold text-gray-800 leading-snug truncate">' + e.title + '</div>' +
+          '<div class="text-xs text-gray-500 mt-0.5">' + e.time + '</div></div>' +
+          '<span class="flex-none text-kftaRed font-bold opacity-0 group-hover:opacity-100 transition-opacity">&rarr;</span></a>';
+      }).join('');
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (cur.getFullYear()===START.getFullYear() && cur.getMonth()===START.getMonth()) return;
+      cur = new Date(cur.getFullYear(), cur.getMonth()-1, 1); render();
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      cur = new Date(cur.getFullYear(), cur.getMonth()+1, 1); render();
+    });
+    render();
+    </script>
+
+    <footer class="bg-kftaGreen text-kftaBeige py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+            <div class="w-full md:w-1/3">
+                <h3 class="font-serif font-bold text-xl mb-4">KFTA</h3>
+                <p class="text-sm opacity-80 leading-relaxed">한국패션테라피협회는 패션과 심리를 결합하여 진정한 나를 찾고, 치유와 성장을 돕는 새로운 패러다임을 제시합니다.</p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-sm opacity-80 mb-2">Email: nxxon@naver.com</p>
+                <p class="text-sm opacity-80 mb-2">Tel: 010-9692-0410</p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h4 class="font-bold mb-4">Legal</h4>
+                <a href="#" class="block text-sm opacity-80 hover:text-white mb-2 transition-colors">이용약관</a>
+                <a href="#" class="block text-sm opacity-80 hover:text-white transition-colors">개인정보처리방침</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-kftaBeige/20 text-center text-sm opacity-60">
+            &copy; 2026 Korea Fashion Therapy Association. All rights reserved.
+        </div>
+        <!-- KFTA-ENTITY-BAR -->
+        <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/20 text-center text-xs leading-relaxed">
+            <p class="mb-3 space-x-4">
+                <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">YouTube</a>
+                <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">Instagram</a>
+                <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">네이버 블로그</a>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오채널</a>
+            </p>
+            <p class="opacity-70">한국패션테라피협회(KFTA)는 <strong>캄온(calm:on)</strong>의 패션테라피 교육 브랜드입니다. (사업자등록번호 395-44-01406 · 교육과정의 신청 · 결제는 캄온에서 이루어집니다)</p>
+            <p class="opacity-70 mt-1">학술 · 연구 활동은 <strong>한국패션테라피진흥원</strong>(비영리단체 · 고유번호 110-82-84910)이 수행합니다.</p>
+            <p class="opacity-50 mt-2">「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (출원번호 제40-2026-0177049호 · 2026.08.26 출원)</p>
+        </div>
+
+    </footer>
+</body>
+</html>

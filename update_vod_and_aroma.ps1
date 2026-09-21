@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+$aromaContent = @"
+<!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -107,3 +108,15 @@
     </footer>
 </body>
 </html>
+"@
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\academy_oneday_aroma.html", $aromaContent, [System.Text.Encoding]::UTF8)
+
+# Now update the VOD buttons in academy.html and academy_weekly.html
+$a = [System.IO.File]::ReadAllText("c:\lumi\kfta\kfta-homepage\academy.html", [System.Text.Encoding]::UTF8)
+$a = [regex]::Replace($a, 'href="checkout_vod.html\?([^"]+)"[^>]*>온라인 VOD 수강 신청하기 \(바로 시청\)</a>', 'href="academy_vod_detail.html?$1" class="w-full block text-center bg-kftaGreen hover:bg-green-900 text-white font-bold py-3 rounded-xl transition-colors">온라인 VOD 수강 신청하기</a>')
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\academy.html", $a, [System.Text.Encoding]::UTF8)
+
+$w = [System.IO.File]::ReadAllText("c:\lumi\kfta\kfta-homepage\academy_weekly.html", [System.Text.Encoding]::UTF8)
+$w = [regex]::Replace($w, 'href="checkout_vod.html\?([^"]+)"[^>]*>온라인 VOD 수강 신청하기 \(바로 시청\)</a>', 'href="academy_vod_detail.html?$1" class="w-full block text-center bg-kftaGreen hover:bg-green-900 text-white font-bold py-3 rounded-xl transition-colors mt-4">온라인 VOD 수강 신청하기</a>')
+$w = [regex]::Replace($w, 'href="checkout_vod.html\?title=KFTA%20%ED%8C%A8%EC%85%98%ED%85%8C%EB%9D%BC%ED%94%BC%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%ED%86%A0%ED%81%AC%20%EC%A0%84%EC%B2%B4%20%ED%8C%A8%EC%8A%A4&price=50000"[^>]*>수강 신청하기</a>', 'href="academy_vod_detail.html?title=KFTA%20%ED%8C%A8%EC%85%98%ED%85%8C%EB%9D%BC%ED%94%BC%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%ED%86%A0%ED%81%AC%20%EC%A0%84%EC%B2%B4%20%ED%8C%A8%EC%8A%A4&price=50000" class="inline-block bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-12 rounded-full transition-all text-lg shadow-xl hover:-translate-y-1">수강 신청하기</a>')
+[System.IO.File]::WriteAllText("c:\lumi\kfta\kfta-homepage\academy_weekly.html", $w, [System.Text.Encoding]::UTF8)

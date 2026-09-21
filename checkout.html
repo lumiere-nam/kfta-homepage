@@ -19,6 +19,12 @@
             else if(itemName.includes("Level 3") || itemName.includes("레벨3")) price = "2,500,000";
             else if((itemName.includes("Trainer") || itemName.includes("트레이너")) && !itemName.includes("Master") && !itemName.includes("마스터")) price = "2,700,000";
             else if(itemName.includes("Master Trainer") || itemName.includes("마스터 트레이너")) price = "3,000,000";
+            else if(itemName.includes("마인드 컬러 컨설팅")) price = "250,000";
+            else if(itemName.includes("옷장 다이어트")) price = "400,000";
+            else if(itemName.includes("퍼스널 이미지 브랜딩 컨설팅")) price = "500,000";
+            else if(itemName.includes("엄마프사 프로젝트")) price = "400,000";
+            else if(itemName.includes("나의 컬러 팔레트 맵")) price = "150,000";
+            else if(itemName.includes("패션 마인드 디톡스 원데이")) price = "120,000";
             else price = "1,000,000"; // default fallback
 
             document.getElementById("item-name").textContent = itemName;

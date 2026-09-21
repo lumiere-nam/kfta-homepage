@@ -156,10 +156,10 @@
         });
 
         // 로그인 상태 반영 (auth.js가 있을 때)
-        if (window.Auth && Auth.isLoggedIn && Auth.isLoggedIn()) {
+        if (typeof Auth !== 'undefined' && Auth.isLoggedIn && Auth.isLoggedIn()) {
             const a = document.getElementById('mNavAuth');
             if (a) {
-                a.textContent = '마이 클래스';
+                a.textContent = '마이 페이지';
                 a.setAttribute('href', 'mypage.html');
                 a.className = a.className.replace('bg-kftaGreen', 'bg-kftaRed');
             }

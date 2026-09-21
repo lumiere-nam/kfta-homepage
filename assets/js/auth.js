@@ -84,12 +84,34 @@ const Auth = {
         return JSON.parse(localStorage.getItem('kfta_purchases') || '[]');
     },
 
+    // 주문 내역 (결제 · 배송 연동 시 채워진다)
+    //   { id, name, price, qty, status:'paid|ready|shipping|delivered|done', invoice, orderedAt }
+    getOrders: function() {
+        if (!this.isLoggedIn()) return [];
+        try { return JSON.parse(localStorage.getItem('kfta_orders') || '[]'); }
+        catch (e) { return []; }
+    },
+
+    // 신청한 오프라인 클래스  { name, date, time, place }
+    getBookings: function() {
+        if (!this.isLoggedIn()) return [];
+        try { return JSON.parse(localStorage.getItem('kfta_bookings') || '[]'); }
+        catch (e) { return []; }
+    },
+
+    // 발급된 수료증  { name, completedAt, no }
+    getCertificates: function() {
+        if (!this.isLoggedIn()) return [];
+        try { return JSON.parse(localStorage.getItem('kfta_certificates') || '[]'); }
+        catch (e) { return []; }
+    },
+
     // Update Navbar UI based on login status
     updateNavbar: function() {
         const btn = document.getElementById('navAuth');
         if (btn) {
             if (this.isLoggedIn()) {
-                btn.textContent = '마이 클래스';
+                btn.textContent = '마이 페이지';
                 btn.setAttribute('href', 'mypage.html');
                 btn.className = 'self-center shrink-0 ml-4 text-xs font-bold text-white bg-kftaRed hover:bg-red-900 px-4 py-1.5 rounded-full transition-colors whitespace-nowrap';
             } else {
@@ -101,7 +123,7 @@ const Auth = {
         const authContainer = document.getElementById('auth-nav-item');
         if (!authContainer) return;
         authContainer.innerHTML = this.isLoggedIn()
-            ? '<a href="mypage.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:opacity-80">MY CLASS</a>'
+            ? '<a href="mypage.html" class="text-sm font-bold text-kftaRed uppercase tracking-wide hover:opacity-80">MY PAGE</a>'
             : '<a href="login.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">LOGIN</a>';
     }
 };

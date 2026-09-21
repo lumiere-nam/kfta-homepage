@@ -19,17 +19,65 @@
 </head>
 <body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
     <!-- Header -->
-    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder">
+    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
                 <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+                
             </a>
             <nav class="hidden md:flex gap-8 relative z-50 h-full">
-                <div class="group relative flex items-center h-full"><a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a></div>
-                <div class="group relative flex items-center h-full"><a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a></div>
-                <div class="group relative flex items-center h-full"><a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a></div>
-                <div class="group relative flex items-center h-full"><a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a></div>
-                <div class="group relative flex items-center h-full"><a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a></div>
+                <div class="group relative flex items-center h-full">
+                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
+                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
+                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
+                        <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
+                        <a href="academy.html?v=2#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
+                        <a href="academy.html?v=2#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
+                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
+                          <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
+                          <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
+                          <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
+                          <a href="cert_trainer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Trainer</a>
+                          <a href="cert_master.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Master Trainer</a>
+                      </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Books</a>
+                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Therapy Tools</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
+                        <a href="schedule.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Schedule</a>
+                        <a href="community.html#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
+                        <a href="community.html#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
+                        <a href="community.html#reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
+                        <a href="community.html#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">F&Q</a>
+                    </div>
+                </div>
                 <a href="login.html" id="navAuth" class="self-center shrink-0 ml-4 font-bold text-white bg-kftaGreen hover:bg-green-900 px-4 py-1.5 text-xs rounded-full transition-colors whitespace-nowrap">로그인</a>
             </nav>
         </div>
@@ -38,11 +86,69 @@
     <main class="py-24 px-6">
         <article class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
             <!-- Notice Header -->
-            <header class="bg-kftaGreen text-white p-12 text-center">
-                <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur text-white text-xs font-bold rounded-full mb-6 tracking-widest uppercase">Schedule Notice</div>
-                <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">[일정공지] 이달의 KFTA 프로그램 일정 안내</h1>
-                <p class="text-kftaBeige font-light tracking-wide">작성일: 2026.02.01 <span class="mx-2">|</span> 조회수: 128</p>
-            </header>
+            <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+                
+            </a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full">
+                    <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
+                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
+                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
+                        <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
+                        <a href="academy.html?v=2#weekly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Weekly Talks</a>
+                        <a href="academy.html?v=2#kpop" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Fashion in K-POP</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
+                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
+                          <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
+                          <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
+                          <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
+                          <a href="cert_trainer.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Trainer</a>
+                          <a href="cert_master.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Master Trainer</a>
+                      </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Books</a>
+                        <a href="shop.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Therapy Tools</a>
+                    </div>
+                </div>
+                <div class="group relative flex items-center h-full">
+                    <a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="community.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Notice</a>
+                        <a href="schedule.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Schedule</a>
+                        <a href="community.html#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Contact</a>
+                        <a href="community.html#gallery" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Gallery</a>
+                        <a href="community.html#reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Reviews</a>
+                        <a href="community.html#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">F&Q</a>
+                    </div>
+                </div>
+                <a href="login.html" id="navAuth" class="self-center shrink-0 ml-4 font-bold text-white bg-kftaGreen hover:bg-green-900 px-4 py-1.5 text-xs rounded-full transition-colors whitespace-nowrap">로그인</a>
+            </nav>
+        </div>
+    </header>
 
             <!-- Notice Content -->
             <div class="p-10 md:p-16 space-y-12">
@@ -120,3 +226,4 @@
     </footer>
 </body>
 </html>
+

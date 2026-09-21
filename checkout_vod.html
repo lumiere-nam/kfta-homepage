@@ -18,6 +18,13 @@
     </script>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
+    <style>
+        /* 한글 단어가 줄 끝에서 잘리지 않게 */
+        body, h1, h2, h3, h4, h5, h6, p, li, span, a, td, th, button {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
     <div class="max-w-lg w-full bg-white rounded-2xl shadow-xl overflow-hidden">

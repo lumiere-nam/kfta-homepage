@@ -10,7 +10,13 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="assets/js/auth.js"></script>
-    <style>body { font-family: 'Pretendard', sans-serif; }</style>
+    <style>body { font-family: 'Pretendard', sans-serif; }
+        /* 한글 단어가 줄 끝에서 잘리지 않게 */
+        body, h1, h2, h3, h4, h5, h6, p, li, span, a, td, th, button {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
 </head>
@@ -52,10 +58,8 @@
 
     <script>
         document.getElementById('kakaoBtn').addEventListener('click', () => {
-            alert('카카오 로그인은 연동 준비 중입니다.
-아래 이메일 로그인을 이용해 주세요.');
+            alert('카카오 로그인은 연동 준비 중입니다.\n아래 이메일 로그인을 이용해 주세요.');
         });
-        <script>
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value;

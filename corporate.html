@@ -8,6 +8,16 @@
     <script>tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } } }</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-800 bg-kftaLight antialiased">
                 <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
@@ -90,7 +100,7 @@
         <div class="max-w-7xl mx-auto">
             <!-- Category 1: Trend & Personal Branding -->
             <div class="mb-20">
-                <h2 class="font-serif font-bold text-4xl text-kftaGreen mb-4 text-center">트렌드 & 퍼스널 브랜딩</h2>
+                <h2 class="font-serif font-bold text-4xl text-kftaGreen mb-4 text-center">퍼스널 브랜딩 & 비즈니스 코칭</h2>
                 <p class="text-center text-gray-600 mb-12">개인의 개성을 존중하는 기업 문화에 맞춘 세련된 스타일링 프로그램</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-kftaLight p-10 rounded-3xl flex flex-col justify-center border-t-4 border-kftaRed">
@@ -114,7 +124,7 @@
 
             <!-- Category 2: Fashion Therapy & Team Building -->
             <div class="mb-12">
-                <h2 class="font-serif font-bold text-4xl text-kftaGreen mb-4 text-center">패션 테라피 & 팀빌딩</h2>
+                <h2 class="font-serif font-bold text-4xl text-kftaGreen mb-4 text-center">조직 활성화 & 패션테라피</h2>
                 <p class="text-center text-gray-600 mb-12">스트레스 해소와 조직 내 소통에 초점을 맞춘 힐링 워크샵 프로그램</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-kftaLight p-10 rounded-3xl flex flex-col justify-center border-t-4 border-[#869CB0]">

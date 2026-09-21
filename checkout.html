@@ -14,11 +14,11 @@
             const itemName = params.get("item") || "한국패션테라피 교육 과정";
             let price = "0";
             
-            if(itemName.includes("Level 1")) price = "870,000";
-            else if(itemName.includes("Level 2")) price = "1,200,000";
-            else if(itemName.includes("Level 3")) price = "1,500,000";
-            else if(itemName.includes("Trainer") && !itemName.includes("Master")) price = "1,850,000";
-            else if(itemName.includes("Master Trainer")) price = "2,000,000";
+            if(itemName.includes("Level 1")) price = "1,500,000";
+            else if(itemName.includes("Level 2")) price = "2,000,000";
+            else if(itemName.includes("Level 3")) price = "2,500,000";
+            else if(itemName.includes("Trainer") && !itemName.includes("Master")) price = "2,700,000";
+            else if(itemName.includes("Master Trainer")) price = "3,000,000";
             else price = "1,000,000"; // default fallback
 
             document.getElementById("item-name").textContent = itemName;
@@ -30,6 +30,16 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
+    </style>
 </head>
 <body class="font-sans text-gray-800 bg-kftaLight antialiased flex flex-col min-h-screen">
     

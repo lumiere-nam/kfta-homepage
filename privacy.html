@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 | KFTA 한국패션테라피협회</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
+    </style>
+    <script src="assets/js/auth.js"></script>
+</head>
+<body class="font-sans text-gray-800 bg-kftaLight antialiased selection:bg-kftaRed selection:text-white">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-kftaBeige/90 backdrop-blur-md z-50 border-b border-kftaBorder animate__animated animate__fadeInDown">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+                <img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-12 w-auto">
+            </a>
+            <nav class="hidden md:flex gap-8 relative z-50 h-full">
+                <div class="group relative flex items-center h-full"><a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a></div>
+                <div class="group relative flex items-center h-full"><a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a></div>
+                <div class="group relative flex items-center h-full"><a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a></div>
+                <div class="group relative flex items-center h-full"><a href="consulting.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CONSULTING</a></div>
+                <div class="group relative flex items-center h-full"><a href="corporate.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CORPORATE</a></div>
+                <div class="group relative flex items-center h-full"><a href="shop.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">SHOP</a></div>
+                <div class="group relative flex items-center h-full"><a href="community.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">COMMUNITY</a></div>
+                <a href="login.html" id="navAuth" class="self-center shrink-0 ml-4 font-bold text-white bg-kftaGreen hover:bg-green-900 px-4 py-1.5 text-xs rounded-full transition-colors whitespace-nowrap">로그인</a>
+            </nav>
+        </div>
+    </header>    <main class="bg-kftaLight py-16 px-6 font-sans text-gray-800">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-sm tracking-widest text-kftaRed font-bold mb-3">KFTA POLICY</p>
+            <h1 class="font-serif font-bold text-4xl lg:text-5xl mb-4">개인정보처리방침</h1>
+            <p class="text-gray-600 mb-12">캄온(calm:on)은 이용자의 개인정보를 소중히 다루며, 관련 법령을 준수합니다.</p>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">1. 개인정보의 처리 목적</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">캄온(calm:on) (이하 &lsquo;협회&rsquo;)은 다음의 목적을 위해 개인정보를 처리하며, 목적 외의 용도로는 이용하지 않습니다.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li><strong>회원 관리</strong> — 가입 의사 확인, 본인 식별, 공지사항 전달</li>
+                    <li><strong>교육 서비스 제공</strong> — 클래스 신청 접수, 일정 안내, 수료증 발급</li>
+                    <li><strong>상담 및 문의 응대</strong> — 컨설팅 예약, 문의 회신</li>
+                    <li><strong>재화 판매</strong> — 교재 · 교구 주문 확인 및 배송</li>
+                    <li><strong>마케팅 정보 제공</strong> — 개강 소식 및 혜택 안내 (별도 동의한 경우에 한함)</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">2. 수집하는 개인정보 항목</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-kftaGreen text-white">
+                                <th class="border border-kftaBorder p-3 text-left">구분</th>
+                                <th class="border border-kftaBorder p-3 text-left">수집 항목</th>
+                                <th class="border border-kftaBorder p-3 text-left">수집 방법</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="border border-kftaBorder p-3 font-bold">필수</td><td class="border border-kftaBorder p-3">이름, 이메일, 휴대전화번호</td><td class="border border-kftaBorder p-3">회원가입</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-kftaBorder p-3 font-bold">선택</td><td class="border border-kftaBorder p-3">마케팅 정보 수신 동의 여부</td><td class="border border-kftaBorder p-3">회원가입</td></tr>
+                            <tr><td class="border border-kftaBorder p-3 font-bold">문의 시</td><td class="border border-kftaBorder p-3">이름, 연락처, 문의 내용</td><td class="border border-kftaBorder p-3">문의 양식</td></tr>
+                            <tr class="bg-gray-50"><td class="border border-kftaBorder p-3 font-bold">배송 시</td><td class="border border-kftaBorder p-3">수령인, 주소, 연락처</td><td class="border border-kftaBorder p-3">주문 접수</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-600 mt-4 leading-relaxed">※ 협회는 <strong>비밀번호를 저장하지 않으며</strong>, 주민등록번호 등 고유식별정보를 수집하지 않습니다.</p>
+                <p class="text-sm text-gray-600 mt-2 leading-relaxed">※ 결제 시스템 도입 후에는 결제대행사(PG)를 통해 결제 정보가 처리되며, 협회는 카드번호 등 결제 수단 정보를 직접 보관하지 않습니다.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">3. 개인정보의 보유 및 이용 기간</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li><strong>회원 정보</strong> — 회원 탈퇴 시까지. 탈퇴 요청 시 지체 없이 파기합니다.</li>
+                    <li><strong>문의 내역</strong> — 처리 완료 후 1년</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mt-4 mb-3 text-sm">다만 관련 법령에 따라 아래 기간 동안 보관합니다.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li>계약 또는 청약철회 등에 관한 기록 — <strong>5년</strong> (전자상거래법)</li>
+                    <li>대금 결제 및 재화 공급에 관한 기록 — <strong>5년</strong> (전자상거래법)</li>
+                    <li>소비자 불만 또는 분쟁 처리에 관한 기록 — <strong>3년</strong> (전자상거래법)</li>
+                    <li>표시 · 광고에 관한 기록 — <strong>6개월</strong> (전자상거래법)</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">4. 개인정보의 제3자 제공</h2>
+                <p class="text-gray-700 leading-relaxed text-sm">협회는 이용자의 개인정보를 <strong>제3자에게 제공하지 않습니다.</strong> 다만 이용자가 사전에 동의한 경우, 또는 법령에 따라 수사기관이 적법한 절차로 요구하는 경우에는 예외로 합니다.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">5. 개인정보 처리의 위탁</h2>
+                <p class="text-gray-700 leading-relaxed text-sm mb-4">협회는 서비스 제공을 위해 아래와 같이 업무를 위탁할 수 있으며, 위탁 시 개인정보가 안전하게 관리되도록 필요한 사항을 규정합니다.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li>결제 처리 — 결제대행사 (도입 시 별도 고지)</li>
+                    <li>상품 배송 — 택배사</li>
+                    <li>알림 발송 — 문자 · 알림톡 발송 대행사</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">6. 정보주체의 권리와 행사 방법</h2>
+                <p class="text-gray-700 leading-relaxed text-sm mb-4">이용자는 언제든지 아래의 권리를 행사하실 수 있습니다.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li>개인정보 <strong>열람</strong> 요구</li>
+                    <li>오류가 있을 경우 <strong>정정</strong> 요구</li>
+                    <li><strong>삭제</strong> 요구</li>
+                    <li><strong>처리 정지</strong> 요구</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed text-sm mt-4">아래 연락처로 요청하시면 지체 없이 조치하겠습니다. 마케팅 수신 동의는 언제든 철회하실 수 있습니다.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">7. 개인정보의 파기</h2>
+                <p class="text-gray-700 leading-relaxed text-sm">보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다. 전자적 파일은 복구할 수 없는 방법으로 삭제하며, 종이 문서는 분쇄하거나 소각합니다.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">8. 개인정보의 안전성 확보 조치</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm leading-relaxed">
+                    <li>개인정보 취급자를 최소한으로 제한하고 접근 권한을 관리합니다.</li>
+                    <li>개인정보가 포함된 자료는 잠금장치가 있는 장소에 보관합니다.</li>
+                    <li>해킹 및 악성코드에 대비한 보안 조치를 적용합니다.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-8">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">9. 개인정보 보호책임자</h2>
+                <div class="bg-kftaBeige/40 rounded-xl p-6 text-sm text-gray-700 leading-relaxed">
+                    <p class="font-bold text-gray-900 mb-2">개인정보 보호책임자</p>
+                    <p>성명 : 남미화</p>
+                    <p>소속 : 캄온(calm:on)</p>
+                    <p>연락처 : 010-9692-0410</p>
+                    <p>이메일 : nxxon@naver.com</p>
+                </div>
+                <p class="text-sm text-gray-600 mt-4 leading-relaxed">개인정보 침해에 대한 신고나 상담이 필요하신 경우 아래 기관에 문의하실 수 있습니다.</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm mt-2">
+                    <li>개인정보침해신고센터 (privacy.kisa.or.kr / 국번없이 118)</li>
+                    <li>개인정보 분쟁조정위원회 (kopico.go.kr / 1833-6972)</li>
+                    <li>대검찰청 사이버수사과 (spo.go.kr / 1301)</li>
+                    <li>경찰청 사이버수사국 (ecrm.police.go.kr / 182)</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-kftaBorder p-8 mb-12">
+                <h2 class="font-bold text-xl text-kftaGreen mb-4">10. 방침의 변경</h2>
+                <p class="text-gray-700 leading-relaxed text-sm">이 개인정보처리방침은 <strong>2026년 9월 22일</strong>부터 적용됩니다. 내용의 추가 · 삭제 및 수정이 있을 경우 시행 7일 전부터 홈페이지를 통해 공지하겠습니다.</p>
+            </div>
+
+            <div class="bg-kftaBeige/50 rounded-2xl p-7 border border-kftaBorder text-sm text-gray-700 leading-relaxed">
+                <p class="font-bold text-gray-900 mb-2">사업자 정보</p>
+                <p>상호 : 캄온(calm:on) &nbsp;|&nbsp; 대표 : 남미화</p>
+                <p>사업자등록번호 : 395-44-01406</p>
+                <p>주소 : 경기도 용인시 처인구 포곡읍 성산로 667, 102동 2층 203호 A구역(솔빛마을)</p>
+                <p class="mt-3 text-xs text-gray-500">한국패션테라피협회(KFTA)는 캄온(calm:on)의 패션테라피 교육 브랜드입니다.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-kftaGreen text-kftaBeige py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+            <div class="w-full md:w-1/3">
+                <h3 class="font-serif font-bold text-xl mb-4">KFTA</h3>
+                <p class="text-sm opacity-80 leading-relaxed">한국패션테라피협회는 패션과 심리를 결합하여 진정한 나를 찾고, 치유와 성장을 돕는 새로운 패러다임을 제시합니다.</p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h4 class="font-bold mb-4">Contact</h4>
+                <p class="text-sm opacity-80 mb-2">Email: nxxon@naver.com</p>
+                <p class="text-sm opacity-80 mb-2">Tel: 010-9692-0410</p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <h4 class="font-bold mb-4">Legal</h4>
+                <a href="#" class="block text-sm opacity-80 hover:text-white mb-2 transition-colors">이용약관</a>
+                <a href="#" class="block text-sm opacity-80 hover:text-white transition-colors">개인정보처리방침</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-kftaBeige/20 text-center text-sm opacity-60">
+            &copy; 2026 Korea Fashion Therapy Association. All rights reserved.
+        </div>
+        <!-- KFTA-ENTITY-BAR -->
+        <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/20 text-center text-xs leading-relaxed">
+            <p class="mb-3 space-x-4">
+                <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">YouTube</a>
+                <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">Instagram</a>
+                <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">네이버 블로그</a>
+                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오채널</a>
+            </p>
+            <p class="opacity-70">한국패션테라피협회(KFTA)는 <strong>캄온(calm:on)</strong>의 패션테라피 교육 브랜드입니다. (사업자등록번호 395-44-01406 · 교육과정의 신청 · 결제는 캄온에서 이루어집니다)</p>
+            <p class="opacity-70 mt-1">학술 · 연구 활동은 <strong>한국패션테라피진흥원</strong>(비영리단체 · 고유번호 110-82-84910)이 수행합니다.</p>
+            <p class="opacity-50 mt-2">「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (출원번호 제40-2026-0177049호 · 2026.08.26 출원)</p>
+            <p class="mt-3 space-x-3 opacity-80">
+                <a href="terms.html" class="hover:underline">이용약관</a><span class="opacity-40">|</span><a href="privacy.html" class="font-bold hover:underline">개인정보처리방침</a><span class="opacity-40">|</span><a href="refund.html" class="hover:underline">환불 규정</a>
+            </p>
+        </div>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOD Player | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' } } } }
+    </script>
+    <script src="assets/js/auth.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <!-- Player Header -->
+    <header class="bg-gray-900 border-b border-gray-800 p-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <a href="mypage.html" class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </a>
+            <h1 id="classTitle" class="font-bold text-lg">로딩중...</h1>
+        </div>
+        <div class="text-sm text-gray-400">
+            KFTA Online Class
+        </div>
+    </header>
+
+    <!-- Main Player Area -->
+    <main class="flex-grow flex flex-col lg:flex-row relative">
+        <div class="flex-grow flex items-center justify-center bg-black relative">
+            <div id="videoContainer" class="w-full max-w-5xl aspect-video bg-gray-900 flex items-center justify-center shadow-2xl">
+                <!-- YouTube Iframe will be injected here if authorized -->
+            </div>
+        </div>
+        
+        <!-- Sidebar (Curriculum) -->
+        <div class="w-full lg:w-80 bg-gray-900 border-l border-gray-800 flex flex-col h-64 lg:h-auto overflow-y-auto">
+            <div class="p-4 border-b border-gray-800">
+                <h2 class="font-bold">커리큘럼</h2>
+            </div>
+            <div class="p-2 space-y-1">
+                <button class="w-full text-left p-3 rounded bg-gray-800 text-white flex items-center gap-3">
+                    <svg class="w-5 h-5 text-kftaRed" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                    <span class="text-sm font-medium">1강. 오리엔테이션</span>
+                </button>
+                <button class="w-full text-left p-3 rounded hover:bg-gray-800 text-gray-400 hover:text-white transition-colors flex items-center gap-3">
+                    <span class="w-5 h-5 flex items-center justify-center border border-gray-600 rounded-full text-xs">2</span>
+                    <span class="text-sm font-medium">2강. 핵심 이론</span>
+                </button>
+                <button class="w-full text-left p-3 rounded hover:bg-gray-800 text-gray-400 hover:text-white transition-colors flex items-center gap-3">
+                    <span class="w-5 h-5 flex items-center justify-center border border-gray-600 rounded-full text-xs">3</span>
+                    <span class="text-sm font-medium">3강. 실전 적용</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const classId = urlParams.get('id');
+        const className = urlParams.get('title') || '클래스';
+
+        document.getElementById('classTitle').textContent = className;
+
+        // Authorization check!
+        if (!Auth.isLoggedIn() || !Auth.hasPurchased(classId)) {
+            document.getElementById('videoContainer').innerHTML = `
+                <div class="text-center p-8">
+                    <svg class="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <h2 class="text-2xl font-bold mb-2">권한이 없습니다.</h2>
+                    <p class="text-gray-400 mb-6">해당 VOD를 수강하려면 먼저 구매하셔야 합니다.</p>
+                    <a href="checkout_vod.html?id=${classId}&title=${encodeURIComponent(className)}" class="bg-kftaRed hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg">수강 신청하러 가기</a>
+                </div>
+            `;
+        } else {
+            // Authorized -> Show Mock Video
+            document.getElementById('videoContainer').innerHTML = `
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            `;
+        }
+    </script>
+</body>
+</html>

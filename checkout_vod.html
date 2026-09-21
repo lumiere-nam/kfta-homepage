@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOD 결제 | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' } } } }
+    </script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        // Redirect to login if not logged in
+        if (!Auth.isLoggedIn()) {
+            const currentUrl = encodeURIComponent(window.location.href);
+            window.location.href = `login.html?redirect=${currentUrl}`;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="max-w-lg w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-gray-800">수강 신청 (VOD)</h1>
+                <a href="academy.html?v=2" class="text-gray-400 hover:text-gray-600">취소</a>
+            </div>
+            
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+                <p class="text-sm text-gray-500 mb-1">선택한 클래스</p>
+                <h2 id="className" class="text-xl font-bold text-kftaGreen">로딩중...</h2>
+                <div class="mt-4 pt-4 border-t border-gray-200 flex justify-between items-center">
+                    <span class="text-gray-600">결제 금액</span>
+                    <span class="text-2xl font-bold text-kftaRed" id="price">₩ 0</span>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <p class="text-sm text-gray-500 text-center">이 페이지는 클래스101 스타일의 VOD 수강권 부여를 시뮬레이션합니다.</p>
+                <button id="payBtn" class="w-full bg-kftaGreen hover:bg-green-900 text-white font-bold py-4 rounded-xl shadow-lg transition-all text-lg flex justify-center items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                    테스트 결제 진행하기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = urlParams.get('id') || 'unknown';
+        const itemName = urlParams.get('title') || '온라인 클래스';
+        const itemPrice = urlParams.get('price') || '50,000';
+
+        document.getElementById('className').textContent = itemName;
+        document.getElementById('price').textContent = `₩ ${itemPrice}`;
+
+        document.getElementById('payBtn').addEventListener('click', function() {
+            // Give original button loading state
+            this.innerHTML = '처리중...';
+            this.classList.add('opacity-75');
+            
+            setTimeout(() => {
+                // Grant access
+                Auth.purchaseClass(itemId, itemName);
+                alert(`${itemName} 수강 신청이 완료되었습니다! 마이클래스에서 시청하세요.`);
+                window.location.href = 'mypage.html';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Class | KFTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' } } } }
+    </script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        if (!Auth.isLoggedIn()) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body class="bg-kftaLight min-h-screen">
+    <!-- Navbar (simplified for mypage) -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="index.html"><img src="assets/kfta-logo-real.png" alt="KFTA Logo" class="h-8"></a>
+            <div class="flex items-center gap-4">
+                <span id="userName" class="text-sm font-bold text-gray-700"></span>
+                <button onclick="Auth.logout()" class="text-sm text-gray-500 hover:text-red-500">로그아웃</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">마이 클래스 (내 서재)</h1>
+        
+        <div id="classList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Classes will be injected here -->
+        </div>
+        
+        <div id="emptyState" class="hidden text-center py-20 bg-white rounded-2xl border border-gray-200 shadow-sm">
+            <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <h3 class="text-lg font-bold text-gray-700 mb-2">수강 중인 클래스가 없습니다.</h3>
+            <p class="text-gray-500 mb-6">아카데미에서 원하는 온라인 VOD를 찾아보세요.</p>
+            <a href="academy.html?v=2" class="bg-kftaGreen hover:bg-green-900 text-white font-bold py-2 px-6 rounded-lg transition-colors">클래스 둘러보기</a>
+        </div>
+    </main>
+
+    <script>
+        const user = Auth.getUser();
+        document.getElementById('userName').textContent = `${user.name}님`;
+
+        const purchases = Auth.getPurchases();
+        if (purchases.length === 0) {
+            document.getElementById('emptyState').classList.remove('hidden');
+        } else {
+            const container = document.getElementById('classList');
+            purchases.forEach(p => {
+                container.innerHTML += `
+                    <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="bg-gray-800 h-40 flex items-center justify-center relative group">
+                            <span class="text-white/30 font-bold text-xl uppercase">${p.id}</span>
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-bold text-kftaRed mb-2 block">무제한 수강</span>
+                            <h3 class="font-bold text-gray-800 text-lg leading-tight mb-4">${p.name}</h3>
+                            <a href="player.html?id=${p.id}&title=${encodeURIComponent(p.name)}" class="block w-full text-center bg-kftaGreen hover:bg-green-900 text-white font-bold py-2 rounded-lg transition-colors">이어보기</a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

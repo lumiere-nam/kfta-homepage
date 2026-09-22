@@ -14,6 +14,14 @@
 
 
     <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
         /* 한글 단어가 줄 끝에서 잘리지 않게 */
         body, h1, h2, h3, h4, h5, h6, p, li, span, a, td, th, button {
             word-break: keep-all;

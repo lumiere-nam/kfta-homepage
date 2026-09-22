@@ -11,7 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     <script src="assets/js/auth.js"></script>
-    <style>body { font-family: 'Pretendard', sans-serif; }
+    <style>
+        @font-face {
+            font-family: 'AmpersandSerif';
+            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
+            unicode-range: U+0026;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
+            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        }
         /* 한글 단어가 줄 끝에서 잘리지 않게 */
         body, h1, h2, h3, h4, h5, h6, p, li, span, a, td, th, button {
             word-break: keep-all;

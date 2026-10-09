@@ -365,8 +365,8 @@
                 <p class="text-sm mt-4">경기도 용인시 처인구 성산로 667</p>
             </div>
             <div class="text-center md:text-right text-sm">
-                <p class="mb-2">Email: <a href="mailto:nxxon@naver.com" class="hover:text-white transition-colors">nxxon@naver.com</a></p>
-                <p class="mb-6">Tel: 010-9692-0410</p>
+                <p class="mb-2">Email: <a href="mailto:cs@calmon.co.kr" class="hover:text-white transition-colors">cs@calmon.co.kr</a></p>
+                <p class="mb-6">Tel: 050-6023-0410</p>
                 <p>&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>

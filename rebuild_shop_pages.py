@@ -1,4 +1,4 @@
-import os
+﻿import os
 
 template = """<!DOCTYPE html>
 <html lang="ko">
@@ -143,7 +143,7 @@ template = """<!DOCTYPE html>
             </div>
             <div class="text-center md:text-right opacity-80 text-sm space-y-1">
                 <p>경기도 용인시 처인구 성산로 667, 102동 1F 203호 A구역 (1F 주차가능)</p>
-                <p>Tel: 010-9692-0410 | Email: nxxon@naver.com</p>
+                <p>Tel: 050-6023-0410 | Email: cs@calmon.co.kr</p>
                 <p class="mt-4 opacity-60">&copy; 2026 Korea Fashion Therapy Association. All rights reserved.</p>
             </div>
         </div>

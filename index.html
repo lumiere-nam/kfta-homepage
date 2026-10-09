@@ -18,8 +18,8 @@
               kftaBorder: '#D1C9BB'
             },
             fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['Pretendard', 'sans-serif'],
+              serif: ['Pretendard', '-apple-system', 'sans-serif'],
+              sans: ['Pretendard', '-apple-system', 'sans-serif'],
             }
           }
         }
@@ -28,15 +28,12 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'AmpersandSerif';
-            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
-            unicode-range: U+0026;
-        }
-        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
-            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        /* 사이트 전체 단일 프리미엄 폰트(Pretendard)로 100% 일원화 */
+        body, h1, h2, h3, h4, h5, h6, p, li, a, span, div, button, input, textarea,
+        .font-serif, [class*="font-serif"],
+        .font-sans, [class*="font-sans"] {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
         }
     
         /* 한글 단어가 줄 끝에서 잘리지 않게 */
@@ -60,14 +57,15 @@
             <nav class="hidden md:flex gap-8 relative z-50 h-full">
                 <div class="group relative flex items-center h-full">
                     <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
-                    <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                        <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
-                        <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
-                        <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
+                    <div class="absolute left-0 top-full hidden group-hover:block w-64 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#greeting" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Greeting (인사말)</a>
+                        <a href="index.html#vision" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy (비전 &amp; 철학)</a>
+                        <a href="index.html#methodology" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology (테라피 4단계)</a>
+                        <a href="index.html#location" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen font-semibold text-kftaGreen border-t border-gray-50">사무국 &amp; 4대 교육체계 (Delivery)</a>
                     </div>
                 </div>
                 <div class="group relative flex items-center h-full">
-                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CLASS</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
                         <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
                         <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
@@ -78,7 +76,7 @@
                 <div class="group relative flex items-center h-full">
                     <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
-                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
+                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview</a>
                           <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
                           <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
                           <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
@@ -118,175 +116,671 @@
 
 
         <!-- Hero Section -->
-    <section class="bg-kftaBeige pt-24 pb-12 px-6">
-        <div class="max-w-4xl mx-auto text-center animate__animated animate__fadeInDown">
-            <h1 class="font-serif font-bold text-5xl md:text-6xl text-kftaRed mb-8 leading-tight">Our Story</h1>
-            <p class="text-lg text-gray-700 mb-10 leading-relaxed text-center">심리적 통찰, 자기 성찰, 그리고 진정성으로 완성되는 패션 테라피를 통해 당신을 발견하세요.</p>
-            <a href="#vision" class="inline-block bg-kftaRed hover:bg-red-900 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-red-900/30 mb-16">협회 소개</a>
-            <div class="mt-8">
-                <img src="assets/mirror.jpg" alt="Our Story Mirror" class="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl">
+    <section class="bg-kftaBeige py-24 px-6 animate__animated animate__fadeIn">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="font-serif font-bold text-5xl md:text-6xl text-kftaGreen mb-8">Our Story</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed break-keep mb-12">
+                심리적 통찰, 자기 성찰, 그리고 진정성으로 완성되는 패션 테라피를 통해 당신을 발견하세요.
+            </p>
+
+            <!-- Chapter Index Bar (Floating Frosted Glass, Airy & Clean) -->
+            <div class="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 py-2.5 px-6 sm:px-8 rounded-full bg-white/80 backdrop-blur-md border border-kftaBorder/80 shadow-xs mb-14 text-xs sm:text-sm tracking-wider">
+                <a href="#greeting" class="group flex items-center gap-1.5 text-gray-700 hover:text-kftaGreen transition-colors py-1">
+                    <span class="font-bold text-kftaRed text-xs">01</span>
+                    <span class="font-semibold">인사말</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-widest group-hover:text-kftaGreen hidden md:inline">Greeting</span>
+                </a>
+                <span class="w-1 h-2.5 bg-gray-300/70"></span>
+                <a href="#vision" class="group flex items-center gap-1.5 text-gray-700 hover:text-kftaGreen transition-colors py-1">
+                    <span class="font-bold text-kftaRed text-xs">02</span>
+                    <span class="font-semibold">철학 & 비전</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-widest group-hover:text-kftaGreen hidden md:inline">Philosophy</span>
+                </a>
+                <span class="w-1 h-2.5 bg-gray-300/70"></span>
+                <a href="#values" class="group flex items-center gap-1.5 text-gray-700 hover:text-kftaGreen transition-colors py-1">
+                    <span class="font-bold text-kftaRed text-xs">03</span>
+                    <span class="font-semibold">핵심 가치</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-widest group-hover:text-kftaGreen hidden md:inline">Values</span>
+                </a>
+                <span class="w-1 h-2.5 bg-gray-300/70"></span>
+                <a href="#methodology" class="group flex items-center gap-1.5 text-gray-700 hover:text-kftaGreen transition-colors py-1">
+                    <span class="font-bold text-kftaRed text-xs">04</span>
+                    <span class="font-semibold">방법론</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-widest group-hover:text-kftaGreen hidden md:inline">Methodology</span>
+                </a>
+                <span class="w-1 h-2.5 bg-gray-300/70"></span>
+                <a href="#location" class="group flex items-center gap-1.5 text-gray-700 hover:text-kftaGreen transition-colors py-1">
+                    <span class="font-bold text-kftaRed text-xs">05</span>
+                    <span class="font-semibold">사무국 & 교육 체계</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-widest group-hover:text-kftaGreen hidden md:inline">Studio</span>
+                </a>
+            </div>
+
+            <!-- Fine Art Mirror Visual -->
+            <div class="relative max-w-3xl mx-auto">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                    <img src="assets/mirror.jpg" alt="Our Story Mirror" class="w-full h-auto object-cover object-center group-hover:scale-[1.01] transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Message (협회장 인사말) -->
+    <section id="greeting" class="bg-white py-28 px-6 border-b border-kftaBorder/60">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-xs uppercase tracking-[0.3em] text-kftaRed font-bold block mb-2.5">President's Address</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-kftaGreen font-light">
+                    <span class="font-normal text-kftaGreen">Founder’s</span> Message
+                </h2>
+                <div class="w-12 h-0.5 bg-kftaRed/50 mx-auto mt-4 mb-3"></div>
+                <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">인사말</p>
+            </div>
+
+            <!-- Greeting Main Card -->
+            <div class="bg-kftaLight rounded-[2.5rem] p-8 md:p-14 border border-kftaBorder/70 shadow-lg mb-20">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Images Gallery -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white group">
+                            <img src="assets/founder-lecture.jpg" alt="한국패션테라피협회장 남미화 강의 현장" class="w-full h-80 md:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-5 left-5 right-5 text-white">
+                                <span class="bg-kftaRed/95 text-[11px] font-bold tracking-widest px-3 py-1 rounded-full uppercase inline-block mb-1.5 shadow">Academic & Educational Practice</span>
+                                <p class="text-sm font-light text-white/95">학술 연구와 현장 교육 실무를 기반으로 한 패션테라피 현장</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white h-32 md:h-36 group">
+                                <img src="assets/founder-workspace.jpg" alt="패션테라피 스타일링 분석 연구" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-md border-2 border-white h-32 md:h-36 group">
+                                <img src="assets/founder-books.jpg" alt="패션테라피 학술 연구 및 도서" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Greeting Text Content -->
+                    <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-kftaBorder text-xs text-kftaGreen font-semibold w-fit shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-kftaRed"></span>
+                            국내 최초의 패션테라피 학술 기반 전문 기관
+                        </div>
+
+                        <h3 class="font-serif text-2xl md:text-3xl text-kftaGreen font-bold leading-snug">
+                            “어떤 옷을 입어도 그 안에서<br class="hidden sm:inline">
+                            진정한 자신을 발견하시기를 바랍니다.”
+                        </h3>
+
+                        <div class="space-y-4 text-gray-700 leading-relaxed text-base md:text-lg break-keep font-sans">
+                            <p class="font-medium text-gray-800">
+                                안녕하십니까, 한국패션테라피협회장 <strong>남미화</strong>입니다.<br>
+                                저희 협회를 찾아주신 여러분께 진심으로 감사드립니다.
+                            </p>
+                            <p>
+                                본 협회는 <strong>의류학, 심리학, 표현예술(미술심리)</strong>을 융합하여 옷차림 속에 담긴 개인의 심리를 읽어내는 국내 최초의 패션테라피 전문 기관입니다.
+                            </p>
+                            <p>
+                                저희는 주관적인 감각에 의존하지 않고, 축적된 상담 사례와 심리 분석을 바탕으로 패션테라피의 객관적인 기준을 제시합니다. 검증된 전문성을 통해 나이와 유행에 흔들리지 않는, 당신만의 스타일을 주도적으로 완성해 나가시도록 돕겠습니다.
+                            </p>
+                            <p class="text-gray-600 font-medium">
+                                감사합니다.
+                            </p>
+                        </div>
+
+                        <div class="pt-6 border-t border-kftaBorder/70">
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-bold">President of KFTA</p>
+                            <p class="text-xl md:text-2xl font-serif font-bold text-kftaGreen mt-0.5">
+                                한국패션테라피협회장 <span class="text-kftaRed">남 미 화</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Founder Detailed Profile Section (Redesigned) -->
+            <div class="mt-28">
+                <!-- Section Sub-Header -->
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-kftaRed block mb-2">Academic & Professional Credentials</span>
+                    <h3 class="font-serif text-3xl md:text-4xl text-kftaGreen font-bold mb-4">협회장 프로필 및 주요 약력</h3>
+                    <p class="text-gray-600 text-sm md:text-base leading-relaxed break-keep">
+                        국내 최초 패션테라피 학술 연구를 개척하고, 의류학·심리학·미술심리를 융합하여 체계적인 표준을 정립해 온 협회장의 전문 이력입니다.
+                    </p>
+                    <div class="w-16 h-0.5 bg-kftaRed/50 mx-auto mt-6"></div>
+                </div>
+
+                <div class="space-y-10">
+                    <!-- BLOCK 1: Academic & Pioneer (학술 연구 & 리더십) -->
+                    <div class="bg-gradient-to-br from-white via-white to-kftaBeige/20 rounded-[2.5rem] p-8 md:p-12 border border-kftaBorder/70 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
+                            <!-- Left: Leadership Badges -->
+                            <div class="lg:w-1/3 space-y-5">
+                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kftaGreen/10 text-kftaGreen text-xs font-bold tracking-wider uppercase">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-kftaGreen"></span>
+                                    Leadership & Degrees
+                                </div>
+                                <h4 class="font-serif text-2xl md:text-3xl text-kftaGreen font-bold leading-tight break-keep">
+                                    학술 및 연구 기반<br>
+                                    <span class="text-kftaRed">패션테라피 개척자</span>
+                                </h4>
+                                <div class="space-y-2.5 pt-2">
+                                    <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 flex items-center justify-between shadow-xs">
+                                        <span class="text-xs text-gray-500 font-medium">한국패션테라피협회</span>
+                                        <span class="text-sm font-bold text-kftaGreen">협회장</span>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 flex items-center justify-between shadow-xs">
+                                        <span class="text-xs text-gray-500 font-medium">한국패션테라피진흥원</span>
+                                        <span class="text-sm font-bold text-kftaGreen">대표</span>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 flex items-center justify-between shadow-xs">
+                                        <span class="text-xs text-gray-500 font-medium">웰에이징 라이프스타일 브랜드</span>
+                                        <span class="text-sm font-bold text-kftaGreen">캄온(calm:on) 대표</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Academic Degrees & Pioneer Paper -->
+                            <div class="lg:w-2/3 space-y-6">
+                                <!-- Highlight Banner: 국내 최초 연구 -->
+                                <div class="bg-white rounded-2xl p-6 border-l-4 border-kftaRed shadow-sm border-t border-r border-b border-gray-100">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="bg-kftaRed text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Milestone 2012</span>
+                                        <span class="text-xs font-bold text-kftaRed">국내 최초 패션테라피 학술 연구 발표</span>
+                                    </div>
+                                    <p class="text-base md:text-lg font-bold text-gray-900 leading-snug break-keep">
+                                        「힐링 콘텐츠 개념을 적용한 패션테라피 연구의 방법론적 접근」
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-2 break-keep">
+                                        한국패션비즈니스학회 학술대회 발표 (남미화·박혜원) &middot; 국내 패션테라피 연구의 효시
+                                    </p>
+                                </div>
+
+                                <!-- Degrees & Societies Grid -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                                    <div class="space-y-3">
+                                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Academic Degrees</p>
+                                        <ul class="space-y-3.5 text-sm text-gray-700">
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaGreen mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">국립창원대학교 대학원</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">의류학과 패션전공 이학박사</p>
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaGreen mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">영국 Nottingham Trent University</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">Fashion and Textiles 석사 (M.A.)</p>
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaGreen mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">이화여자대학교 대학원</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">의류직물학과 의류직물학전공 석사</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="space-y-3">
+                                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Societies & Activities</p>
+                                        <ul class="space-y-3.5 text-sm text-gray-700">
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaRed mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">한국패션비즈니스학회</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">추계학술대회 우수논문상 수상 및 구두 발표 (2013)</p>
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaRed mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">한국패션조형협회</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">다수의 패션 조형 전시 활동 참여</p>
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-2.5">
+                                                <span class="w-2 h-2 rounded-full bg-kftaRed mt-1.5 shrink-0"></span>
+                                                <div>
+                                                    <strong class="text-gray-900 font-bold">한국색채학회</strong>
+                                                    <p class="text-xs text-gray-500 mt-0.5">학술 및 색채 전시 활동 참여</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOCK 2: Multidisciplinary Assessment & Professional Credentials (3대 전문 분석 역량) -->
+                    <div class="bg-white rounded-[2.5rem] p-8 md:p-12 border border-gray-200/80 shadow-sm">
+                        <div class="flex items-center justify-between mb-8 pb-4 border-b border-kftaBorder/50">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-kftaRed">Multidisciplinary Assessment & Credentials</span>
+                                <h4 class="font-serif text-2xl md:text-3xl text-kftaGreen font-bold mt-1">전문 자격 및 분석 역량</h4>
+                            </div>
+                            <span class="text-xs text-gray-400 font-medium hidden sm:inline-block">심리 &middot; 색채 &middot; 패션의 융합 분석 전문성</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Category 1: 심리/감성 분석 -->
+                            <div class="bg-kftaLight/60 rounded-3xl p-7 border border-kftaBorder/50 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-5">
+                                        <div class="w-10 h-10 rounded-2xl bg-kftaGreen/15 text-kftaGreen flex items-center justify-center font-bold text-sm">
+                                            01
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-900 text-base">심리 &middot; 감성 분석</h5>
+                                            <p class="text-[11px] text-gray-500">내면 심리 및 감성 코칭</p>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-3 text-sm text-gray-700">
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>미술심리상담사 <strong class="text-gray-900">1급</strong></span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>감성코칭지도사 <strong class="text-gray-900">2급</strong></span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>도형심리 GPA 디브리퍼</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-8 pt-4 border-t border-gray-200/60 text-[11px] text-gray-400">
+                                    심층 심리 분석 및 정서 코칭
+                                </div>
+                            </div>
+
+                            <!-- Category 2: 색채/성향 분석 -->
+                            <div class="bg-kftaLight/60 rounded-3xl p-7 border border-kftaBorder/50 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-5">
+                                        <div class="w-10 h-10 rounded-2xl bg-kftaRed/15 text-kftaRed flex items-center justify-center font-bold text-sm">
+                                            02
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-900 text-base">색채 &middot; 성향 분석</h5>
+                                            <p class="text-[11px] text-gray-500">컬러 테라피 & 에너지 분석</p>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-2.5 text-sm text-gray-700">
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaRed shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>색채도형심리상담사</span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaRed shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>퍼스널컬러 컨설턴트 <strong class="text-gray-900">2급</strong></span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaRed shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>CPAC(Color Personality) 강사</span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaRed shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>오라에너지분석 전문가</span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaRed shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>아로마테라피 전문 자격</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-8 pt-4 border-t border-gray-200/60 text-[11px] text-gray-400">
+                                    컬러 에너지와 개인 맞춤 성향 도출
+                                </div>
+                            </div>
+
+                            <!-- Category 3: 패션/이미지 실무 -->
+                            <div class="bg-kftaLight/60 rounded-3xl p-7 border border-kftaBorder/50 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-5">
+                                        <div class="w-10 h-10 rounded-2xl bg-kftaGreen/15 text-kftaGreen flex items-center justify-center font-bold text-sm">
+                                            03
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold text-gray-900 text-base">패션 &middot; 이미지 실무</h5>
+                                            <p class="text-[11px] text-gray-500">외적 스타일링 및 리테일 실무</p>
+                                        </div>
+                                    </div>
+                                    <ul class="space-y-3 text-sm text-gray-700">
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>이미지컨설턴트 <strong class="text-gray-900">2급</strong></span>
+                                        </li>
+                                        <li class="flex items-center gap-2.5">
+                                            <svg class="w-4 h-4 text-kftaGreen shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                            <span>샵마스터 <strong class="text-gray-900">3급</strong></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-8 pt-4 border-t border-gray-200/60 text-[11px] text-gray-400">
+                                    외적 이미지 및 패션 디렉팅 실무
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BLOCK 3: Career, Academia & Publications (커리어, 심사, 저서 2-컬럼) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Left: 대학 출강 & 현장 리더십 -->
+                        <div class="bg-white rounded-[2.5rem] p-8 md:p-10 border border-gray-200/80 shadow-sm flex flex-col justify-between space-y-6">
+                            <div>
+                                <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-kftaGreen/10 text-kftaGreen text-xs font-bold w-fit mb-4">
+                                    University & Leadership
+                                </div>
+                                <h4 class="font-serif text-xl md:text-2xl text-kftaGreen font-bold mb-4">
+                                    현장 실무 및 대학교 출강 이력
+                                </h4>
+
+                                <div class="space-y-4 text-sm text-gray-700">
+                                    <div class="p-5 rounded-2xl bg-kftaLight/50 border border-gray-100">
+                                        <strong class="text-gray-900 block text-base mb-1.5 font-bold">대학교 출강 및 겸임교수 역임</strong>
+                                        <p class="leading-relaxed text-xs md:text-sm text-gray-600 break-keep">
+                                            전 영남대학교 의류패션학과 겸임교수 &middot; 국립창원대 &middot; 국립경상대(의류학과) &middot; 국립금오공과대(소재디자인공학과) &middot; 세종사이버대(상담심리학부) &middot; 청강문화산업대 패션스쿨 등 대학 강사 역임
+                                        </p>
+                                    </div>
+
+                                    <div class="p-5 rounded-2xl bg-kftaLight/50 border border-gray-100">
+                                        <strong class="text-gray-900 block text-base mb-1.5 font-bold">디자인 & 비즈니스 총괄</strong>
+                                        <p class="leading-relaxed text-xs md:text-sm text-gray-600 break-keep">
+                                            현 캄온(calm:on) 대표 &middot; 전 패션이즈 대표 (패션 유통 및 디자인 총괄) &middot; 전 한국종합교육원 &middot; 이천평생학습관 강사 역임
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400 border-t border-gray-100 pt-3">
+                                후학 양성과 패션 산업 실무를 아우르는 풍부한 현장 지도 경험
+                            </p>
+                        </div>
+
+                        <!-- Right: 자문/심사 & 주요 저서/전시 -->
+                        <div class="bg-white rounded-[2.5rem] p-8 md:p-10 border border-gray-200/80 shadow-sm flex flex-col justify-between space-y-6">
+                            <div>
+                                <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-kftaRed/10 text-kftaRed text-xs font-bold w-fit mb-4">
+                                    Advisory & Publications
+                                </div>
+                                <h4 class="font-serif text-xl md:text-2xl text-kftaGreen font-bold mb-4">
+                                    심사·자문, 주요 저서 및 교구재료
+                                </h4>
+
+                                <div class="space-y-4 text-sm text-gray-700">
+                                    <div class="p-5 rounded-2xl bg-kftaLight/50 border border-gray-100">
+                                        <strong class="text-gray-900 block text-base mb-1.5 font-bold">공적 자문 및 심사 위원</strong>
+                                        <ul class="text-xs md:text-sm text-gray-600 space-y-1.5 list-disc list-inside marker:text-kftaRed break-keep">
+                                            <li>전 대한민국텍스타일디자인대전 심사위원</li>
+                                            <li>전 (사)한국직업연구진흥원 자격검정 전문위원 (2012~2022)</li>
+                                            <li>전 한국생산성본부(신사업창업사관학교) &middot; 힐링산업협회(힐링페스타) &middot; 동부여성발전센터 강사</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="p-5 rounded-2xl bg-kftaLight/50 border border-gray-100">
+                                        <strong class="text-gray-900 block text-base mb-1.5 font-bold">주요 저서 및 교구재료</strong>
+                                        <ul class="text-xs md:text-sm text-gray-600 space-y-1.5 list-disc list-inside marker:text-kftaRed break-keep">
+                                            <li><strong>시니어 특화 콘텐츠:</strong> 「나의 빛나는 시절: 시니어 패션 컬러링북」 시리즈 (vol.1 1960년대 '스윙잉 서울' 등)</li>
+                                            <li><strong>아동 및 일반 교구재료:</strong> 「반짝반짝 패션 놀이 컬러링북」 외 다수</li>
+                                            <li><strong>글로벌 전시 기획:</strong> 영국 Nottingham Trent Univ. 등 다수의 'Korean Art and Design Exhibition' 기획 &middot; 참여</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-xs text-gray-400 border-t border-gray-100 pt-3">
+                                객관적인 공적 심사 역량과 특화 콘텐츠 저술 실적 보유
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Philosophy -->
-    <section id="vision" class="bg-white py-24 px-6 border-b border-kftaBorder">
+    <section id="vision" class="bg-white py-28 px-6 border-b border-kftaBorder/60">
         <div class="max-w-4xl mx-auto flex flex-col gap-16">
-            <div class="text-center">
-                <h2 class="font-serif text-5xl mb-4 text-kftaGreen animate__animated animate__fadeInUp">Philosophy</h2>
-                <div class="w-24 h-1 bg-kftaRed mx-auto mt-6"></div>
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.3em] text-kftaRed font-bold block mb-2.5">Foundation & Vision</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-kftaGreen font-light">
+                    <span class="font-normal text-kftaGreen">Our</span> Philosophy
+                </h2>
+                <div class="w-12 h-0.5 bg-kftaRed/50 mx-auto mt-4 mb-3"></div>
+                <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">협회 철학 & 비전</p>
             </div>
 
-            <div class="bg-kftaLight p-10 md:p-14 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition-shadow text-center animate__animated animate__fadeInUp animate__delay-1s">
-                <h3 class="font-bold text-3xl text-kftaGreen mb-6">Vision</h3>
-                <p class="text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto">한국패션테라피협회(KFTA)는 2012년 한국패션비즈니스학회에서 발표한 「힐링 콘텐츠 개념을 적용한 패션 테라피 연구의 방법론적 접근」(남미화·박혜원)에서 시작된 국내 패션테라피 연구의 계보 위에 서 있습니다.</p>
-                <p class="text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">2021년 <strong>한국패션테라피진흥원</strong>을 세워 그 연구를 이어왔고, 축적된 성과를 교육 과정으로 옮겨왔습니다.</p>
-                <p class="text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">의류학·심리학·미술심리의 융합적 통찰을 바탕으로, 감각이 아닌 '분석 기준'으로 스타일링을 설명하는 <strong class="text-kftaGreen">7요소</strong> · <strong class="text-kftaRed">4축</strong>, 그리고 매체론을 정립해왔습니다.</p>
-                <p class="text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">이 기준 위에서 전문가를 양성하고, 검증된 시스템을 해외로 확장해 나갑니다.</p>
+            <div class="bg-kftaLight p-10 md:p-14 rounded-3xl shadow-sm border border-kftaBorder/50 hover:shadow-md transition-shadow text-center">
+                <span class="text-xs font-semibold text-kftaRed uppercase tracking-widest block mb-2">01. Academic Foundation</span>
+                <h3 class="font-serif text-2xl md:text-3xl text-kftaGreen font-bold mb-6">Vision</h3>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto">한국패션테라피협회(KFTA)는 2012년 한국패션비즈니스학회에서 발표한 「힐링 콘텐츠 개념을 적용한 패션 테라피 연구의 방법론적 접근」(남미화·박혜원)에서 시작된 국내 패션테라피 연구의 계보 위에 서 있습니다.</p>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">2021년 <strong>한국패션테라피진흥원</strong>을 세워 그 연구를 이어왔고, 축적된 성과를 교육 과정으로 옮겨왔습니다.</p>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">의류학·심리학·미술심리의 융합적 통찰을 바탕으로, 감각이 아닌 '분석 기준'으로 스타일링을 설명하는 <strong class="text-kftaGreen">7요소</strong> · <strong class="text-kftaRed">4축</strong>, 그리고 매체론을 정립해왔습니다.</p>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed text-justify break-keep max-w-2xl mx-auto mt-4">이 기준 위에서 전문가를 양성하고, 검증된 시스템을 해외로 확장해 나갑니다.</p>
             </div>
 
-            <div class="bg-kftaLight p-10 md:p-14 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition-shadow text-center animate__animated animate__fadeInUp animate__delay-2s">
-                <h3 class="font-bold text-3xl text-kftaGreen mb-6">Mission</h3>
-                <p class="text-2xl font-serif text-kftaRed mb-6 font-bold tracking-wide">“감이 아닌 분석으로 옷차림 너머의 마음을 읽는다.”</p>
-                <p class="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">이미지스타일분석™을 통해 누구나 자신의 스타일을 스스로 완성해 나가도록 돕는다.</p>
+            <div class="bg-kftaLight p-10 md:p-14 rounded-3xl shadow-sm border border-kftaBorder/50 hover:shadow-md transition-shadow text-center">
+                <span class="text-xs font-semibold text-kftaRed uppercase tracking-widest block mb-2">02. Core Mission</span>
+                <h3 class="font-serif text-2xl md:text-3xl text-kftaGreen font-bold mb-6">Mission</h3>
+                <p class="text-2xl md:text-3xl font-medium text-kftaRed mb-6 tracking-wide">“감이 아닌 분석으로 옷차림 너머의 마음을 읽는다.”</p>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto">이미지스타일분석™을 통해 누구나 자신의 스타일을 스스로 완성해 나가도록 돕습니다.</p>
             </div>
         </div>
     </section>
 
     <!-- Core Values -->
-    <section class="bg-kftaLight py-24 px-6 relative overflow-hidden">
+    <section id="values" class="bg-kftaLight py-28 px-6 relative overflow-hidden border-b border-kftaBorder/60">
         <!-- Background Decoration -->
         <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#3B4B38 2px, transparent 2px); background-size: 40px 40px;"></div>
         
         <div class="max-w-7xl mx-auto text-center relative z-10">
-            <h2 class="font-serif text-5xl mb-4 text-kftaGreen animate__animated animate__fadeInUp">Core Values - BLOOM</h2>
-            <div class="w-24 h-1 bg-kftaRed mx-auto mt-6 mb-10"></div>
-            <p class="text-xl text-gray-600 mb-16 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">관계, 자기사랑, 호기심, 타인존중, 성장의 다섯 가지 가치로 구조화하고, 이를 'BLOOM(꽃이 피다)'으로 통합</p>
+            <!-- Section Header (Standardized) -->
+            <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+                <span class="text-xs uppercase tracking-[0.3em] text-kftaRed font-bold block mb-2.5">Core Values & Identity</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-kftaGreen font-light">
+                    <span class="font-normal text-kftaGreen">Core</span> Values — BLOOM
+                </h2>
+                <div class="w-12 h-0.5 bg-kftaRed/50 mx-auto mt-4 mb-3"></div>
+                <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">협회 5대 핵심 가치</p>
+                <p class="text-sm md:text-base text-gray-600 mt-4 leading-relaxed break-keep">
+                    관계, 자기사랑, 호기심, 타인존중, 성장의 5대 축을 통해<br>내면의 빛을 발견하고 진정한 자기다움을 꽃피웁니다.
+                </p>
+            </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn">
-                    <h1 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">B</h1>
-                    <h4 class="font-bold text-gray-800 text-sm lg:text-base">BELONG</h4>
-                    <p class="text-xs lg:text-sm text-gray-500 mt-2">관계</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-5 lg:gap-6">
+                <!-- B -->
+                <div class="bg-white p-7 lg:p-9 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-kftaBorder/60 group flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold tracking-widest text-kftaRed uppercase block mb-1">01 / Connection</span>
+                        <h3 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-3 group-hover:text-kftaRed transition-colors">B</h3>
+                        <h4 class="font-bold text-gray-900 text-sm lg:text-base tracking-wide">BELONG</h4>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-kftaLight text-xs font-semibold text-gray-700">관계와 유대</span>
+                        <p class="text-[11px] text-gray-500 mt-1.5 break-keep">세상과의 따뜻한 연결</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-1s">
-                    <h1 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">L</h1>
-                    <h4 class="font-bold text-gray-800 text-sm lg:text-base">LOVE</h4>
-                    <p class="text-xs lg:text-sm text-gray-500 mt-2">자기사랑</p>
+
+                <!-- L -->
+                <div class="bg-white p-7 lg:p-9 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-kftaBorder/60 group flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold tracking-widest text-kftaRed uppercase block mb-1">02 / Self-Compassion</span>
+                        <h3 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-3 group-hover:text-kftaRed transition-colors">L</h3>
+                        <h4 class="font-bold text-gray-900 text-sm lg:text-base tracking-wide">LOVE</h4>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-kftaLight text-xs font-semibold text-gray-700">자기사랑</span>
+                        <p class="text-[11px] text-gray-500 mt-1.5 break-keep">나를 긍정하는 자존감</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-2s">
-                    <h1 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">O</h1>
-                    <h4 class="font-bold text-gray-800 text-sm lg:text-base">OPEN</h4>
-                    <p class="text-xs lg:text-sm text-gray-500 mt-2">호기심</p>
+
+                <!-- O -->
+                <div class="bg-white p-7 lg:p-9 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-kftaBorder/60 group flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold tracking-widest text-kftaRed uppercase block mb-1">03 / Curiosity</span>
+                        <h3 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-3 group-hover:text-kftaRed transition-colors">O</h3>
+                        <h4 class="font-bold text-gray-900 text-sm lg:text-base tracking-wide">OPEN</h4>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-kftaLight text-xs font-semibold text-gray-700">열린 호기심</span>
+                        <p class="text-[11px] text-gray-500 mt-1.5 break-keep">새로운 스타일에 대한 탐색</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-3s">
-                    <h1 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">O</h1>
-                    <h4 class="font-bold text-gray-800 text-sm lg:text-base">OTHER</h4>
-                    <p class="text-xs lg:text-sm text-gray-500 mt-2">타인존중</p>
+
+                <!-- O -->
+                <div class="bg-white p-7 lg:p-9 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-kftaBorder/60 group flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold tracking-widest text-kftaRed uppercase block mb-1">04 / Respect</span>
+                        <h3 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-3 group-hover:text-kftaRed transition-colors">O</h3>
+                        <h4 class="font-bold text-gray-900 text-sm lg:text-base tracking-wide">OTHER</h4>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-kftaLight text-xs font-semibold text-gray-700">타인 존중</span>
+                        <p class="text-[11px] text-gray-500 mt-1.5 break-keep">서로 다른 개성의 포용</p>
+                    </div>
                 </div>
-                <div class="bg-white p-8 lg:p-10 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group animate__animated animate__zoomIn animate__delay-4s">
-                    <h1 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-4 group-hover:text-kftaRed transition-colors">M</h1>
-                    <h4 class="font-bold text-gray-800 text-sm lg:text-base">MOVE</h4>
-                    <p class="text-xs lg:text-sm text-gray-500 mt-2">성장</p>
+
+                <!-- M -->
+                <div class="bg-white p-7 lg:p-9 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-kftaBorder/60 group flex flex-col justify-between col-span-2 md:col-span-1 max-w-sm md:max-w-none mx-auto w-full">
+                    <div>
+                        <span class="text-[11px] font-bold tracking-widest text-kftaRed uppercase block mb-1">05 / Growth</span>
+                        <h3 class="font-serif font-bold text-5xl lg:text-6xl text-kftaGreen mb-3 group-hover:text-kftaRed transition-colors">M</h3>
+                        <h4 class="font-bold text-gray-900 text-sm lg:text-base tracking-wide">MOVE</h4>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 mt-4">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full bg-kftaLight text-xs font-semibold text-gray-700">지속적 성장</span>
+                        <p class="text-[11px] text-gray-500 mt-1.5 break-keep">주도적 변화와 실천</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Methodology -->
-    <section id="methodology" class="bg-[#B65F42] py-24 px-6 relative text-white">
+    <section id="methodology" class="bg-gradient-to-br from-[#8C3A27] via-[#9B4530] to-[#732B1D] py-28 px-6 relative text-white">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
             <!-- Text Content -->
             <div class="flex-1">
-                <h2 class="font-serif text-5xl mb-4 text-white/90">Methodology</h2>
-                <div class="w-24 h-1 bg-white/60 mt-6 mb-8"></div>
+                <!-- Standardized Section Header (White on Terracotta) -->
                 <div class="mb-8">
-                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/80 mb-2">IMAGE STYLE ANALYSIS™은</p>
-                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/80 mb-6">한국패션테라피협회 고유 방법론입니다.</p>
+                    <span class="text-xs uppercase tracking-[0.3em] text-white/70 font-bold block mb-2.5">Exclusive Methodology</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-white font-light">
+                        <span class="font-normal text-white">KFTA</span> Methodology
+                    </h2>
+                    <div class="w-12 h-0.5 bg-white/40 mt-4 mb-3"></div>
+                    <p class="text-xs uppercase tracking-[0.2em] text-white/70 font-medium">협회 고유 분석 방법론</p>
                 </div>
-                <p class="text-lg leading-relaxed text-white/90 max-w-lg mb-10 break-keep">
-                    단순한 외모 연출을 넘어 개인의 심리, 체형, 행동 패턴, 라이프 스타일을 4가지 축으로 정밀하게 분석하여, 나이에 구애받지 않는 확고한 자기 취향을 도출합니다.
+
+                <div class="mb-8">
+                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/95 mb-1.5">IMAGE STYLE ANALYSIS™은</p>
+                    <p class="text-xl md:text-2xl font-bold tracking-wide text-white/95 mb-6">한국패션테라피협회만의 고유 프레임워크입니다.</p>
+                </div>
+                <p class="text-base md:text-lg leading-relaxed text-white/85 max-w-lg mb-10 break-keep font-light">
+                    단순한 외모 연출을 넘어 개인의 심리 기질, 체형 실루엣, 행동 패턴, 라이프스타일을 4가지 핵심 축으로 융합 분석하여 나이와 유행에 흔들리지 않는 본연의 자기 스타일을 정립합니다.
                 </p>
-                <a href="academy.html?v=2" class="inline-block bg-[#8A2019] hover:bg-[#6e1913] text-white font-bold py-3 px-8 rounded-full transition-colors text-lg shadow-md border border-[#8A2019]">교육과정 둘러보기</a>
+                <a href="academy.html?v=2" class="inline-flex items-center gap-2 bg-white hover:bg-kftaLight text-[#8C3A27] font-bold py-3.5 px-8 rounded-full transition-all text-sm md:text-base shadow-lg hover:shadow-xl">
+                    <span>교육과정 둘러보기</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
             </div>
 
             <!-- 4-Axis Grid -->
-            <div class="flex-1 grid grid-cols-2 gap-6 w-full">
-                <!-- Vidual -->
-                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+            <div class="flex-1 grid grid-cols-2 gap-5 w-full">
+                <!-- Visual (외적 축) -->
+                <div class="bg-white/95 backdrop-blur-sm text-gray-800 rounded-3xl p-7 shadow-xl flex flex-col justify-between hover:-translate-y-1.5 transition-transform border border-white/40">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#8C3A27]"></span>
+                        <span class="text-[10px] font-bold tracking-widest text-[#8C3A27] uppercase">AXIS 01</span>
                     </div>
-                    <ul class="text-sm md:text-base font-bold text-gray-600 mb-6 space-y-1 h-20 flex flex-col justify-center">
-                        <li>패션·컬러</li>
-                        <li>체형·얼굴</li>
-                        <li>헤어·메이크업</li>
-                    </ul>
-                    <div class="mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
-                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Vidual (외적)</p>
+                    <div class="space-y-1 my-auto text-left">
+                        <p class="text-sm font-bold text-gray-900">패션 &middot; 퍼스널컬러</p>
+                        <p class="text-xs text-gray-600">체형 &middot; 페이스 라인</p>
+                        <p class="text-xs text-gray-600">헤어 &middot; 메이크업 조형미</p>
                     </div>
-                </div>
-
-                <!-- Internal -->
-                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
-                    </div>
-                    <div class="mb-6 h-20 flex flex-col justify-center">
-                        <p class="text-sm md:text-base font-bold text-gray-600">나도</p>
-                        <p class="text-sm md:text-base font-bold text-gray-600">몰랐던</p>
-                        <p class="text-sm md:text-base font-bold text-gray-600">내 마음</p>
-                    </div>
-                    <div class="mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
-                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Internal (내적)</p>
+                    <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+                        <span class="font-bold text-[#8C3A27] text-sm">#Visual (외적)</span>
+                        <span class="text-[11px] text-gray-400 font-medium">외면 연출</span>
                     </div>
                 </div>
 
-                <!-- Behavioral -->
-                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                <!-- Internal (내적 축) -->
+                <div class="bg-white/95 backdrop-blur-sm text-gray-800 rounded-3xl p-7 shadow-xl flex flex-col justify-between hover:-translate-y-1.5 transition-transform border border-white/40">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#8C3A27]"></span>
+                        <span class="text-[10px] font-bold tracking-widest text-[#8C3A27] uppercase">AXIS 02</span>
                     </div>
-                    <div class="mb-6 h-20 flex flex-col justify-center">
-                        <p class="text-sm md:text-base font-bold text-gray-600 mt-0">자세·태도</p>
+                    <div class="space-y-1 my-auto text-left">
+                        <p class="text-sm font-bold text-gray-900">내면 심리 &middot; 정서 상태</p>
+                        <p class="text-xs text-gray-600">무의식 속 선호와 갈망</p>
+                        <p class="text-xs text-gray-600">자존감 &middot; 자기표현 욕구</p>
                     </div>
-                    <div class="mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
-                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Behavioral (태도·행동)</p>
+                    <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+                        <span class="font-bold text-[#8C3A27] text-sm">#Internal (내적)</span>
+                        <span class="text-[11px] text-gray-400 font-medium">내면 심리</span>
                     </div>
                 </div>
 
-                <!-- Contextual -->
-                <div class="bg-[#F8F7F5] text-gray-800 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center relative hover:-translate-y-2 transition-transform h-64 justify-center">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-                        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/></svg>
+                <!-- Behavioral (태도·행동 축) -->
+                <div class="bg-white/95 backdrop-blur-sm text-gray-800 rounded-3xl p-7 shadow-xl flex flex-col justify-between hover:-translate-y-1.5 transition-transform border border-white/40">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#8C3A27]"></span>
+                        <span class="text-[10px] font-bold tracking-widest text-[#8C3A27] uppercase">AXIS 03</span>
                     </div>
-                    <div class="mb-6 h-20 flex flex-col justify-center">
-                        <p class="text-sm md:text-base font-bold text-gray-600">언제,</p>
-                        <p class="text-sm md:text-base font-bold text-gray-600">어디서,</p>
-                        <p class="text-sm md:text-base font-bold text-gray-600">어떤 모습으로</p>
+                    <div class="space-y-1 my-auto text-left">
+                        <p class="text-sm font-bold text-gray-900">자세 &middot; 걸음걸이</p>
+                        <p class="text-xs text-gray-600">표정 &middot; 아이 콘택트</p>
+                        <p class="text-xs text-gray-600">보이스 &middot; 커뮤니케이션 매너</p>
                     </div>
-                    <div class="mt-auto">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 mx-auto mb-3 shadow-inner"></div>
-                        <p class="font-bold text-[#B65F42] text-sm md:text-base">#Contextual (상황)</p>
+                    <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+                        <span class="font-bold text-[#8C3A27] text-sm">#Behavioral (행동)</span>
+                        <span class="text-[11px] text-gray-400 font-medium">태도와 매너</span>
+                    </div>
+                </div>
+
+                <!-- Contextual (상황 축) -->
+                <div class="bg-white/95 backdrop-blur-sm text-gray-800 rounded-3xl p-7 shadow-xl flex flex-col justify-between hover:-translate-y-1.5 transition-transform border border-white/40">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#8C3A27]"></span>
+                        <span class="text-[10px] font-bold tracking-widest text-[#8C3A27] uppercase">AXIS 04</span>
+                    </div>
+                    <div class="space-y-1 my-auto text-left">
+                        <p class="text-sm font-bold text-gray-900">T.P.O 상황 적합성</p>
+                        <p class="text-xs text-gray-600">사회적 역할 &middot; 관계성</p>
+                        <p class="text-xs text-gray-600">라이프스타일 &middot; 웰에이징</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+                        <span class="font-bold text-[#8C3A27] text-sm">#Contextual (상황)</span>
+                        <span class="text-[11px] text-gray-400 font-medium">환경과 맥락</span>
                     </div>
                 </div>
             </div>
-            
         </div>
-        <div class="text-center mt-12">
-            <p class="text-white/60 text-sm tracking-[0.2em] font-medium">[ THE 4-AXIS FRAMEWORK ]</p>
+        <div class="text-center mt-14">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/70 text-xs tracking-[0.25em] font-medium border border-white/10">[ THE 4-AXIS INTEGRATED FRAMEWORK ]</span>
         </div>
     </section>
 
     <!-- History Timetable -->
-    <section id="history" class="bg-kftaLight py-24 px-6 border-b border-gray-200">
+    <section id="history" class="bg-white py-28 px-6 border-b border-kftaBorder/60">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="font-serif text-5xl mb-4 text-kftaGreen animate__animated animate__fadeInUp">History</h2>
-                <p class="text-xl text-gray-600 animate__animated animate__fadeInUp animate__delay-1s">한국패션테라피협회의 체계적인 연구와 비즈니스 성장 과정</p>
+            <!-- Section Header (Standardized) -->
+            <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+                <span class="text-xs uppercase tracking-[0.3em] text-kftaRed font-bold block mb-2.5">Milestones & Heritage</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-kftaGreen font-light">
+                    <span class="font-normal text-kftaGreen">KFTA</span> History
+                </h2>
+                <div class="w-12 h-0.5 bg-kftaRed/50 mx-auto mt-4 mb-3"></div>
+                <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">학술 연구와 협회 연혁</p>
+                <p class="text-sm md:text-base text-gray-600 mt-4 leading-relaxed break-keep">
+                    2012년 국내 최초의 패션테라피 학술 연구에서 출발하여, 체계적인 교육 및 라이프스타일 브랜드로 도약해 온 발자취입니다.
+                </p>
             </div>
 
             <div class="relative border-l-4 border-kftaGreen ml-6 md:ml-1/2 space-y-12 pb-8">
@@ -354,7 +848,7 @@
                         <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                             <ul class="space-y-3 text-gray-700 list-disc list-inside marker:text-gray-400">
                                 <li>한국패션테라피협회로 확대 개편 <span class="text-sm text-gray-500">(상표출원 제40-2026-0177049호)</span></li>
-                                <li>5단계 자격 체계 및 '패션테라피 프랙티셔너' 인증 확립</li>
+                                <li>5단계 전문가 교육과정 체계 확립</li>
                                 <li>캄온(calm:on) 설립 <span class="text-sm text-gray-500">(교육사업 운영 · 2026.09.11)</span></li>
                                 <li>키즈 대상 패션테라피 강의 시작</li>
                             </ul>
@@ -385,48 +879,181 @@
         </div>
     </section>
 
-    <!-- Location -->
-    <section id="location" class="bg-kftaLight py-24 px-6 border-b border-kftaBorder">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
-            <div class="flex-1 w-full">
-                <img src="assets/kfta-location-map-trans.png" alt="Visit the KFTA Map" class="w-full h-auto object-contain">
+    <!-- Location & Education Delivery System -->
+    <section id="location" class="bg-kftaLight py-28 px-6 border-b border-kftaBorder">
+        <div id="delivery" class="max-w-7xl mx-auto space-y-20">
+            <!-- Section Header (Standardized) -->
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.3em] text-kftaRed font-bold block mb-2.5">Headquarters &amp; Education Delivery</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-kftaGreen font-light">
+                    <span class="font-normal text-kftaGreen">Studio</span> &amp; Delivery System
+                </h2>
+                <div class="w-12 h-0.5 bg-kftaRed/50 mx-auto mt-4 mb-3"></div>
+                <p class="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">KFTA 4대 맞춤형 교육 체계 &amp; 중앙 연구 스튜디오</p>
+                <p class="text-sm md:text-base text-gray-600 mt-4 leading-relaxed break-keep">
+                    한국패션테라피협회는 수강생의 학습 환경과 목적에 맞춰 가장 안전하고 효과적인 방식으로 교육을 진행합니다.<br class="hidden sm:inline">
+                    시공간 제약 없는 온라인 클래스부터 기관 맞춤 출강, 전문 세미나룸, 프라이빗 1:1 연구 세션까지 체계적으로 만나보실 수 있습니다.
+                </p>
             </div>
-            <div class="flex-1 w-full space-y-12">
-                <div>
-                    <h2 class="font-serif text-5xl mb-4 text-kftaGreen">Visit<br>the KFTA</h2>
-                    <p class="text-xl text-gray-600 mb-6">한국패션테라피협회 본원 및 오프라인 교육장<br>오시는 길을 안내해 드립니다.</p>
-                    
+
+            <!-- 4 Delivery Systems Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 01: Online Live & VOD -->
+                <div class="bg-white rounded-3xl p-7 border border-kftaBorder/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-full bg-kftaGreen/10 text-kftaGreen text-[11px] font-bold tracking-wider uppercase">Online Class</span>
+                            <span class="text-xs font-bold text-gray-400">01</span>
+                        </div>
+                        <h4 class="font-serif text-xl font-bold text-kftaGreen mb-2 group-hover:text-kftaRed transition-colors">온라인 라이브 &amp; VOD</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed break-keep">
+                            전국 및 해외 어디서나 시공간 제약 없이 수강할 수 있는 온라인 과정입니다. 고화질 실시간 강의와 다시보기 VOD, 공식 연구 교재 및 실습 교구재가 함께 제공됩니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
+                        <span>실시간 소통 &amp; VOD 학습</span>
+                        <span class="text-kftaGreen font-semibold">전국 · 해외 수강</span>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 02: Corporate & Outreach -->
+                <div class="bg-white rounded-3xl p-7 border border-kftaBorder/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-6 h-6 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <h4 class="font-bold text-lg text-gray-800">VISIT US</h4>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-full bg-kftaRed/10 text-kftaRed text-[11px] font-bold tracking-wider uppercase">Outreach Training</span>
+                            <span class="text-xs font-bold text-gray-400">02</span>
                         </div>
-                        <p class="text-gray-600 ml-9 leading-relaxed break-keep">경기도 용인시 처인구 포곡읍 성산로 667<br>102동 2층 203호 A구역 (솔빛마을)</p>
-                        <p class="text-sm text-kftaGreen font-bold ml-9 mt-2">1층 주차 가능</p>
+                        <h4 class="font-serif text-xl font-bold text-kftaGreen mb-2 group-hover:text-kftaRed transition-colors">기업 &middot; 기관 맞춤 출강</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed break-keep">
+                            대학교, 공공기관, 기업체 인재개발원 등 현장으로 전문 강사진이 직접 찾아가는 맞춤형 위탁 교육입니다. 대상자의 직무와 연령에 최적화된 테라피 워크숍을 진행합니다.
+                        </p>
                     </div>
-                    <div>
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-6 h-6 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <h4 class="font-bold text-lg text-gray-800">SEND AN EMAIL</h4>
-                        </div>
-                        <p class="text-gray-600 ml-9">nxxon@naver.com</p>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
+                        <span>기관 맞춤형 커리큘럼</span>
+                        <span class="text-kftaRed font-semibold">전문 강사진 파견</span>
                     </div>
+                </div>
+
+                <!-- 03: Special Convention & Auditorium -->
+                <div class="bg-white rounded-3xl p-7 border border-kftaBorder/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-6 h-6 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            <h4 class="font-bold text-lg text-gray-800">PUBLIC TRANSIT</h4>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-full bg-kftaGreen/10 text-kftaGreen text-[11px] font-bold tracking-wider uppercase">Special Seminar</span>
+                            <span class="text-xs font-bold text-gray-400">03</span>
                         </div>
-                        <p class="text-gray-600 ml-9 leading-relaxed text-justify">지하철: 에버라인 '전대·에버랜드역' 하차<br>버스: '전대3리' 또는 '에버랜드' 하차<br>(5002, 5700, 1500-2, 66)</p>
+                        <h4 class="font-serif text-xl font-bold text-kftaGreen mb-2 group-hover:text-kftaRed transition-colors">오프라인 전문 세미나</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed break-keep">
+                            정규 심화 과정 및 대규모 학술 워크숍은 쾌적하고 공인된 전문 세미나홀과 컨벤션룸을 대관하여 안전하고 품격 있는 환경에서 실습과 교류를 진행합니다.
+                        </p>
                     </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
+                        <span>공인 전문 세미나홀 대관</span>
+                        <span class="text-kftaGreen font-semibold">오프라인 집중 실습</span>
+                    </div>
+                </div>
+
+                <!-- 04: Private 1:1 R&D Studio -->
+                <div class="bg-white rounded-3xl p-7 border border-kftaBorder/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg class="w-6 h-6 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <h4 class="font-bold text-lg text-gray-800">CALL US</h4>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-1 rounded-full bg-kftaRed/10 text-kftaRed text-[11px] font-bold tracking-wider uppercase">Private Session</span>
+                            <span class="text-xs font-bold text-gray-400">04</span>
                         </div>
-                        <p class="text-gray-600 ml-9">010-9692-0410</p>
+                        <h4 class="font-serif text-xl font-bold text-kftaGreen mb-2 group-hover:text-kftaRed transition-colors">1:1 프라이빗 컨설팅</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed break-keep">
+                            중앙 사무국 스튜디오에서 한 분만을 위해 온전히 집중하는 1:1 맞춤형 세션입니다. 100% 사전 예약제로 운영되어 프라이빗하고 깊이 있는 분석과 자문을 제공합니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
+                        <span>평일 10:00 ~ 17:00</span>
+                        <span class="text-kftaRed font-semibold">100% 사전 예약제</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Studio Visit & Location Details (2-Column) -->
+            <div id="studio" class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center pt-8 border-t border-kftaBorder/60">
+                <!-- Left: Map Image -->
+                <div class="flex-1 w-full">
+                    <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white bg-white p-3">
+                        <img src="assets/kfta-location-map-trans.png" alt="KFTA Headquarters Map" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Right: Studio Info & Legal Protection Callout -->
+                <div class="flex-1 w-full space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-kftaRed">Headquarters &amp; Studio</span>
+                        <h3 class="font-serif text-3xl md:text-4xl text-kftaGreen font-bold mt-1">중앙 사무국 &amp; 프라이빗 스튜디오</h3>
+                        <p class="text-gray-600 text-sm mt-2">한국패션테라피협회 중앙 사무국 방문 및 사전 예약 안내</p>
+                    </div>
+
+                    <!-- Private Studio Notice Callout (홈페이지 브랜드 아이덴티티에 완벽히 조화되는 프리미엄 에디토리얼 카드) -->
+                    <div class="bg-[#F6F8F5] border border-kftaGreen/20 border-l-4 border-l-kftaGreen rounded-2xl p-5 md:p-6 shadow-xs transition-all duration-300">
+                        <div class="flex flex-wrap items-center gap-2 mb-2.5">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-kftaGreen/10 text-kftaGreen font-bold text-[11px] tracking-wider uppercase">
+                                <svg class="w-3.5 h-3.5 text-kftaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                Private Studio Notice
+                            </span>
+                            <h4 class="text-sm md:text-[15px] font-bold text-gray-900 tracking-tight">
+                                스튜디오 100% 프라이빗 사전 예약제 안내
+                            </h4>
+                        </div>
+                        <p class="text-xs md:text-[13px] text-gray-700 leading-relaxed break-keep">
+                            KFTA 중앙 사무국 스튜디오는 학술 연구와 교구재 개발, 그리고 1:1 심층 자문에만 집중하는 프라이빗 연구 공간입니다.
+                            방문하시는 분들의 프라이버시와 심도 있는 세션을 위해 <strong class="text-kftaGreen font-bold">100% 사전 예약 확정제로만 운영</strong>됩니다.
+                        </p>
+                        <div class="mt-3.5 pt-3 border-t border-kftaBorder/40 flex items-start gap-2 text-[12px] text-gray-500 leading-relaxed break-keep">
+                            <span class="text-kftaRed font-bold shrink-0">※</span>
+                            <span>일반 단체 강의 및 워크숍은 온라인 클래스와 쾌적한 외부 전문 세미나룸에서 안전하게 진행됩니다.</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                        <!-- Address -->
+                        <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 shadow-xs">
+                            <div class="flex items-center gap-2.5 mb-1.5 text-kftaGreen font-bold text-xs uppercase tracking-wider">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span>Location</span>
+                            </div>
+                            <p class="text-xs text-gray-700 font-medium break-keep">
+                                경기도 용인시 처인구 포곡읍 성산로 667<br>102동 2층 203호 A구역 (솔빛마을)
+                            </p>
+                            <p class="text-[11px] text-kftaGreen font-bold mt-1.5">1층 주차 가능 (사전 예약 차량 한정)</p>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 shadow-xs">
+                            <div class="flex items-center gap-2.5 mb-1.5 text-kftaGreen font-bold text-xs uppercase tracking-wider">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <span>Official Email</span>
+                            </div>
+                            <p class="text-xs text-gray-700 font-medium">cs@calmon.co.kr</p>
+                            <p class="text-[11px] text-gray-400 mt-1.5">제휴 &middot; 출강 &middot; 자격 검정 문의</p>
+                        </div>
+
+                        <!-- Transit -->
+                        <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 shadow-xs">
+                            <div class="flex items-center gap-2.5 mb-1.5 text-kftaGreen font-bold text-xs uppercase tracking-wider">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <span>Public Transit</span>
+                            </div>
+                            <p class="text-xs text-gray-700 break-keep">
+                                <strong>지하철:</strong> 에버라인 '전대·에버랜드역' 하차<br>
+                                <strong>버스:</strong> '전대3리' 또는 '에버랜드' 하차<br>
+                                <span class="text-gray-500 text-[11px]">(5002, 5700, 1500-2, 66번)</span>
+                            </p>
+                        </div>
+
+                        <!-- Call -->
+                        <div class="p-4 rounded-2xl bg-white border border-kftaBorder/60 shadow-xs">
+                            <div class="flex items-center gap-2.5 mb-1.5 text-kftaGreen font-bold text-xs uppercase tracking-wider">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <span>Inquiry & Call</span>
+                            </div>
+                            <p class="text-xs text-gray-700 font-bold text-sm">050-6023-0410</p>
+                            <p class="text-[11px] text-gray-500 mt-1.5">개인 컨설팅: 평일 10:00 ~ 17:00 (사전 예약 필수)</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -434,81 +1061,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-kftaGreen text-kftaLight py-14 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-            <div>
-                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
-                <p class="opacity-60 text-xs tracking-[0.2em]">KOREA FASHION THERAPY ASSOCIATION</p>
+    <footer class="bg-kftaGreen text-kftaLight pt-16 pb-12 px-6">
+        <div class="max-w-7xl mx-auto space-y-10">
+            <!-- 1. Top Section: Brand & SNS Channels -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold tracking-wider text-white">한국패션테라피협회</h2>
+                    <p class="text-white/50 text-[11px] tracking-[0.25em] uppercase mt-1">Korea Fashion Therapy Association</p>
+                </div>
+                <!-- SNS Channels -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">YouTube</a>
+                    <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">Instagram</a>
+                    <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">네이버 블로그</a>
+                    <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">카카오채널</a>
+                </div>
             </div>
-            <div class="opacity-80 text-sm space-y-1 md:text-right break-keep">
-                <p>경기도 용인시 처인구 포곡읍 성산로 667, 102동 2층 203호 A구역 (솔빛마을)</p>
-                <p>Tel. 010-9692-0410 &nbsp;·&nbsp; nxxon@naver.com</p>
+
+            <!-- 2. Middle Section: Structured Business & Entity Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-white/60 leading-relaxed">
+                <!-- Left: Entity & Business Credentials -->
+                <div class="space-y-2">
+                    <p class="text-white/85 font-medium">
+                        <span class="text-white/40 font-normal mr-2">운영 주관</span>한국패션테라피협회(KFTA) &middot; 비영리단체 &middot; 고유번호 ○○○-○○-○○○○○
+                    </p>
+                    <p class="text-white/85 font-medium">
+                        <span class="text-white/40 font-normal mr-2">공식 운영 및 결제</span>캄온(calm:on) &middot; 대표 남미화
+                    </p>
+                    <p>
+                        사업자등록번호 395-44-01406 &middot; 통신판매업신고 제2026-용인처인-01969호
+                    </p>
+                    <p class="text-white/50 text-[11px] pt-0.5 leading-relaxed">
+                        ※ 본 협회의 모든 교육·자격 과정 접수 및 교구재 결제, 전자상거래 제반 업무는 공식 위탁운영사인 캄온(calm:on)을 통해 투명하고 안전하게 처리됩니다.
+                    </p>
+                </div>
+
+                <!-- Right: Location, Contact & Legal Notice -->
+                <div class="space-y-2 md:text-right">
+                    <p>경기도 용인시 처인구 포곡읍 성산로 667, 102동 2층 203호 A구역 (솔빛마을)</p>
+                    <p>Tel. 050-6023-0410 &nbsp;&middot;&nbsp; E-mail. cs@calmon.co.kr</p>
+                    <p class="text-white/45 text-[11px] pt-0.5">
+                        「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (제40-2026-0177049호)
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- KFTA-ENTITY-BAR -->
-        <div class="max-w-7xl mx-auto mt-16 text-center text-xs leading-relaxed break-keep">
-            <p class="mb-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-                <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">YouTube</a>
-                <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">Instagram</a>
-                <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">네이버 블로그</a>
-                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오채널</a>
-            </p>
-            <p class="opacity-70">KFTA는 <strong>캄온(calm:on)</strong>의 패션테라피 교육 브랜드입니다.</p>
-            <p class="opacity-70 mt-1.5">대표 남미화 &middot; 사업자등록번호 395-44-01406</p>
-            <p class="opacity-70 mt-1.5">신청과 결제는 캄온에서 이루어집니다.</p>
-            <p class="opacity-70 mt-1.5">학술 · 연구 활동은 <strong>한국패션테라피진흥원</strong>(비영리단체 · 고유번호 110-82-84910)이 수행합니다.</p>
-            <p class="opacity-50 mt-1.5">「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (제40-2026-0177049호)</p>
-            <p class="mt-8 flex flex-wrap justify-center items-center gap-x-3 gap-y-1 opacity-80 text-[13px]">
-                <a href="terms.html" class="hover:underline">이용약관</a><span class="opacity-40">|</span><a href="privacy.html" class="font-bold hover:underline">개인정보처리방침</a><span class="opacity-40">|</span><a href="refund.html" class="hover:underline">환불 규정</a>
-            </p>
-            <p class="mt-7 opacity-40">&copy; 2026 calm:on. All rights reserved.</p>
+
+            <!-- 3. Bottom Bar: Policy Links & Copyright -->
+            <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <div class="flex items-center gap-4 text-white/70">
+                    <a href="terms.html" class="hover:text-white transition-colors">이용약관</a>
+                    <span class="text-white/20">|</span>
+                    <a href="privacy.html" class="text-white font-semibold hover:underline">개인정보처리방침</a>
+                    <span class="text-white/20">|</span>
+                    <a href="refund.html" class="hover:text-white transition-colors">환불 규정</a>
+                </div>
+                <p class="text-white/40 text-[11px]">&copy; 2026 calm:on. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,19 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Pretendard', 'sans-serif'] } } }
+        theme: { extend: { colors: { kftaGreen: '#3B4B38', kftaRed: '#8B1A1A', kftaBeige: '#E8E3D9', kftaLight: '#F9F8F6', kftaBorder: '#D1C9BB' }, fontFamily: { serif: ['Pretendard', '-apple-system', 'sans-serif'], sans: ['Pretendard', '-apple-system', 'sans-serif'] } } }
       }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'AmpersandSerif';
-            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
-            unicode-range: U+0026;
-        }
-        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
-            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        /* 사이트 전체 단일 프리미엄 폰트(Pretendard)로 100% 일원화 */
+        body, h1, h2, h3, h4, h5, h6, p, li, a, span, div, button, input, textarea,
+        .font-serif, [class*="font-serif"],
+        .font-sans, [class*="font-sans"] {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
         }
     
         /* 한글 단어가 줄 끝에서 잘리지 않게 */
@@ -45,13 +42,14 @@
                 <div class="group relative flex items-center h-full">
                     <a href="index.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ABOUT</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                        <a href="index.html#greeting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Greeting</a>
                         <a href="index.html#vision" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Philosophy</a>
                         <a href="index.html#methodology" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Methodology</a>
                         <a href="index.html#location" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Location</a>
                     </div>
                 </div>
                 <div class="group relative flex items-center h-full">
-                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">ACADEMY</a>
+                    <a href="academy.html?v=2" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CLASS</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
                         <a href="academy.html?v=2#oneday" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">One Day Class</a>
                         <a href="academy.html?v=2#kids" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Kids & Family Class</a>
@@ -62,7 +60,7 @@
                 <div class="group relative flex items-center h-full">
                     <a href="certification.html" class="text-sm font-bold text-kftaGreen uppercase tracking-wide hover:text-kftaRed">CERTIFICATION</a>
                     <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100 z-50">
-                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview (개요)</a>
+                          <a href="certification.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Overview</a>
                           <a href="cert_level1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 1 Foundation</a>
                           <a href="cert_level2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 2 Practitioner</a>
                           <a href="cert_level3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-kftaBeige hover:text-kftaGreen">Level 3 Master Practitioner</a>
@@ -147,34 +145,63 @@
     </main>
 
 
-    <footer class="bg-kftaGreen text-kftaLight py-14 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-            <div>
-                <h2 class="font-serif text-2xl font-bold tracking-widest mb-2">한국패션테라피협회</h2>
-                <p class="opacity-60 text-xs tracking-[0.2em]">KOREA FASHION THERAPY ASSOCIATION</p>
+            <!-- Footer -->
+    <footer class="bg-kftaGreen text-kftaLight pt-16 pb-12 px-6">
+        <div class="max-w-7xl mx-auto space-y-10">
+            <!-- 1. Top Section: Brand & SNS Channels -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-white/10">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold tracking-wider text-white">한국패션테라피협회</h2>
+                    <p class="text-white/50 text-[11px] tracking-[0.25em] uppercase mt-1">Korea Fashion Therapy Association</p>
+                </div>
+                <!-- SNS Channels -->
+                <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">YouTube</a>
+                    <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">Instagram</a>
+                    <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">네이버 블로그</a>
+                    <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white text-xs transition-colors duration-200">카카오채널</a>
+                </div>
             </div>
-            <div class="opacity-80 text-sm space-y-1 md:text-right break-keep">
-                <p>경기도 용인시 처인구 포곡읍 성산로 667, 102동 2층 203호 A구역 (솔빛마을)</p>
-                <p>Tel. 010-9692-0410 &nbsp;·&nbsp; nxxon@naver.com</p>
+
+            <!-- 2. Middle Section: Structured Business & Entity Information -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs text-white/60 leading-relaxed">
+                <!-- Left: Entity & Business Credentials -->
+                <div class="space-y-2">
+                    <p class="text-white/85 font-medium">
+                        <span class="text-white/40 font-normal mr-2">운영 주관</span>한국패션테라피협회(KFTA) &middot; 비영리단체 &middot; 고유번호 ○○○-○○-○○○○○
+                    </p>
+                    <p class="text-white/85 font-medium">
+                        <span class="text-white/40 font-normal mr-2">공식 운영 및 결제</span>캄온(calm:on) &middot; 대표 남미화
+                    </p>
+                    <p>
+                        사업자등록번호 395-44-01406 &middot; 통신판매업신고 제2026-용인처인-01969호
+                    </p>
+                    <p class="text-white/50 text-[11px] pt-0.5 leading-relaxed">
+                        ※ 본 협회의 모든 교육·자격 과정 접수 및 교구재 결제, 전자상거래 제반 업무는 공식 위탁운영사인 캄온(calm:on)을 통해 투명하고 안전하게 처리됩니다.
+                    </p>
+                </div>
+
+                <!-- Right: Location, Contact & Legal Notice -->
+                <div class="space-y-2 md:text-right">
+                    <p>경기도 용인시 처인구 포곡읍 성산로 667, 102동 2층 203호 A구역 (솔빛마을)</p>
+                    <p>Tel. 050-6023-0410 &nbsp;&middot;&nbsp; E-mail. cs@calmon.co.kr</p>
+                    <p class="text-white/45 text-[11px] pt-0.5">
+                        「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (제40-2026-0177049호)
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- KFTA-ENTITY-BAR -->
-        <div class="max-w-7xl mx-auto mt-16 text-center text-xs leading-relaxed break-keep">
-            <p class="mb-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-                <a href="https://www.youtube.com/@fashiontherapynam" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">YouTube</a>
-                <a href="https://www.instagram.com/fashiontherapy.nam/" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">Instagram</a>
-                <a href="https://blog.naver.com/fashiontherapy_" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">네이버 블로그</a>
-                <a href="https://pf.kakao.com/_vxitxaX" target="_blank" rel="noopener" class="underline underline-offset-4 hover:no-underline">카카오채널</a>
-            </p>
-            <p class="opacity-70">KFTA는 <strong>캄온(calm:on)</strong>의 패션테라피 교육 브랜드입니다.</p>
-            <p class="opacity-70 mt-1.5">대표 남미화 &middot; 사업자등록번호 395-44-01406</p>
-            <p class="opacity-70 mt-1.5">신청과 결제는 캄온에서 이루어집니다.</p>
-            <p class="opacity-70 mt-1.5">학술 · 연구 활동은 <strong>한국패션테라피진흥원</strong>(비영리단체 · 고유번호 110-82-84910)이 수행합니다.</p>
-            <p class="opacity-50 mt-1.5">「한국패션테라피협회」 명칭 및 KFTA 로고는 상표출원 중입니다. (제40-2026-0177049호)</p>
-            <p class="mt-8 flex flex-wrap justify-center items-center gap-x-3 gap-y-1 opacity-80 text-[13px]">
-                <a href="terms.html" class="hover:underline">이용약관</a><span class="opacity-40">|</span><a href="privacy.html" class="font-bold hover:underline">개인정보처리방침</a><span class="opacity-40">|</span><a href="refund.html" class="hover:underline">환불 규정</a>
-            </p>
-            <p class="mt-7 opacity-40">&copy; 2026 calm:on. All rights reserved.</p>
+
+            <!-- 3. Bottom Bar: Policy Links & Copyright -->
+            <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+                <div class="flex items-center gap-4 text-white/70">
+                    <a href="terms.html" class="hover:text-white transition-colors">이용약관</a>
+                    <span class="text-white/20">|</span>
+                    <a href="privacy.html" class="text-white font-semibold hover:underline">개인정보처리방침</a>
+                    <span class="text-white/20">|</span>
+                    <a href="refund.html" class="hover:text-white transition-colors">환불 규정</a>
+                </div>
+                <p class="text-white/40 text-[11px]">&copy; 2026 calm:on. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>

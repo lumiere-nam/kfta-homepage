@@ -19,13 +19,11 @@
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 
     <style>
-        @font-face {
-            font-family: 'AmpersandSerif';
-            src: local('Baskerville'), local('Georgia'), local('Times New Roman'), serif;
-            unicode-range: U+0026;
-        }
-        body, h1, h2, h3, h4, h5, h6, p, a, span, div {
-            font-family: 'AmpersandSerif', 'Pretendard', sans-serif !important;
+        /* 사이트 전체 단일 프리미엄 폰트(Pretendard)로 100% 일원화 */
+        body, h1, h2, h3, h4, h5, h6, p, li, a, span, div, button, input, textarea,
+        .font-serif, [class*="font-serif"],
+        .font-sans, [class*="font-sans"] {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
         }
         /* 한글 단어가 줄 끝에서 잘리지 않게 */
         body, h1, h2, h3, h4, h5, h6, p, li, span, a, td, th, button {

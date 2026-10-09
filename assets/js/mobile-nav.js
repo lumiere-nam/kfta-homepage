@@ -5,6 +5,7 @@
 (function () {
     const MENU = [
         { label: 'ABOUT', href: 'index.html', sub: [
+            { label: 'Greeting',    href: 'index.html#greeting' },
             { label: 'Philosophy',   href: 'index.html#vision' },
             { label: 'Methodology',  href: 'index.html#methodology' },
             { label: 'Location',     href: 'index.html#location' },
@@ -16,7 +17,7 @@
             { label: 'Fashion in K-POP',    href: 'academy.html?v=2#kpop' },
         ]},
         { label: 'CERTIFICATION', href: 'certification.html', sub: [
-            { label: 'Overview (개요)',            href: 'certification.html' },
+            { label: 'Overview',                   href: 'certification.html' },
             { label: 'Level 1 Foundation',         href: 'cert_level1.html' },
             { label: 'Level 2 Practitioner',       href: 'cert_level2.html' },
             { label: 'Level 3 Master Practitioner', href: 'cert_level3.html' },
